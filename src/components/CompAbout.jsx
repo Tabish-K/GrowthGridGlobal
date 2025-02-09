@@ -94,12 +94,7 @@ function CompAbout() {
             {/* First Section */}
             <div className='bg-white min-h-screen lg:h-max py-16 lg:py-28'>
                 <div className='container mx-auto px-4 lg:px-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
-                <motion.div 
-                        initial={{ width: 0 }}
-                        whileInView={{ width: "50%" }}
-                        transition={{ duration: 1, ease: "easeInOut" }}
-                        className="h-[2px] bg-[#CC0000] mx-auto"
-                    />
+                
                 <h1 className='font-bold text-3xl lg:text-5xl text-gray-800 block sm:hidden'>The Numbers That Drive the Future of Business.</h1>
                     <img 
                         src='https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxvZmZpY2UlMjBleHBsYWluYXRpb258ZW58MHwxfDB8fHww'

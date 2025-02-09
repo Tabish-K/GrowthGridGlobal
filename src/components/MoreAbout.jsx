@@ -308,7 +308,7 @@ function MoreAbout() {
                             transition={{ duration: 1, ease: "easeInOut" }}
                             className="h-[2px] bg-[#CC0000] mx-auto mb-8"
                         />
-                <div className="max-w-4xl mx-auto space-y-6 mb-8 lg:mb-10">
+                <div className="max-w-5xl mx-auto space-y-6 mb-8 lg:mb-10">
                     <h1 className="text-3xl lg:text-5xl font-bold">
                         Revolutionizing Businesses with Tailored, AI-Powered Strategies.
                     </h1>
@@ -316,30 +316,51 @@ function MoreAbout() {
                         Our work speaks for itself. Dive into the details of how we've transformed industries, solved complex challenges, and driven measurable results for our clients.
                     </p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-                    {[1, 2].map((item) => (
-                        <div key={item} className="flex flex-col md:flex-row gap-4 lg:gap-6">
+                <div className="grid md:grid-cols-2 gap-6 lg:gap-8 mt-16">
+                    
+                        <div className="flex flex-col md:flex-row gap-4 lg:gap-6">
                             <img 
                                 src="https://images.unsplash.com/photo-1552960394-c81add8de6b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdvcmslMjBpbiUyMG9mZmljZXxlbnwwfDF8MHx8fDA%3D"
-                                alt={`Case study ${item}`}
+                                alt={`Case study`}
                                 className="w-full md:w-1/2 h-48 md:h-auto object-cover"
                             />
                             <div className="flex flex-col justify-between md:w-1/2">
                                 <h1 className="text-2xl lg:text-3xl font-semibold mb-6">
                                     Transforming Workflow Automation for a Global Tech Firm
                                 </h1>
-                                <div className="bg-gray-50 p-6 lg:p-8 border border-gray-100 hover:border-[#CC0000] transition-all duration-300">
+                                <div className="bg-gray-50 p-6 lg:p-8 border">
                                     <h2 className="text-[#CC0000] font-semibold mb-2 lg:mb-4">Overview</h2>
                                     <p className="tracking-wide text-sm lg:text-base">
                                         A global technology company with over 10,000 employees and operations in 15 countries faced significant inefficiencies in its internal workflows, leading to delayed project timelines, mounting operational costs, and employee burnout.
                                     </p>
-                                    <button className="text-[#CC0000] text-sm lg:text-base mt-2 lg:mt-4 hover:underline">
+                                    <button className="text-[#CC0000] font-semibold text-xs sm:text-sm mt-2 lg:mt-4 hover:underline">
                                         Know more
                                     </button>
                                 </div>
                             </div>
                         </div>
-                    ))}
+                        <div className="flex flex-col md:flex-row gap-4 lg:gap-6">
+                            <img 
+                                src="https://images.unsplash.com/photo-1521898284481-a5ec348cb555?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHdvcmtpbmclMjBvJTIwbGFwdG9wfGVufDB8fDB8fHww"
+                                alt={`Case study`}
+                                className="w-full md:w-1/2 h-48 md:h-auto object-cover"
+                            />
+                            <div className="flex flex-col justify-between md:w-1/2">
+                                <h1 className="text-2xl lg:text-3xl font-semibold mb-6">
+                                Scaling E-Commerce Revenue for a Boutique Fashion Brand
+                                </h1>
+                                <div className="bg-gray-50 p-6 lg:p-8 border">
+                                    <h2 className="text-[#CC0000] font-semibold mb-2 lg:mb-4">Overview</h2>
+                                    <p className="tracking-wide text-sm lg:text-base">
+                                    A fast-growing e-commerce fashion retailer with an international customer base but stagnant growth due to a poorly optimized platform, high cart abandonment rates, and ineffective customer retention strategies.
+                                    </p>
+                                    <button className="text-[#CC0000] font-semibold text-xs sm:text-sm mt-2 lg:mt-4 hover:underline">
+                                        Know more
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    
                 </div>
             </div>
         </div>

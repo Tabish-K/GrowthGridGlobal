@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from "next/link";
+import ScrollToTop from './ScrollToTop';
 
 const HERO_CONTENT = {
     "SRO": {
@@ -85,7 +86,7 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="bg-cover bg-center h-screen z-20 text-white relative flex flex-col justify-between w-full p-4 lg:p-8"
+            className="bg-cover bg-center min-h-[100dvh] z-20 text-white relative flex flex-col justify-between w-full p-4 lg:p-8"
             style={{
                 backgroundImage: `url('${backgroundImage}')`,
                 backgroundSize: 'cover',
@@ -93,12 +94,13 @@ const HeroSection = () => {
                 transition: 'background-image 0.5s ease-in-out'
             }}
         >
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+            <div className="absolute top-0 inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/10 to-transparent" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/60 via-black/50 to-transparent" />
 
             {/* Main content section */}
             <motion.div 
                 variants={containerVariants}
-                className="hero-content max-w-screen-lg w-full mt-32 lg:mt-48"
+                className="hero-content max-w-screen-lg w-full mt-36 lg:mt-48"
             >
                 <motion.h1 
                     key={activeService}
@@ -122,18 +124,24 @@ const HeroSection = () => {
                     variants={containerVariants}
                     className="hero-cta flex flex-wrap gap-4"
                 >
-                    {['Get a Free Consultation', 'Explore Our Solutions →'].map((label, index) => (
                         <motion.a 
-                            key={label}
                             variants={itemVariants}
-                            href={index === 0 ? "#" : "/explore"}
+                            href={"#"}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="border-b-2 px-4 py-2 lg:px-6 lg:py-4 hover:bg-white hover:text-black transition-colors"
+                            className="px-4 py-2 lg:px-6 lg:py-4 hover:bg-white hover:text-black transition-colors"
                         >
-                            {label}
+                            Get a Free Consultation
                         </motion.a>
-                    ))}
+                        <motion.a 
+                            variants={itemVariants}
+                            href={"/explore"}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="border-2 px-4 py-2 lg:px-6 lg:py-4 hover:bg-white hover:text-black transition-colors"
+                        >
+                            Explore Our Solutions →
+                        </motion.a>
                 </motion.div>
             </motion.div>
 
@@ -170,7 +178,7 @@ const HeroSection = () => {
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
-                                    className="px-3 py-2 lg:px-6 lg:py-4 border-2 border-white transition-colors"
+                                    className="px-3 py-2 lg:px-6 lg:py-4 text-2xl hover:bg-white hover:text-black transition-colors"
                                 >
                                     →
                                 </motion.button>
@@ -179,6 +187,9 @@ const HeroSection = () => {
                     </motion.div>
                 </div>
             </motion.div>
+            <div className='absolute z-20 bottom-8'>
+            <ScrollToTop/>
+            </div>
         </motion.div>
     );
 };

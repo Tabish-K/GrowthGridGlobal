@@ -30,8 +30,8 @@ function Footer() {
                     {/* Top Section */}
                     <div className="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-12 mb-12">
                         {/* Brand Section */}
-                        <div className="max-w-sm">
-                            <p className="text-md md:text-lg">
+                        <div className="">
+                            <p className="text-sm md:text-md">
                                 "Stay Updated on the Latest in AI and Business Growth."
                             </p>
                             <Link 
@@ -65,7 +65,7 @@ function Footer() {
                     </div>
 
                     {/* Navigation Links */}
-                    <div className="flex flex-wrap gap-4 lg:gap-8 text-sm lg:text-base">
+                    <div className="flex flex-wrap gap-4 lg:gap-8 text-xs sm:text-sm">
                         <Link href="/services" className="hover:text-gray-300">Services</Link>
                         <Link href="/blog" className="hover:text-gray-300">Blog</Link>
                         <Link href="/case-studies" className="hover:text-gray-300">Case Studies</Link>
