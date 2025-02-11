@@ -69,7 +69,7 @@ const Navbar = () => {
             </div> */}
 
             {/* Main Navigation */}
-            <div className={`transition-all duration-300 border-b ${
+            <div className={`transition-all duration-300 ${
                 hasScrolled 
                 ? 'bg-white shadow-lg' 
                 : 'bg-transparent'

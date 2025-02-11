@@ -2,6 +2,7 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 function CompAbout() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -91,21 +92,103 @@ function CompAbout() {
 
     return (
         <div className='w-full'>
+            
+            {/* Challenge Section */}
+            <section className="bg-white text-gray-800 py-16 border-t border-gray-100">
+            <div className="container mx-auto px-6 lg:px-12">
+                <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
+                    {/* Left Content */}
+                    <div className="w-full lg:w-1/2 space-y-8">
+                        <div className="space-y-4">
+                            <motion.h1 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                className="text-3xl lg:text-4xl font-bold text-gray-900"
+                            >
+                                What's Your Business Challenge?
+                            </motion.h1>
+                            <motion.p 
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                className="text-base md:text-lg text-gray-600 leading-relaxed"
+                            >
+                                Answer two questions and put our thinking to work on your unique business challenges.
+                            </motion.p>
+                        </div>
+
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            className="space-y-6"
+                        >
+                            <h2 className="text-xl font-semibold text-gray-800">
+                                What is your industry?
+                            </h2>
+                            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
+                                {industries.map((industry) => (
+                                    <Link 
+                                        key={industry.id}
+                                        href={`/explore`}
+                                    >
+                                    <motion.button
+                                        onClick={() => setSelectedIndustry(industry.id)}
+                                        className={`
+                                            px-6 py-4 text-sm font-medium 
+                                            border border-gray-300
+                                            transition-all duration-200
+                                            hover:border-[#CC0000] hover:text-[#CC0000]
+                                            focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-opacity-50
+                                            ${selectedIndustry === industry.id 
+                                                ? 'border-[#CC0000] text-[#CC0000] bg-red-50' 
+                                                : 'text-gray-700'
+                                            }
+                                        `}
+                                    >
+                                        {industry.name}
+                                    </motion.button>
+                                    </Link>
+                                ))}
+                            </div>
+                        </motion.div>
+
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.6 }}
+                            className="pt-4"
+                        >
+                            <button className="bg-[#CC0000] text-white px-8 py-3 font-medium hover:bg-[#CC0000]/60 transition-colors">
+                                Next Question →
+                            </button>
+                        </motion.div>
+                    </div>
+
+                    {/* Right Image */}
+                    <motion.div 
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        className="w-full lg:w-1/2"
+                    >
+                        <div className="relative h-[400px] lg:h-[500px] w-full">
+                            <img
+                                src="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?w=1200&auto=format&fit=crop&q=80"
+                                alt="Business challenge visualization"
+                                className="w-full h-full object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+                        </div>
+                    </motion.div>
+                </div>
+            </div>
+        </section>
             {/* First Section */}
             <div className='bg-white min-h-screen lg:h-max py-16 lg:py-28'>
                 <div className='container mx-auto px-4 lg:px-10 flex flex-col lg:flex-row items-center gap-8 lg:gap-16'>
-                
-                <h1 className='font-bold text-3xl lg:text-5xl text-gray-800 block sm:hidden'>The Numbers That Drive the Future of Business.</h1>
-                    <img 
-                        src='https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE1fHxvZmZpY2UlMjBleHBsYWluYXRpb258ZW58MHwxfDB8fHww'
-                        alt="Office explanation"
-                        className='w-full lg:w-1/2 h-64 lg:h-[30rem] object-cover'
-                    />
                     <div className='w-full lg:w-1/2 space-y-12'>
-                        <div className='bg-gray-50 border p-4'>
-                            <h1 className='font-bold text-3xl lg:text-5xl text-gray-800 hidden sm:block'>The Numbers That Drive the Future of Business.</h1>
-                            <p className='text-gray-800 tracking-wider text-base lg:text-lg py-3'>From efficiency to innovation, discover why businesses that harness AI, automation, and data analytics are thriving in a competitive world.</p>
-                        </div>
 
                         <div className='bg-[#CC0000] h-[2px] w-[50%] relative left-0 right-0 m-auto'></div>
 
@@ -160,95 +243,6 @@ function CompAbout() {
                     </div>
                 </div>
             </div>
-
-            {/* Challenge Section */}
-            <section className="bg-white text-gray-800 py-16 border-t border-gray-100">
-            <div className="container mx-auto px-6 lg:px-12">
-                <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-20">
-                    {/* Left Content */}
-                    <div className="w-full lg:w-1/2 space-y-8">
-                        <div className="space-y-4">
-                            <motion.h1 
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6 }}
-                                className="text-3xl lg:text-4xl font-bold text-gray-900"
-                            >
-                                What's Your Business Challenge?
-                            </motion.h1>
-                            <motion.p 
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                                className="text-base md:text-lg text-gray-600 leading-relaxed"
-                            >
-                                Answer two questions and put our thinking to work on your unique business challenges.
-                            </motion.p>
-                        </div>
-
-                        <motion.div 
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            className="space-y-6"
-                        >
-                            <h2 className="text-xl font-semibold text-gray-800">
-                                What is your industry?
-                            </h2>
-                            <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
-                                {industries.map((industry) => (
-                                    <motion.button
-                                        key={industry.id}
-                                        onClick={() => setSelectedIndustry(industry.id)}
-                                        className={`
-                                            px-6 py-4 text-sm font-medium 
-                                            border border-gray-300
-                                            transition-all duration-200
-                                            hover:border-[#CC0000] hover:text-[#CC0000]
-                                            focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-opacity-50
-                                            ${selectedIndustry === industry.id 
-                                                ? 'border-[#CC0000] text-[#CC0000] bg-red-50' 
-                                                : 'text-gray-700'
-                                            }
-                                        `}
-                                    >
-                                        {industry.name}
-                                    </motion.button>
-                                ))}
-                            </div>
-                        </motion.div>
-
-                        <motion.div 
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.6 }}
-                            className="pt-4"
-                        >
-                            <button className="bg-[#CC0000] text-white px-8 py-3 font-medium hover:bg-[#CC0000]/60 transition-colors">
-                                Next Question →
-                            </button>
-                        </motion.div>
-                    </div>
-
-                    {/* Right Image */}
-                    <motion.div 
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="w-full lg:w-1/2"
-                    >
-                        <div className="relative h-[400px] lg:h-[500px] w-full">
-                            <img
-                                src="https://images.unsplash.com/photo-1523875194681-bedd468c58bf?w=1200&auto=format&fit=crop&q=80"
-                                alt="Business challenge visualization"
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
-                        </div>
-                    </motion.div>
-                </div>
-            </div>
-        </section>
         </div>
     )
 }

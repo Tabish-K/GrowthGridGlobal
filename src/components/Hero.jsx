@@ -100,7 +100,7 @@ const HeroSection = () => {
             {/* Main content section */}
             <motion.div 
                 variants={containerVariants}
-                className="hero-content max-w-screen-lg w-full mt-36 lg:mt-48"
+                className="hero-content px-6 sm:px-8 max-w-screen-lg w-full flex flex-col justify-center min-h-[90dvh]"
             >
                 <motion.h1 
                     key={activeService}
