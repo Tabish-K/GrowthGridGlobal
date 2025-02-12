@@ -546,132 +546,132 @@ guide users down the sales funnel.`
             }
         ]
     },
-    "website-and-app-development": {
-        "hero": {
-            "title": "Website and App Development: Building Future-Ready Digital Platforms",
-            "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
-        },
-        "research": {
-            "title": "Research and Market Insights",
-            "content": `In 2024, 94% of first impressions about a business are based on web design, and 88% of users are less likely to return to a website after a bad experience. With mobile devices accounting for over 60% of global web traffic, businesses without a responsive, user-friendly website risk losing substantial opportunities. Additionally, slow-loading websites cost retailers over $2.6 billion annually due to lost conversions.`,
-            "customerExpectations": [
-                `Speed: Users expect websites to load in under 2 seconds; every additional second reduces conversion rates by 7%.`,
-                `Personalization: 70% of customers expect personalized interactions, which lead to a 20% increase in sales.`,
-                `Seamlessness: Frictionless navigation, clear call-to-actions, and intuitive interfaces drive engagement.`
-            ],
-            "businessImplications": `To thrive in the digital age, companies must adopt AI-driven technologies and cutting-edge frameworks to build digital experiences that not only meet but exceed user expectations.`
-        },
-        "advantage": {
-            "title": "Growth Grid’s AI-Powered Advantage",
-            "description": `At Growth Grid, we combine data-driven research with advanced AI technologies to deliver websites and apps designed for performance, engagement, and scalability.`,
-            "aiTools": [
-                {
-                    "title": "Dynamic Personalization",
-                    "description": `Tools like Dynamic Yield and Adobe Target deliver personalized user journeys in real-time, adapting layouts and content based on user behavior and preferences.`
-                },
-                {
-                    "title": "Performance Optimization",
-                    "description": `AI tools like Google Lighthouse and NitroPack continuously monitor and optimize load times, ensuring peak performance.`
-                },
-                {
-                    "title": "Predictive Design Insights",
-                    "description": `Use Hotjar and Crazy Egg to analyze heatmaps and session recordings, predicting and resolving pain points in the user journey.`
-                },
-                {
-                    "title": "Chatbot Integration",
-                    "description": `Deploy AI chatbots using Dialogflow or Zendesk AI to provide instant support, boosting customer satisfaction.`
-                },
-                {
-                    "title": "SEO Automation",
-                    "description": `Tools like Surfer SEO and Semrush optimize content structure and keywords to improve rankings and visibility.`
-                }
-            ],
-            "usp": [
-                `Data-Driven Foundations: Before development, we perform a comprehensive audit of your competitors, target audience, and industry trends.`,
-                `AI-Enhanced Development: Our use of machine learning algorithms ensures predictive personalization and dynamic content delivery.`,
-                `Full-Service Offering: From ideation to deployment, we provide end-to-end solutions, including testing, security, and post-launch optimization.`
-            ]
-        },
-        "process": {
-            "title": "What to Expect",
-            "phases": [
-                {
-                    "title": "Discovery Phase",
-                    "steps": [
-                        `Research and Competitor Analysis: Identify gaps in your competitors' platforms using tools like SEMrush Competitive Analysis.`,
-                        `Survey your target audience to understand pain points and expectations for your platform.`,
-                        `Customer Journey Mapping: Visualize every interaction a user will have with your website or app to ensure a seamless experience.`,
-                        `Wireframing and Prototyping: Create interactive wireframes using Figma, enabling stakeholders to visualize and refine the design before development begins.`
-                    ]
-                },
-                {
-                    "title": "Development Phase",
-                    "steps": [
-                        `Scalable and Responsive Architecture: Build platforms using modern frameworks like React.js, Next.js, and Flutter to ensure compatibility across all devices.`,
-                        `AI-Driven Customization: Implement dynamic elements like personalized homepages and product recommendations using Dynamic Yield.`,
-                        `Fast and Secure Infrastructure: Optimize load times with CDNs (Content Delivery Networks) and ensure data protection with SSL encryption and compliance with GDPR or HIPAA regulations.`
-                    ]
-                },
-                {
-                    "title": "Deployment and Post-Launch Optimization",
-                    "steps": [
-                        `Performance Monitoring: AI-powered analytics dashboards track KPIs like bounce rates, load times, and user interactions in real time.`,
-                        `Continuous Improvements: Use A/B testing to refine design elements and functionality based on user feedback.`,
-                        `AI-Based Customer Support: Chatbots provide 24/7 assistance to users, reducing drop-offs during critical moments like checkout or inquiries.`
-                    ]
-                }
-            ]
-        },
-        "results": {
-            "title": "Impact: How We Deliver Results",
-            "items": [
-                {
-                    "title": "Improved First Impressions",
-                    "description": `How We Achieve It: Using advanced UI/UX design principles and AI personalization, we create visually stunning platforms that resonate with users. Research shows that 75% of users form opinions about a business’s credibility based on its website design.`
-                },
-                {
-                    "title": "Higher Engagement Rates",
-                    "description": `How We Achieve It: By integrating dynamic content delivery, we keep users engaged and moving through the sales funnel. For example, personalized product recommendations can increase average order value by 20%.`
-                },
-                {
-                    "title": "Reduced Bounce Rates",
-                    "description": `How We Achieve It: Optimized load times (under 2 seconds) and intuitive navigation reduce bounce rates by up to 50%.`
-                },
-                {
-                    "title": "Enhanced Mobile Experience",
-                    "description": `How We Achieve It: Mobile-first frameworks and responsive designs ensure seamless usability across all devices, catering to the 60% of users accessing platforms via mobile.`
-                },
-                {
-                    "title": "Revenue Growth",
-                    "description": `How We Achieve It: A combination of AI-powered personalization, dynamic pricing models, and optimized navigation increases conversions by an average of 25%.`
-                }
-            ]
-        },
-        "team": {
-            "title": "Our Team",
-            "description": `Growth Grid’s team of UX/UI designers, AI engineers, and software developers is dedicated to delivering high-quality, tailored solutions. Each team member brings expertise in cutting-edge technologies like React.js, Python, and AI-based analytics tools.`
-        },
-        "insights": {
-            "title": "Insights from Our Work",
-            "examples": [
-                `A client in the retail sector saw a 40% increase in conversions after implementing AI-based product recommendations and an optimized checkout process.`,
-                `Our e-commerce app development for a mid-sized brand resulted in 70% of total sales coming through the app within six months of launch.`,
-                `Websites we redesigned load 40% faster, reducing bounce rates by 35% and increasing average session duration by 25%.`
-            ]
-        },
-        "relatedServices": [
-            {
-                "title": "E-Commerce Optimization",
-                "description": "Enhance your e-commerce platform with tailored AI solutions to maximize conversions.",
-                "slug": "e-commerce-optimization"
-            },
-            {
-                "title": "AI Integration",
-                "description": "Implement tools like chatbots and predictive analytics to enhance user experience and business intelligence.",
-                "slug": "ai-integration"
-            }
-        ]
-    },
+    // "website-and-app-development": {
+    //     "hero": {
+    //         "title": "Website and App Development: Building Future-Ready Digital Platforms",
+    //         "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+    //     },
+    //     "research": {
+    //         "title": "Research and Market Insights",
+    //         "content": `In 2024, 94% of first impressions about a business are based on web design, and 88% of users are less likely to return to a website after a bad experience. With mobile devices accounting for over 60% of global web traffic, businesses without a responsive, user-friendly website risk losing substantial opportunities. Additionally, slow-loading websites cost retailers over $2.6 billion annually due to lost conversions.`,
+    //         "customerExpectations": [
+    //             `Speed: Users expect websites to load in under 2 seconds; every additional second reduces conversion rates by 7%.`,
+    //             `Personalization: 70% of customers expect personalized interactions, which lead to a 20% increase in sales.`,
+    //             `Seamlessness: Frictionless navigation, clear call-to-actions, and intuitive interfaces drive engagement.`
+    //         ],
+    //         "businessImplications": `To thrive in the digital age, companies must adopt AI-driven technologies and cutting-edge frameworks to build digital experiences that not only meet but exceed user expectations.`
+    //     },
+    //     "advantage": {
+    //         "title": "Growth Grid’s AI-Powered Advantage",
+    //         "description": `At Growth Grid, we combine data-driven research with advanced AI technologies to deliver websites and apps designed for performance, engagement, and scalability.`,
+    //         "aiTools": [
+    //             {
+    //                 "title": "Dynamic Personalization",
+    //                 "description": `Tools like Dynamic Yield and Adobe Target deliver personalized user journeys in real-time, adapting layouts and content based on user behavior and preferences.`
+    //             },
+    //             {
+    //                 "title": "Performance Optimization",
+    //                 "description": `AI tools like Google Lighthouse and NitroPack continuously monitor and optimize load times, ensuring peak performance.`
+    //             },
+    //             {
+    //                 "title": "Predictive Design Insights",
+    //                 "description": `Use Hotjar and Crazy Egg to analyze heatmaps and session recordings, predicting and resolving pain points in the user journey.`
+    //             },
+    //             {
+    //                 "title": "Chatbot Integration",
+    //                 "description": `Deploy AI chatbots using Dialogflow or Zendesk AI to provide instant support, boosting customer satisfaction.`
+    //             },
+    //             {
+    //                 "title": "SEO Automation",
+    //                 "description": `Tools like Surfer SEO and Semrush optimize content structure and keywords to improve rankings and visibility.`
+    //             }
+    //         ],
+    //         "usp": [
+    //             `Data-Driven Foundations: Before development, we perform a comprehensive audit of your competitors, target audience, and industry trends.`,
+    //             `AI-Enhanced Development: Our use of machine learning algorithms ensures predictive personalization and dynamic content delivery.`,
+    //             `Full-Service Offering: From ideation to deployment, we provide end-to-end solutions, including testing, security, and post-launch optimization.`
+    //         ]
+    //     },
+    //     "process": {
+    //         "title": "What to Expect",
+    //         "phases": [
+    //             {
+    //                 "title": "Discovery Phase",
+    //                 "steps": [
+    //                     `Research and Competitor Analysis: Identify gaps in your competitors' platforms using tools like SEMrush Competitive Analysis.`,
+    //                     `Survey your target audience to understand pain points and expectations for your platform.`,
+    //                     `Customer Journey Mapping: Visualize every interaction a user will have with your website or app to ensure a seamless experience.`,
+    //                     `Wireframing and Prototyping: Create interactive wireframes using Figma, enabling stakeholders to visualize and refine the design before development begins.`
+    //                 ]
+    //             },
+    //             {
+    //                 "title": "Development Phase",
+    //                 "steps": [
+    //                     `Scalable and Responsive Architecture: Build platforms using modern frameworks like React.js, Next.js, and Flutter to ensure compatibility across all devices.`,
+    //                     `AI-Driven Customization: Implement dynamic elements like personalized homepages and product recommendations using Dynamic Yield.`,
+    //                     `Fast and Secure Infrastructure: Optimize load times with CDNs (Content Delivery Networks) and ensure data protection with SSL encryption and compliance with GDPR or HIPAA regulations.`
+    //                 ]
+    //             },
+    //             {
+    //                 "title": "Deployment and Post-Launch Optimization",
+    //                 "steps": [
+    //                     `Performance Monitoring: AI-powered analytics dashboards track KPIs like bounce rates, load times, and user interactions in real time.`,
+    //                     `Continuous Improvements: Use A/B testing to refine design elements and functionality based on user feedback.`,
+    //                     `AI-Based Customer Support: Chatbots provide 24/7 assistance to users, reducing drop-offs during critical moments like checkout or inquiries.`
+    //                 ]
+    //             }
+    //         ]
+    //     },
+    //     "results": {
+    //         "title": "Impact: How We Deliver Results",
+    //         "items": [
+    //             {
+    //                 "title": "Improved First Impressions",
+    //                 "description": `How We Achieve It: Using advanced UI/UX design principles and AI personalization, we create visually stunning platforms that resonate with users. Research shows that 75% of users form opinions about a business’s credibility based on its website design.`
+    //             },
+    //             {
+    //                 "title": "Higher Engagement Rates",
+    //                 "description": `How We Achieve It: By integrating dynamic content delivery, we keep users engaged and moving through the sales funnel. For example, personalized product recommendations can increase average order value by 20%.`
+    //             },
+    //             {
+    //                 "title": "Reduced Bounce Rates",
+    //                 "description": `How We Achieve It: Optimized load times (under 2 seconds) and intuitive navigation reduce bounce rates by up to 50%.`
+    //             },
+    //             {
+    //                 "title": "Enhanced Mobile Experience",
+    //                 "description": `How We Achieve It: Mobile-first frameworks and responsive designs ensure seamless usability across all devices, catering to the 60% of users accessing platforms via mobile.`
+    //             },
+    //             {
+    //                 "title": "Revenue Growth",
+    //                 "description": `How We Achieve It: A combination of AI-powered personalization, dynamic pricing models, and optimized navigation increases conversions by an average of 25%.`
+    //             }
+    //         ]
+    //     },
+    //     "team": {
+    //         "title": "Our Team",
+    //         "description": `Growth Grid’s team of UX/UI designers, AI engineers, and software developers is dedicated to delivering high-quality, tailored solutions. Each team member brings expertise in cutting-edge technologies like React.js, Python, and AI-based analytics tools.`
+    //     },
+    //     "insights": {
+    //         "title": "Insights from Our Work",
+    //         "examples": [
+    //             `A client in the retail sector saw a 40% increase in conversions after implementing AI-based product recommendations and an optimized checkout process.`,
+    //             `Our e-commerce app development for a mid-sized brand resulted in 70% of total sales coming through the app within six months of launch.`,
+    //             `Websites we redesigned load 40% faster, reducing bounce rates by 35% and increasing average session duration by 25%.`
+    //         ]
+    //     },
+    //     "relatedServices": [
+    //         {
+    //             "title": "E-Commerce Optimization",
+    //             "description": "Enhance your e-commerce platform with tailored AI solutions to maximize conversions.",
+    //             "slug": "e-commerce-optimization"
+    //         },
+    //         {
+    //             "title": "AI Integration",
+    //             "description": "Implement tools like chatbots and predictive analytics to enhance user experience and business intelligence.",
+    //             "slug": "ai-integration"
+    //         }
+    //     ]
+    // },
     "e-commerce-optimization": {
         "hero": {
             "title": "E-Commerce Optimization: Supercharging Online Sales",
