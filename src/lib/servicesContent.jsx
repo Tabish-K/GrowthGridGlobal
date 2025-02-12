@@ -16,6 +16,10 @@ export const services = [
         slug: `market-research`
     },
     {
+        title: `Engagement with AI`,
+        slug: `engagement-with-ai`
+    },
+    {
         title: `Website and App Development`,
         slug: `website-and-app-development`
     },
@@ -35,10 +39,10 @@ export const services = [
         title: `Data and Cloud Solutions`,
         slug: `data-and-cloud-solutions`
     },
-    {
-        title: `Custom Tech Solutions`,
-        slug: `custom-tech-solutions`
-    }
+    // {
+    //     title: `Custom Tech Solutions`,
+    //     slug: `custom-tech-solutions`
+    // }
 ];
 
 export const serviceContent = {
@@ -789,76 +793,62 @@ guide users down the sales funnel.`
         },
         "research": {
             "title": "Research and Market Insights",
-            "content": `Workflow automation is revolutionizing how businesses operate, with companies reporting up to
-a 50% increase in operational efficiency through automated processes (McKinsey). By
-eliminating manual, repetitive tasks, workflow automation enhances accuracy and saves time.
-The global workflow automation market is projected to grow from $9.8 billion in 2023 to $26
-billion by 2030, driven by increasing adoption of AI and machine learning technologies.`,
+            "content": `Workflow automation is revolutionizing how businesses operate, with companies reporting up to a 50% increase in operational efficiency through automated processes (McKinsey). By eliminating manual, repetitive tasks, workflow automation enhances accuracy and saves time. The global workflow automation market is projected to grow from $9.8 billion in 2023 to $26 billion by 2030, driven by increasing adoption of AI and machine learning technologies.`,
             "keyChallenges": [
-                `Time-Consuming Processes: Manual workflows lead to bottlenecks, reducing team
-efficiency.`,
-                `Error-Prone Tasks: Repetitive tasks are prone to human error, affecting operational
-reliability.`,
+                `Time-Consuming Processes: Manual workflows lead to bottlenecks, reducing team efficiency.`,
+                `Error-Prone Tasks: Repetitive tasks are prone to human error, affecting operational reliability.`,
                 `Scalability Issues: Growing businesses struggle to scale manual processes efficiently.`
             ]
         },
         "advantage": {
             "title": "Growth Grid’s AI-Powered Advantage",
-            "description": `We implement AI-driven workflow automation solutions to help businesses achieve seamless
-operations. By identifying inefficiencies and automating processes, we enable your organization
-to scale with agility and accuracy.`,
+            "description": `We implement AI-driven workflow automation solutions to help businesses achieve seamless operations. By identifying inefficiencies and automating processes, we enable your organization to scale with agility and accuracy.`,
             "aiTools": [
                 {
                     "title": "Automation Platforms",
-                    "description": `Tools like UiPath, Zapier, and Microsoft Power Automate
-streamline task execution and system integration.`
+                    "description": `Tools like UiPath, Zapier, and Microsoft Power Automate streamline task execution and system integration.`
                 },
                 {
-                    "title": "Process Mining:",
-                    "description": `Platforms like Celonis identify bottlenecks and inefficiencies in
-workflows.`
+                    "title": "Process Mining",
+                    "description": `Platforms like Celonis identify bottlenecks and inefficiencies in workflows.`
                 },
                 {
                     "title": "Predictive Workflow Optimization",
-                    "description": `Use IBM Watson and Google AI to anticipate
-workload peaks and allocate resources proactively.`
+                    "description": `Use IBM Watson and Google AI to anticipate workload peaks and allocate resources proactively.`
                 },
                 {
                     "title": "Data Integration",
-                    "description": `APIs like Workato seamlessly connect disparate systems for
-unified workflows.`
+                    "description": `APIs like Workato seamlessly connect disparate systems for unified workflows.`
                 }
             ],
             "approach": [
-                `Workflow Mapping: Use AI-powered tools to analyze and optimize current
-processes.`,
-                `Customized Automation: Develop workflows tailored to your business needs,
-from invoice approvals to inventory tracking.`,
-                `Real-Time Monitoring: Implement dashboards to track task progress and identify
-issues before they escalate.`
+                `Workflow Mapping: Use AI-powered tools to analyze and optimize current processes.`,
+                `Customized Automation: Develop workflows tailored to your business needs, from invoice approvals to inventory tracking.`,
+                `Real-Time Monitoring: Implement dashboards to track task progress and identify issues before they escalate.`
             ]
         },
         "process": {
             "title": "What to Expect",
             "phases": [
                 {
-                    "title": "Audit and Redesign",
+                    "title": "Assessment and Design",
                     "steps": [
-                        `Perform a comprehensive review of your platform using Hotjar heatmaps and session recordings.`,
-                        `Redesign navigation, product pages, and checkout flows to reduce friction.`
+                        `Conduct an in-depth audit of existing workflows using Celonis Process Mining.`,
+                        `Identify high-impact areas for automation, such as repetitive data entry or report generation.`
                     ]
                 },
                 {
-                    "title": "AI Integration",
+                    "title": "Automation Implementation",
                     "steps": [
-                        `Add dynamic content that adapts to user preferences in real time.`,
-                        `Use predictive analytics to automate restocking and offer tailored promotions.`
+                        `Develop workflows using tools like UiPath to automate key processes.`,
+                        `Integrate systems like CRMs, ERPs, and collaboration tools (e.g., Slack) for seamless data exchange.`
                     ]
                 },
                 {
-                    "title": "Campaign Optimization",
+                    "title": "Monitoring and Optimization",
                     "steps": [
-                        `Create targeted email and ad campaigns based on user behavior and purchasing history.`
+                        `Provide real-time tracking dashboards built with Power BI to measure automation ROI.`,
+                        `Use machine learning to refine workflows based on performance data.`
                     ]
                 }
             ]
@@ -867,47 +857,371 @@ issues before they escalate.`
             "title": "Impact: How We Deliver Results",
             "items": [
                 {
-                    "title": "Higher Conversion Rates",
-                    "description": `How We Achieve It: Personalized product recommendations and dynamic pricing increase conversions by 20%.`
+                    "title": "Time Savings",
+                    "description": `How We Achieve It: Automate repetitive tasks to free up 20–30% of employee time for strategic work.`
                 },
                 {
-                    "title": "Increased Average Order Value",
-                    "description": `How We Achieve It: Cross-selling and upselling techniques powered by AI boost order values by 25%.`
+                    "title": "Error Reduction",
+                    "description": `How We Achieve It: Automating workflows ensures consistency, reducing errors by 90%.`
                 },
                 {
-                    "title": "Improved Customer Retention",
-                    "description": `How We Achieve It: Loyalty programs and personalized marketing campaigns increase repeat purchases by 40%.`
+                    "title": "Cost Efficiency",
+                    "description": `How We Achieve It: Streamlined processes cut operational costs by up to 25%.`
                 }
             ]
         },
         "caseStudy": {
-            "title": "Case Study: Scaling Online Sales for a Niche Fashion Brand",
-            "problem": "A boutique e-commerce retailer faced high cart abandonment rates and low repeat customer engagement.",
+            "title": "Case Study: Streamlining HR Workflows for a Tech Firm",
+            "problem": "A tech company with 1,000+ employees struggled with manual HR processes like onboarding and payroll, leading to delays and errors.",
             "solution": [
-                `Redesigned the website for mobile-first responsiveness.`,
-                `Integrated Dynamic Yield to offer personalized product suggestions.`,
-                `Used Klaviyo for retargeting campaigns targeting cart abandoners.`
+                `Automated onboarding workflows using Microsoft Power Automate.`,
+                `Developed a self-service portal where employees could request leave, update profiles, and view payroll details.`,
+                `Integrated tools like Slack and BambooHR for seamless communication.`
             ],
             "results": [
-                `Reduced cart abandonment rates by 35%.`,
-                `Increased monthly revenue by 50%.`,
-                `Achieved a 40% uplift in returning customer purchases.`
+                `HR team saved 20 hours weekly by automating repetitive tasks.`,
+                `Payroll errors decreased by 90%, improving employee satisfaction.`,
+                `Reduced HR operational costs by $100,000 annually.`
             ]
         },
         "relatedServices": [
             {
-                "title": "Website and App Development",
-                "description": "Build responsive and fast-loading e-commerce platforms.",
-                "slug": "website-and-app-development"
+                "title": "AI Integration",
+                "description": "Enhance workflows with intelligent tools for predictive resource allocation.",
+                "slug": "ai-integration"
             },
             {
-                "title": "Paid Advertising",
-                "description": "Drive traffic with hyper-targeted ad campaigns across platforms.",
-                "slug": "paid-advertising"
+                "title": "Custom Tech Solutions",
+                "description": "Build bespoke platforms tailored to your unique workflow needs.",
+                "slug": "custom-tech-solutions"
             }
         ]
     },
-
-
+    "predictive-analytics": {
+    "hero": {
+        "title": "AI-Driven Predictive Analytics for Workflow Optimization",
+        "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+    },
+    "research": {
+        "title": "Research and Market Insights",
+        "content": "The hybrid approach of predictive analytics and workflow automation is a game-changer. By integrating AI to forecast inefficiencies, businesses can proactively address bottlenecks and optimize resource allocation. Gartner reports that 45% of companies now use AI to enhance workflows, leading to an average ROI boost of 22%.",
+        "keyChallenges": [
+            "Unpredictable Workload Peaks: Inability to forecast demand leads to resource mismanagement.",
+            "Inefficient Resource Allocation: Teams are often overburdened or underutilized.",
+            "Delayed Issue Resolution: Businesses lack the tools to anticipate and address process bottlenecks in real time."
+        ]
+    },
+    "advantage": {
+        "title": "Growth Grid's AI-Powered Advantage",
+        "description": "We take workflow automation a step further by embedding predictive analytics into your systems, enabling smarter, data-driven operations.",
+        "aiTools": [
+            {
+                "title": "Predictive Analytics Platforms",
+                "description": "AWS SageMaker and Azure AI for forecasting workload trends."
+            },
+            {
+                "title": "Real-Time Monitoring",
+                "description": "Dashboards from Power BI and Tableau visualize bottlenecks and inefficiencies."
+            },
+            {
+                "title": "Automation Integration",
+                "description": "Use UiPath and Zapier to automate predictive insights into workflows."
+            }
+        ],
+        "approach": [
+            "Forecasting Models: Build machine learning models to predict workload spikes, resource shortages, and potential delays.",
+            "Actionable Insights: Use predictive insights to adjust task priorities and resource allocation dynamically.",
+            "Integrated Dashboards: Provide real-time visibility into workflows, enabling proactive issue resolution."
+        ]
+    },
+    "process": {
+        "title": "What to Expect",
+        "phases": [
+            {
+                "title": "Data Collection and Model Training",
+                "steps": [
+                    "Gather historical workflow data, including task completion rates, delays, and workload trends.",
+                    "Train machine learning models using tools like TensorFlow to identify patterns and predict inefficiencies."
+                ]
+            },
+            {
+                "title": "Integration and Execution",
+                "steps": [
+                    "Embed predictive models into workflow systems like CRMs and ERPs.",
+                    "Automate alerts for upcoming bottlenecks or workload imbalances."
+                ]
+            },
+            {
+                "title": "Optimization and Refinement",
+                "steps": [
+                    "Continuously monitor predictions and adjust models based on new data.",
+                    "Provide weekly performance reports with actionable recommendations."
+                ]
+            }
+        ]
+    },
+    "results": {
+        "title": "Impact: How We Deliver Results",
+        "items": [
+            {
+                "title": "Faster Issue Resolution",
+                "description": "How We Achieve It: Predictive alerts flag bottlenecks before they impact operations, reducing delays by 40%."
+            },
+            {
+                "title": "Optimized Resource Utilization",
+                "description": "How We Achieve It: Predicting workload peaks ensures resources are allocated where they're needed most, improving efficiency by 25%."
+            },
+            {
+                "title": "Proactive Decision-Making",
+                "description": "How We Achieve It: Real-time dashboards empower leaders to make data-backed decisions, improving agility."
+            }
+        ]
+    },
+    "caseStudy": {
+        "title": "Case Study: Predicting IT Support Volumes for a Managed Services Provider",
+        "problem": "A global IT services provider faced unpredictable support ticket volumes, leading to SLA breaches and dissatisfied clients.",
+        "solution": [
+            "Built a predictive model using AWS SageMaker to forecast ticket volumes based on historical data and external factors (e.g., holidays, outages).",
+            "Automated resource allocation in their ITSM system, ensuring adequate staffing during peak periods."
+        ],
+        "results": [
+            "Forecast accuracy improved to 92%.",
+            "SLA compliance rose from 80% to 98%.",
+            "Reduced overtime costs by 20% through better shift planning."
+        ]
+    },
+    "relatedServices": [
+        {
+            "title": "Workflow Automation",
+            "description": "Enhance predictive insights with automated task execution.",
+            "slug": "workflow-automation"
+        },
+        {
+            "title": "Market Research",
+            "description": "Combine predictive analytics with market trends for strategic growth.",
+            "slug": "market-research"
+        }
+    ]
+    },
+    "data-and-cloud-solutions": {
+        "hero": {
+        "title": "Data and Cloud Solutions: Unlocking the Power of Data and Scalability",
+        "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+    },
+    "research": {
+        "title": "Research and Market Insights",
+        "content": "As businesses generate and store vast amounts of data, cloud adoption and data management have become critical for scalability and decision-making. The global cloud computing market is projected to grow to $1 trillion by 2028 (Gartner, 2024), while organizations leveraging cloud data analytics report a 35% faster time to market for new products. However, 60% of companies struggle to integrate cloud technologies due to a lack of expertise and clear strategies.",
+        "keyChallenges": [
+            "Data Silos: Disconnected systems prevent businesses from deriving actionable insights.",
+            "Infrastructure Scalability: Legacy systems are expensive and fail to support growing data needs.",
+            "Security Concerns: Ensuring data protection in cloud environments remains a major challenge."
+        ]
+    },
+    "advantage": {
+        "title": "Growth Grid's AI-Powered Advantage",
+        "description": "At Growth Grid, we offer end-to-end cloud and data solutions that integrate AI for advanced analytics, scalability, and security. Whether migrating legacy systems to the cloud or building data lakes, we create infrastructure that empowers businesses to leverage their data effectively.",
+        "aiTools": [
+            {
+                "title": "Cloud Platforms",
+                "description": "Use leading providers like AWS, Microsoft Azure, and Google Cloud Platform for scalable cloud infrastructure."
+            },
+            {
+                "title": "Data Warehousing",
+                "description": "Tools like Snowflake and BigQuery enable centralized and efficient data storage."
+            },
+            {
+                "title": "AI Analytics",
+                "description": "Implement Tableau and Power BI for real-time data visualization."
+            },
+            {
+                "title": "Security and Compliance",
+                "description": "Use Palo Alto Prisma Cloud for proactive threat detection and compliance monitoring."
+            }
+        ],
+        "approach": [
+            "Cloud Migration Expertise: Seamlessly migrate legacy systems to secure, cost-effective cloud environments.",
+            "Data Integration and Management: Build data lakes that unify siloed data for advanced analytics.",
+            "AI-Enhanced Analytics: Enable predictive insights and automated reporting for better decision-making."
+        ]
+    },
+    "process": {
+        "title": "What to Expect",
+        "phases": [
+            {
+                "title": "Assessment and Planning",
+                "steps": [
+                    "Conduct a data maturity assessment to identify gaps and inefficiencies.",
+                    "Define a migration roadmap for transitioning on-premises systems to the cloud."
+                ]
+            },
+            {
+                "title": "Implementation",
+                "steps": [
+                    "Build and deploy scalable cloud infrastructure tailored to your business needs.",
+                    "Integrate AI tools for predictive analytics, anomaly detection, and automated reporting."
+                ]
+            },
+            {
+                "title": "Ongoing Optimization",
+                "steps": [
+                    "Refine data workflows and security protocols as the business evolves."
+                ]
+            }
+        ]
+    },
+    "results": {
+        "title": "Impact: How We Deliver Results",
+        "items": [
+            {
+                "title": "Enhanced Scalability",
+                "description": "How We Achieve It: Cloud-native architecture allows businesses to scale operations on demand, reducing downtime and infrastructure costs by 30%."
+            },
+            {
+                "title": "Improved Decision-Making",
+                "description": "How We Achieve It: Centralized data lakes integrated with AI analytics provide actionable insights, improving decision-making speed by 50%."
+            },
+            {
+                "title": "Cost Efficiency",
+                "description": "How We Achieve It: Optimized cloud usage saves up to 20% on operational expenses annually."
+            },
+            {
+                "title": "Stronger Security",
+                "description": "How We Achieve It: Proactive monitoring and compliance management ensure data is secure, reducing breach risks by 70%."
+            }
+        ]
+    },
+    "caseStudy": {
+        "title": "Case Study: Scaling Data Operations for a FinTech Firm",
+        "problem": "A FinTech client struggled with fragmented data systems, high operational costs, and compliance challenges in handling sensitive financial data.",
+        "solution": [
+            "Migrated all operations to AWS Cloud, building a centralized data lake for unified access.",
+            "Deployed Palo Alto Prisma Cloud for real-time threat detection and compliance reporting.",
+            "Integrated Power BI dashboards for advanced reporting and performance monitoring."
+        ],
+        "results": [
+            "Reduced data storage costs by 40%.",
+            "Achieved 99.99% uptime, enabling uninterrupted financial transactions.",
+            "Improved reporting speed by 60%, facilitating real-time decision-making."
+        ]
+    },
+    "relatedServices": [
+        {
+            "title": "Predictive Analytics",
+            "description": "Use centralized data for forward-looking insights.",
+            "slug": "predictive-analytics"
+        },
+        {
+            "title": "Custom Tech Solutions",
+            "description": "Build bespoke software that integrates seamlessly with cloud platforms.",
+            "slug": "custom-tech-solutions"
+        }
+    ]
+    },
+    "engagement-with-ai" : {
+        "hero": {
+        "title": "Chatbots: Transforming Customer Engagement with AI",
+        "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+    },
+    "research": {
+        "title": "Research and Market Insights",
+        "content": "Chatbots have redefined customer support, offering 24/7 accessibility and rapid response times. As of 2024, 67% of global customers used chatbots for support, and businesses that integrate AI-driven bots report savings of $8 billion annually (Juniper Research). Moreover, chatbots increase customer satisfaction by 64%, primarily due to their ability to resolve queries instantly.",
+        "keyChallenges": [
+            "Delayed response times lead to poor customer experiences and lost sales.",
+            "Manual handling of FAQs and routine queries overwhelms support teams.",
+            "Customers expect personalized assistance, but many businesses struggle to deliver it at scale."
+        ]
+    },
+    "advantage": {
+        "title": "Growth Grid's AI-Powered Advantage",
+        "description": "We specialize in developing AI-driven chatbots tailored to your business needs, combining natural language processing (NLP) and machine learning for conversational, human-like interactions.",
+        "aiTools": [
+            {
+                "title": "Chatbot Frameworks",
+                "description": "Platforms like Dialogflow and Microsoft Bot Framework for custom bot development."
+            },
+            {
+                "title": "NLP Engines",
+                "description": "OpenAI GPT models and Google Cloud Natural Language to process and understand customer queries."
+            },
+            {
+                "title": "Customer Data Insights",
+                "description": "Tools like HubSpot AI to personalize responses based on user history."
+            }
+        ],
+        "approach": [
+            "Conversational Design: Create flows that guide customers intuitively through FAQs, troubleshooting, and purchase decisions.",
+            "Multi-Channel Integration: Deploy chatbots across websites, mobile apps, and messaging platforms like WhatsApp and Facebook Messenger.",
+            "Continuous Improvement: Use machine learning to analyze interactions and improve bot performance over time."
+        ]
+    },
+    "process": {
+        "title": "What to Expect",
+        "phases": [
+            {
+                "title": "Discovery Phase",
+                "steps": [
+                    "Identify key customer pain points and high-volume query areas.",
+                    "Define bot objectives (e.g., lead generation, customer support, onboarding)."
+                ]
+            },
+            {
+                "title": "Development and Deployment",
+                "steps": [
+                    "Build conversational flows and train the chatbot using industry-specific datasets.",
+                    "Test bot functionality in multiple environments to ensure smooth user interactions."
+                ]
+            },
+            {
+                "title": "Post-Launch Monitoring",
+                "steps": [
+                    "Track bot performance metrics (response time, resolution rate) using Zendesk Analytics.",
+                    "Refine bot responses based on feedback and evolving customer behavior."
+                ]
+            }
+        ]
+    },
+    "results": {
+        "title": "Impact: How We Deliver Results",
+        "items": [
+            {
+                "title": "Improved Efficiency",
+                "description": "How We Achieve It: Automate 80% of routine queries, freeing up human agents to handle complex issues."
+            },
+            {
+                "title": "Cost Savings",
+                "description": "How We Achieve It: Reduce operational costs by up to 40% through chatbot automation."
+            },
+            {
+                "title": "Enhanced Customer Satisfaction",
+                "description": "How We Achieve It: Personalized, real-time support increases CSAT scores by 18%."
+            }
+        ]
+    },
+    "caseStudy": {
+        "title": "Case Study: Enhancing Customer Support for an E-Commerce Brand",
+        "problem": "A growing e-commerce platform faced high support ticket volumes, leading to delayed responses and dissatisfied customers.",
+        "solution": [
+            "Designed and implemented a chatbot using Dialogflow to handle FAQs, order tracking, and return requests.",
+            "Deployed the bot on the website, app, and Facebook Messenger for consistent support."
+        ],
+        "results": [
+            "Reduced response time from 10 minutes to 30 seconds.",
+            "Automated 80% of inquiries, lowering support costs by 40%.",
+            "Improved CSAT scores from 72% to 90%."
+        ]
+    },
+    "relatedServices": [
+        {
+            "title": "AI Integration",
+            "description": "Enhance chatbots with predictive analytics and personalized recommendations.",
+            "slug": "ai-integration"
+        },
+        {
+            "title": "Workflow Automation",
+            "description": "Automate ticket assignment and escalation processes.",
+            "slug": "workflow-automation"
+        }
+    ]
+    }
     // Add similar content structures for other services
 };
