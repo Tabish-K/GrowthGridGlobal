@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Building2, Users, Brain, Trophy, Heart } from 'lucide-react';
 
 const CareersPage = () => {
@@ -54,7 +53,7 @@ const CareersPage = () => {
       {/* Mission Statement */}
       <div className="bg-gray-50">
         <div className="container mx-auto px-4 py-16">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto">
             <p className="text-lg text-gray-700 leading-relaxed">
               At Growth Grid, we're not just building AI-powered solutions—we're reimagining the future of business. Our team of digital architects, data scientists, creative strategists, and technology enthusiasts is on a mission to empower businesses with breakthrough automation, predictive analytics, and transformative digital strategies.
             </p>
@@ -101,31 +100,40 @@ const CareersPage = () => {
       </div>
 
       {/* Open Positions */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Open Positions</h2>
-          <div className="max-w-4xl mx-auto space-y-4">
-            {openPositions.map((position, index) => (
-              <div key={index} className="p-6 bg-gray-50 rounded-lg border border-gray-200 flex justify-between items-center">
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{position.title}</h3>
-                  <div className="flex gap-4 text-sm text-gray-600">
-                    <span>{position.department}</span>
-                    <span>•</span>
-                    <span>{position.location}</span>
-                    <span>•</span>
-                    <span>{position.type}</span>
-                  </div>
+      <section className="py-8 md:py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">
+          Open Positions
+        </h2>
+        
+        <div className="max-w-4xl mx-auto space-y-4">
+          {openPositions.map((position, index) => (
+            <div 
+              key={index} 
+              className="p-4 md:p-6 bg-gray-50 rounded-lg border border-gray-200 flex flex-col md:flex-row justify-between md:items-center gap-4 md:gap-6"
+            >
+              <div className="space-y-2">
+                <h3 className="text-lg md:text-xl font-semibold">
+                  {position.title}
+                </h3>
+                <div className="flex flex-wrap gap-2 md:gap-4 text-sm text-gray-600">
+                  <span>{position.department}</span>
+                  <span className="hidden md:inline">•</span>
+                  <span>{position.location}</span>
+                  <span className="hidden md:inline">•</span>
+                  <span>{position.type}</span>
                 </div>
-                <button className="flex items-center gap-2 px-4 py-2 bg-[#CC0000] text-white rounded-lg hover:bg-red-700 transition-colors">
-                  Apply Now
-                  <ArrowRight className="w-4 h-4" />
-                </button>
               </div>
-            ))}
-          </div>
+              
+              <button className="flex items-center justify-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors w-full md:w-auto">
+                Apply Now
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
+          ))}
         </div>
       </div>
+    </section>
     </div>
   );
 };
