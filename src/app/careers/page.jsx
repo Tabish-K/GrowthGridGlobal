@@ -125,10 +125,10 @@ const CareersPage = () => {
                 </div>
               </div>
               
-              <button className="flex items-center justify-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors w-full md:w-auto">
+              {/* <button className="flex items-center justify-center gap-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors w-full md:w-auto">
                 Apply Now
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </button> */}
             </div>
           ))}
         </div>
