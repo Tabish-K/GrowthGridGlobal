@@ -274,16 +274,16 @@ function MoreAbout() {
                 </div>
                 <div className="flex flex-wrap justify-center gap-3 lg:gap-4 mt-8 lg:mt-10">
                     {[
-                        "Social Media Management",
-                        "Paid Advertising",
-                        "Content Creation",
-                        "Website and App Development",
-                        "E-Commerce Optimization",
-                        "Workflow Automation",
-                        "Predictive Analytics",
-                        "Data and Cloud Solutions",
-                        "Custom Tech Solutions",
-                        "Explore All Services",
+                        `Social Media Management`,
+                        `Paid Advertising`,
+                        `Content Creation`,
+                        `Website and App Development`,
+                        `E-Commerce Optimization`,
+                        `Workflow Automation`,
+                        `Predictive Analytics`,
+                        `Data and Cloud Solutions`,
+                        `Custom Tech Solutions`,
+                        `Explore All Services`,
                     ].map((service, index) => (
                         <button
                             key={index}
@@ -334,7 +334,7 @@ function MoreAbout() {
                                         A global technology company with over 10,000 employees and operations in 15 countries faced significant inefficiencies in its internal workflows, leading to delayed project timelines, mounting operational costs, and employee burnout.
                                     </p>
                                     <button className="text-[#CC0000] font-semibold text-xs sm:text-sm mt-2 lg:mt-4 hover:underline">
-                                        Know more
+                                        {`Know more`}
                                     </button>
                                 </div>
                             </div>
@@ -355,7 +355,7 @@ function MoreAbout() {
                                     A fast-growing e-commerce fashion retailer with an international customer base but stagnant growth due to a poorly optimized platform, high cart abandonment rates, and ineffective customer retention strategies.
                                     </p>
                                     <button className="text-[#CC0000] font-semibold text-xs sm:text-sm mt-2 lg:mt-4 hover:underline">
-                                        Know more
+                                        {`Know more`}
                                     </button>
                                 </div>
                             </div>

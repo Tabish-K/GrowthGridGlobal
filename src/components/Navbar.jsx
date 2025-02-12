@@ -17,57 +17,14 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // const topNavItems = [
-    //     { label: 'OFFICES', hasDropdown: true },
-    //     { label: 'ALUMNI', hasDropdown: false },
-    //     { label: 'MEDIA CENTER', hasDropdown: false },
-    //     { label: 'SUBSCRIBE', hasDropdown: false },
-    //     { label: 'CONTACT', hasDropdown: false }
-    // ];
-
     const mainNavItems = [
-        { label: 'Services', hasDropdown: true },
-        { label: 'About us', hasDropdown: true },
-        { label: 'Careers', hasDropdown: true }
+        { label: 'Services', hasDropdown: true, page: 'explore' },
+        { label: 'About us', hasDropdown: true, page: 'about' },
+        { label: 'Careers', hasDropdown: true, page: 'careers' }
     ];
 
     return (
         <div className="fixed w-full z-50">
-            {/* Top Navigation Bar */}
-            {/* <div className={`transition-all duration-300 border-b ${
-                hasScrolled ? 'bg-white' : 'bg-transparent'
-            }`}>
-                <div className="max-w-7xl mx-auto px-4 lg:px-8">
-                    <div className="hidden lg:flex items-center justify-between h-10">
-                        <div className="flex space-x-6 text-xs">
-                            {topNavItems.map((item) => (
-                                <div key={item.label} className="flex items-center">
-                                    <button className={`p-2 transition-colors ${
-                                        hasScrolled ? 'text-gray-900' : 'text-white'
-                                    }`}>
-                                        {item.label}
-                                    </button>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="flex items-center space-x-6 text-xs">
-                            <button className={`p-2 flex items-center gap-1 transition-colors ${
-                                hasScrolled ? 'text-gray-900' : 'text-white'
-                            }`}>
-                                <Globe size={14} />
-                                <span>GLOBAL | ENGLISH</span>
-                            </button>
-                            <button className={`p-2 flex items-center gap-1 transition-colors ${
-                                hasScrolled ? 'text-gray-900' : 'text-white'
-                            }`}>
-                                <BookmarkIcon size={14} />
-                                <span>SAVED ITEMS</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div> */}
-
             {/* Main Navigation */}
             <div className={`transition-all duration-300 ${
                 hasScrolled 
@@ -99,21 +56,21 @@ const Navbar = () => {
                         {/* Desktop Navigation */}
                         <div className="hidden lg:flex items-center space-x-8 ml-8">
                             {mainNavItems.map((item) => (
-                                <button
-                                    key={item.label}
-                                    className={`text-sm font-semibold tracking-wider flex items-center space-x-1 transition-colors ${
-                                        hasScrolled 
-                                        ? 'text-gray-900 hover:text-[#CC0000]' 
-                                        : 'text-white hover:text-gray-300'
-                                    }`}
-                                >
-                                    <span>{item.label}</span>
-                                    <ChevronDown size={20}/>
-                                </button>
+                                <Link href={`/${item.page}`} key={item.label}>
+                                    <button
+                                        className={`text-sm font-semibold tracking-wider flex items-center space-x-1 transition-colors ${
+                                            hasScrolled 
+                                            ? 'text-gray-900 hover:text-[#CC0000]' 
+                                            : 'text-white hover:text-gray-300'
+                                        }`}
+                                    >
+                                        <span>{item.label}</span>
+                                        <ChevronDown size={20}/>
+                                    </button>
+                                </Link>
                             ))}
                         </div>
                         </div>
-
 
                         {/* Right Section */}
                         <div className="flex items-center space-x-4">
@@ -163,49 +120,18 @@ const Navbar = () => {
                         <div className="flex flex-col h-full overflow-y-auto">
                             <div className="px-4 py-6 space-y-6">
                                 {mainNavItems.map((item) => (
-                                    <div key={item.label} className={`border-b ${
-                                        hasScrolled ? 'border-gray-200' : 'border-gray-700'
-                                    }`}>
-                                        <button className={`flex items-center justify-between w-full py-3 text-left text-gray-800`}>
-                                            <span className="text-lg font-medium">{item.label}</span>
-                                            {item.hasDropdown && <ChevronRight size={20} />}
-                                        </button>
-                                    </div>
+                                    <Link href={`/${item.page}`} key={item.label}>
+                                        <div className={`border-b ${
+                                            hasScrolled ? 'border-gray-200' : 'border-gray-700'
+                                        }`}>
+                                            <button className={`flex items-center justify-between w-full py-3 text-left text-gray-800`}>
+                                                <span className="text-lg font-medium">{item.label}</span>
+                                                {item.hasDropdown && <ChevronRight size={20} />}
+                                            </button>
+                                        </div>
+                                    </Link>
                                 ))}
                             </div>
-                            
-                            {/* <div className={`mt-auto px-4 py-6 space-y-4 ${
-                                hasScrolled ? 'bg-gray-50' : 'bg-gray-800'
-                            }`}>
-                                {topNavItems.map((item) => (
-                                    <button 
-                                        key={item.label}
-                                        className={`block w-full text-left text-sm py-2 ${
-                                            hasScrolled 
-                                            ? 'text-gray-600 hover:text-gray-900' 
-                                            : 'text-gray-300 hover:text-white'
-                                        }`}
-                                    >
-                                        {item.label}
-                                    </button>
-                                ))}
-                                <button className={`flex items-center space-x-2 text-sm py-2 ${
-                                    hasScrolled 
-                                    ? 'text-gray-600 hover:text-gray-900' 
-                                    : 'text-gray-300 hover:text-white'
-                                }`}>
-                                    <Globe size={16} />
-                                    <span>GLOBAL | ENGLISH</span>
-                                </button>
-                                <button className={`flex items-center space-x-2 text-sm py-2 ${
-                                    hasScrolled 
-                                    ? 'text-gray-600 hover:text-gray-900' 
-                                    : 'text-gray-300 hover:text-white'
-                                }`}>
-                                    <BookmarkIcon size={16} />
-                                    <span>SAVED ITEMS</span>
-                                </button>
-                            </div> */}
                         </div>
                         <button
                             onClick={() => setIsOpen(!isOpen)}
