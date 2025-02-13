@@ -17,10 +17,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Growth Grid | AI Automation Framework",
+  title: "Growth Grid ",
   description: "Growth Grid | Revenue Growth Engineers Powering business transformation through CRO expertise, AI automation and enterprise tech solutions",
   openGraph: {
-    title: "Growth Grid | AI Automation Framework",
+    title: "Growth Grid ",
     description: "Growth Grid | Revenue Growth Engineers Powering business transformation through CRO expertise, AI automation and enterprise tech solutions",
     url: "https://growthgrid.in",
     siteName: "Growth Grid",
@@ -36,7 +36,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Growth Grid | AI Automation Framework",
+    title: "Growth Grid ",
     description: "Growth Grid | Revenue Growth Engineers Powering business transformation through CRO expertise, AI automation and enterprise tech solutions",
     images: ["https://growthgrid.in/growth_grid_logo.jpg"], // Full absolute URL
   },
