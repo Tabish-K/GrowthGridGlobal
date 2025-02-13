@@ -49,7 +49,7 @@ export const serviceContent = {
     "social-media-management": {
         hero: {
             title: "Social Media Management: Creating Conversations that Convert",
-            backgroundImage: "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+            backgroundImage: "https://plus.unsplash.com/premium_photo-1681883455364-b8fc8c56b967?q=80&w=876&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         research: {
             title: "Research and Market Insights",
@@ -166,7 +166,7 @@ export const serviceContent = {
     "paid-advertising": {
         hero: {
             title: "Paid Advertising: Precision Targeting, Maximum ROI",
-            backgroundImage: "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+            backgroundImage: "https://images.unsplash.com/photo-1504221507732-5246c045949b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         research: {
             title: "Research and Market Insights",
@@ -289,7 +289,7 @@ purchases, improving conversion rates by up to 25%`
     "content-creation": {
         hero: {
             title: "Content Creation: The Foundation of Digital Success",
-            backgroundImage: "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+            backgroundImage: "https://images.unsplash.com/photo-1513151233558-d860c5398176?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         research: {
             title: "Research and Market Insights",
@@ -434,7 +434,7 @@ guide users down the sales funnel.`
     "market-research": {
         hero: {
             title: "Market Research: Driving Growth Through Data-Driven Decisions",
-            backgroundImage: "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+            backgroundImage: "https://images.unsplash.com/photo-1641355262431-021a396d4fe5?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         research: {
             title: "Research and Market Insights",
@@ -679,7 +679,7 @@ guide users down the sales funnel.`
     "e-commerce-optimization": {
         "hero": {
             "title": "E-Commerce Optimization: Supercharging Online Sales",
-            "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+            "backgroundImage": "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         "research": {
             "title": "Research and Market Insights",
@@ -789,7 +789,7 @@ guide users down the sales funnel.`
     "workflow-automation": {
         "hero": {
             "title": "Workflow Automation: Streamlining Efficiency, Amplifying Productivity",
-            "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+            "backgroundImage": "https://images.unsplash.com/photo-1636956026491-86a9da7001c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         },
         "research": {
             "title": "Research and Market Insights",
@@ -900,7 +900,7 @@ guide users down the sales funnel.`
     "predictive-analytics": {
     "hero": {
         "title": "AI-Driven Predictive Analytics for Workflow Optimization",
-        "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+        "backgroundImage": "https://images.unsplash.com/photo-1665652475985-37e285aeff53?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     "research": {
         "title": "Research and Market Insights",
@@ -1006,7 +1006,7 @@ guide users down the sales funnel.`
     "data-and-cloud-solutions": {
         "hero": {
         "title": "Data and Cloud Solutions: Unlocking the Power of Data and Scalability",
-        "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+        "backgroundImage": "https://images.unsplash.com/photo-1659040456574-8c10cadc1dd8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     "research": {
         "title": "Research and Market Insights",
@@ -1120,7 +1120,7 @@ guide users down the sales funnel.`
     "engagement-with-ai" : {
         "hero": {
         "title": "Chatbots: Transforming Customer Engagement with AI",
-        "backgroundImage": "https://images.unsplash.com/photo-1581508525333-5fe25ad324f7"
+        "backgroundImage": "https://images.unsplash.com/photo-1683141955477-af9f41a4935a?q=80&w=2021&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     "research": {
         "title": "Research and Market Insights",
