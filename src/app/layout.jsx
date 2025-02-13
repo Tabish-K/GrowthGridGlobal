@@ -17,30 +17,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Growth Grid",
-  description: "Growth-Grid-Ai",
+  title: "Growth Grid | AI Automation Framework",
+  description: "Growth Grid | Revenue Growth Engineers Powering business transformation through CRO expertise, AI automation and enterprise tech solutions",
   openGraph: {
-    title: "Growth Grid",
-    description: "Growth-Grid-Ai",
+    title: "Growth Grid | AI Automation Framework",
+    description: "Growth Grid | Revenue Growth Engineers Powering business transformation through CRO expertise, AI automation and enterprise tech solutions",
     url: "https://growthgrid.in",
     siteName: "Growth Grid",
     images: [
       {
-        url: "https://growthgrid.in/logo.jpg", // Full absolute URL
-        width: 1200,
-        height: 630,
-        alt: "Growth Grid Logo",
+        url: "https://growthgrid.in/growth_grid_logo.jpg", // Use a properly formatted image
+        width: 1200, // Standard size for WhatsApp preview
+        height: 630, // Standard height to avoid cropping
+        alt: "Growth Grid AI Automation",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Growth Grid",
-    description: "Growth-Grid-Ai",
-    images: ["https://growthgrid.in/logo.jpg"], // Full absolute URL
+    title: "Growth Grid | AI Automation Framework",
+    description: "Growth Grid | Revenue Growth Engineers Powering business transformation through CRO expertise, AI automation and enterprise tech solutions",
+    images: ["https://growthgrid.in/growth_grid_logo.jpg"], // Full absolute URL
   },
 };
+
 
 
 export default function RootLayout({ children }) {
