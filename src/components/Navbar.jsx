@@ -50,7 +50,7 @@ const Navbar = () => {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`p-2 transition-colors z-10 ${
+                            className={`p-2 z-10 ${
                                 hasScrolled ? 'text-gray-900' : 'text-white'
                             }`}
                         >
