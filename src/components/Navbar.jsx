@@ -33,7 +33,7 @@ const Navbar = () => {
     
     const mobileBottomSections = [
         { label: 'Explore', hasDropdown: true, page: 'explore' },
-        { label: 'Contact', hasDropdown: true, page: '#' },
+        { label: 'Contact', hasDropdown: true, page: 'contact' },
     ];
 
     return (
