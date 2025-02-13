@@ -79,7 +79,8 @@ const HeroSection = () => {
     };
 
     const currentContent = HERO_CONTENT[activeService];
-    const backgroundImage = 'https://plus.unsplash.com/premium_photo-1667354156049-664188e8d53d?q=80&w=1926&auto=format&fit=crop';
+    // const backgroundImage = 'https://plus.unsplash.com/premium_photo-1667354156049-664188e8d53d?q=80&w=1926&auto=format&fit=crop';
+    const backgroundImage = 'https://images.unsplash.com/photo-1542545486-b9c33cdd26a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
     return (
         <motion.div
