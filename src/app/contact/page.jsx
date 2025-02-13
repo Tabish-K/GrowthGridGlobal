@@ -69,7 +69,7 @@ const ContactPage = () => {
                     <div className="absolute transform -rotate-45 -left-1/4 -bottom-1/4 w-1/2 h-1/2 bg-white/20" />
                 </div>
                 
-                <div className="container mx-auto px-8 sm:px-12 relative z-10">
+                <div className="container mx-auto px-6 sm:px-12 relative z-10">
                     <motion.div 
                         initial={{ width: 0 }}
                         animate={{ width: "15%" }}
@@ -84,7 +84,7 @@ const ContactPage = () => {
             </motion.section>
 
             {/* Features Section */}
-            <div className="container mx-auto px-8 -mt-16 relative z-20">
+            <div className="container mx-auto px-6 sm:px-8 -mt-16 relative z-20">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {features.map((feature, index) => (
                         <motion.div
@@ -102,7 +102,7 @@ const ContactPage = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-8 py-20">
+            <div className="container mx-auto px-6 sm:px-8 py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Left Column - Contact Information */}
                     <motion.div 
@@ -163,7 +163,7 @@ const ContactPage = () => {
 
                     {/* Right Column - Contact Form */}
                     <motion.div 
-                        className="bg-white p-8 shadow-lg"
+                        className="bg-white p-6 sm:p-8 shadow-lg"
                         initial="hidden"
                         animate="visible"
                         variants={fadeIn}
