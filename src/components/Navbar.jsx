@@ -37,7 +37,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="fixed w-full z-50">
+        <div className="fixed w-full z-40">
             {/* Main Navigation */}
             <div className={`transition-all duration-300 ${
                 hasScrolled 
@@ -50,7 +50,7 @@ const Navbar = () => {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`p-2 z-10 ${
+                            className={`p-2 z-50 ${
                                 hasScrolled ? 'text-gray-900' : 'text-white'
                             }`}
                         >
@@ -128,7 +128,7 @@ const Navbar = () => {
                         animate={{ x: 0 }}
                         exit={{ x: '-100%' }}
                         transition={{ type: 'tween', duration: 0.3 }}
-                        className={`fixed z-20 inset-0 bg-white shadow-lg border-r-[8px] border-[#CC0000] w-[18rem] h-[38rem] rounded-br-2xl`}
+                        className={`fixed z-50 inset-0 bg-white shadow-lg border-r-[8px] border-[#CC0000] w-[18rem] h-[38rem] rounded-br-2xl`}
                         // style={{ top: '64px' }}
                     >
                         <div className='flex gap-4 relative px-4'>

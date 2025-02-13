@@ -42,11 +42,14 @@ export const metadata = {
   },
 };
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/webtoplogo.png" type="image/png" sizes="32x32" />
+        <link rel="icon" href="/webtoplogo.png" type="image/png" sizes="16x16" />
+        <link rel="apple-touch-icon" href="/webtoplogo.png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
