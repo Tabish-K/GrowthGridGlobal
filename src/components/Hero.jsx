@@ -142,10 +142,10 @@ const HeroSection = () => {
                 className="absolute inset-0 -z-20"
                 initial={{ scale: 1 }}
                 animate={{ 
-                    scale: [1, 1.1, 1],
+                    scale: [1, 1.08, 1],
                 }}
                 transition={{
-                    duration: 30,
+                    duration: 10,
                     repeat: Infinity,
                     repeatType: "reverse",
                     ease: "linear"
@@ -156,8 +156,8 @@ const HeroSection = () => {
                     backgroundPosition: 'center',
                 }}
             />
-            <div className="absolute top-0 inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/10 to-transparent" />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
+            <div className="absolute top-0 inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/20 to-transparent" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
 
             {/* Main content section */}
             <motion.div 
