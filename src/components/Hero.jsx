@@ -114,8 +114,8 @@ const HeroSection = () => {
     // const backgroundImage = 'https://images.unsplash.com/photo-1575041051612-323e644ca1b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
     // const backgroundImage = 'https://images.unsplash.com/photo-1569536013655-0c62cecf2618?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
     // const backgroundImage = 'https://images.unsplash.com/photo-1652212976544-f385a3b484f0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    // const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/23/00/22/the-background-293017_960_720.png';
-    const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/22/17/03/the-background-292729_1280.png';
+    const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/23/00/22/the-background-293017_960_720.png';
+    // const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/22/17/03/the-background-292729_1280.png';
     // const backgroundImage = '';
 
     return (
