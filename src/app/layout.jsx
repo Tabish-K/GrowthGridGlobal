@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Growth Grid ",
+  title: "Growth Grid Global",
   description: "Growth Grid | Revenue Growth Engineers Powering business transformation through CRO expertise, AI automation and enterprise tech solutions",
   openGraph: {
     title: "Growth Grid ",
