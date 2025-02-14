@@ -4,6 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from "next/link";
 import ScrollToTop from './ScrollToTop';
+import { ArrowRight } from 'lucide-react';
 
 const HERO_CONTENT = {
     "SRO": {
@@ -78,25 +79,85 @@ const HeroSection = () => {
         }
     };
 
+    const buttonVariants = {
+        initial: { 
+            scale: 1,
+            backgroundColor: 'transparent',
+            color: 'currentColor'
+            },
+            hover: { 
+            scale: 1.02,
+            backgroundColor: 'white',
+            color: 'black',
+            transition: { duration: 0.3 }
+            },
+            tap: { 
+            scale: 0.98 
+            }
+        };
+        
+        const arrowVariants = {
+            initial: { x: 0 },
+            hover: { 
+            x: 8,
+            transition: {
+                duration: 0.3,
+                ease: "easeInOut"
+            }
+        }
+    };
+
     const currentContent = HERO_CONTENT[activeService];
     // const backgroundImage = 'https://plus.unsplash.com/premium_photo-1667354156049-664188e8d53d?q=80&w=1926&auto=format&fit=crop';
-    const backgroundImage = 'https://images.unsplash.com/photo-1542545486-b9c33cdd26a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    // const backgroundImage = 'https://images.unsplash.com/photo-1542545486-b9c33cdd26a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    // const backgroundImage = 'https://plus.unsplash.com/premium_photo-1711418213820-4eb379d10614?q=80&w=1793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    // const backgroundImage = 'https://images.unsplash.com/photo-1575041051612-323e644ca1b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    // const backgroundImage = 'https://images.unsplash.com/photo-1569536013655-0c62cecf2618?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    // const backgroundImage = 'https://images.unsplash.com/photo-1652212976544-f385a3b484f0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
+    // const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/23/00/22/the-background-293017_960_720.png';
+    const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/22/17/03/the-background-292729_1280.png';
+    // const backgroundImage = '';
 
     return (
         <motion.div
             initial="hidden"
             animate="visible"
             variants={containerVariants}
-            className="bg-cover bg-center min-h-[100dvh] z-20 text-white relative flex flex-col justify-between w-full p-4 lg:p-8"
-            style={{
-                backgroundImage: `url('${backgroundImage}')`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                transition: 'background-image 0.5s ease-in-out'
-            }}
+            className="bg-cover bg-center overflow-hidden min-h-[100dvh] z-20 text-white relative flex flex-col justify-between w-full p-4 lg:p-8"
+            // style={{
+            //     backgroundImage: `url('${backgroundImage}')`,
+            //     backgroundSize: 'cover',
+            //     backgroundPosition: 'center',
+            //     // transition: 'background-image 0.5s ease-in-out'
+            // }}
+            // transition={{
+            //     duration: 20,
+            //     repeat: Infinity,
+            //     repeatType: "reverse",
+            //     ease: "linear"
+            // }}
         >
-            <div className="absolute top-0 inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/10 to-transparent" />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/60 via-black/50 to-transparent" />
+            {/* Animated Background */}
+            <motion.div
+                className="absolute inset-0 -z-20"
+                initial={{ scale: 1 }}
+                animate={{ 
+                    scale: [1, 1.1, 1],
+                }}
+                transition={{
+                    duration: 30,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "linear"
+                }}
+                style={{
+                    backgroundImage: `url('${backgroundImage}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
+            />
+            <div className="absolute top-0 inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/10 to-transparent" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
 
             {/* Main content section */}
             <motion.div 
@@ -108,7 +169,7 @@ const HeroSection = () => {
                     variants={itemVariants}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="hero-title text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6"
+                    className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-10 lg:mb-6"
                 >
                     {currentContent.title}
                 </motion.h1>
@@ -121,29 +182,34 @@ const HeroSection = () => {
                 >
                     {currentContent.description}
                 </motion.p>
-                <motion.div 
-                    variants={containerVariants}
-                    className="hero-cta flex flex-wrap gap-4"
-                >
-                        <motion.a 
-                            variants={itemVariants}
-                            href={"/contact"}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="px-4 py-2 lg:px-6 lg:py-4 hover:bg-white hover:text-black transition-colors"
+                <div className="flex flex-wrap gap-4">
+                    <motion.a
+                        href="/contact"
+                        variants={buttonVariants}
+                        initial="initial"
+                        whileHover="hover"
+                        whileTap="tap"
+                        className="px-4 py-2 lg:px-6 lg:py-4 border-2 border-white border-current"
+                    >
+                        Get a Free Consultation
+                    </motion.a>
+                    
+                    <motion.a
+                        href="/explore"
+                        variants={buttonVariants}
+                        initial="initial"
+                        whileHover="hover"
+                        whileTap="tap"
+                        className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-4"
+                    >
+                        <span>Explore Our Solutions</span>
+                        <motion.div
+                        variants={arrowVariants}
                         >
-                            Get a Free Consultation
-                        </motion.a>
-                        <motion.a 
-                            variants={itemVariants}
-                            href={"/explore"}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="border-2 px-4 py-2 lg:px-6 lg:py-4 hover:bg-white hover:text-black transition-colors"
-                        >
-                            Explore Our Solutions →
-                        </motion.a>
-                </motion.div>
+                        → 
+                        </motion.div>
+                    </motion.a>
+                </div>
             </motion.div>
 
             {/* Services section */}
@@ -151,7 +217,6 @@ const HeroSection = () => {
                 variants={itemVariants}
                 className="mt-8 lg:mt-0 absolute bottom-0 w-full left-0 right-0 px-4"
             >
-                {/* <h2 className="text-md lg:text-lg mb-3 px-2">Our services:</h2> */}
                 <div className="relative">
                     <motion.div
                         variants={containerVariants}

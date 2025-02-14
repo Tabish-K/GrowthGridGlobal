@@ -133,7 +133,7 @@ const ContactPage = () => {
                                 <MapPin className="w-6 h-6 text-[#CC0000] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-800">Visit Us</h3>
-                                    <p className="text-gray-600">D-12 Growth Grid<br />New Delhi, India</p>
+                                    <p className="text-gray-600">Gk2, New Delhi, India. 110048</p>
                                 </div>
                             </motion.div>
 
@@ -144,7 +144,8 @@ const ContactPage = () => {
                                 <Phone className="w-6 h-6 text-[#CC0000] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-800">Call Us</h3>
-                                    <p className="text-gray-600">+91 000-123-4567</p>
+                                    <p className="text-gray-600">+91 9990006274
+                                    </p>
                                 </div>
                             </motion.div>
 
@@ -155,7 +156,7 @@ const ContactPage = () => {
                                 <Mail className="w-6 h-6 text-[#CC0000] mt-1" />
                                 <div>
                                     <h3 className="font-semibold text-gray-800">Email Us</h3>
-                                    <p className="text-gray-600">contact@growthgrid.com</p>
+                                    <p className="text-gray-600">CEO@growthgrid.in</p>
                                 </div>
                             </motion.div>
                         </div>

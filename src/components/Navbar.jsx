@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { X, ChevronRight, Search, BookmarkIcon, Globe, Text, ChevronDown, AlignJustify, AlignLeft } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,24 +8,38 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [hasScrolled, setHasScrolled] = useState(false);
+    const navRef = useRef(null);
 
     useEffect(() => {
         const handleScroll = () => {
             setHasScrolled(window.scrollY > 20);
         };
+
+        const handleClickOutside = (event) => {
+            if (navRef.current && !navRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        document.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
     }, []);
 
     const mainNavItems = [
-        { label: 'Consulting Services', hasDropdown: true, page: 'explore' },
+        { label: 'Consulting Services', hasDropdown: true, page: 'contact' },
         { label: 'About us', hasDropdown: true, page: 'about' },
         { label: 'Careers', hasDropdown: true, page: 'careers' }
     ];
 
     const mobileNavSections = [
         { label: 'Industries', hasDropdown: true, page: '#' },
-        { label: 'Financial Services', hasDropdown: true, page: 'explore' },
+        { label: 'Services', hasDropdown: true, page: 'explore' },
+        { label: 'Consultation Services', hasDropdown: true, page: 'contact' },
         { label: 'Retail', hasDropdown: true, page: '#' },
         { label: 'Our Story', hasDropdown: true, page: 'about' },
         { label: 'Careers', hasDropdown: true, page: 'careers' },
@@ -36,8 +50,13 @@ const Navbar = () => {
         { label: 'Contact', hasDropdown: true, page: 'contact' },
     ];
 
+    // Handler for nav link clicks
+    const handleNavLinkClick = () => {
+        setIsOpen(false);
+    };
+
     return (
-        <div className="fixed w-full z-40">
+        <div className="fixed w-full z-40" ref={navRef}>
             {/* Main Navigation */}
             <div className={`transition-all duration-300 ${
                 hasScrolled 
@@ -58,7 +77,7 @@ const Navbar = () => {
                         </button>
 
                         {/* Logo */}
-                        <Link href="/" className="relative right-10">
+                        <Link href="/" className="relative right-10" onClick={handleNavLinkClick}>
                             {
                                 hasScrolled ?
                                 <img src='blackLogo.png' className='h-48'></img>
@@ -70,7 +89,7 @@ const Navbar = () => {
                         {/* Desktop Navigation */}
                         <div className="hidden lg:flex items-center space-x-8 ml-8">
                             {mainNavItems.map((item) => (
-                                <Link href={`/${item.page}`} key={item.label}>
+                                <Link href={`/${item.page}`} key={item.label} onClick={handleNavLinkClick}>
                                     <button
                                         className={`text-sm font-semibold tracking-wider flex items-center space-x-1 transition-colors ${
                                             hasScrolled 
@@ -97,6 +116,7 @@ const Navbar = () => {
                             </button>
                             <Link 
                                 href="/explore" 
+                                onClick={handleNavLinkClick}
                                 className={`hidden lg:block text-sm font-medium transition-colors ${
                                     hasScrolled 
                                     ? 'text-gray-900 hover:text-[#CC0000]' 
@@ -129,7 +149,6 @@ const Navbar = () => {
                         exit={{ x: '-100%' }}
                         transition={{ type: 'tween', duration: 0.3 }}
                         className={`fixed z-50 inset-0 bg-white shadow-lg border-r-[8px] border-[#CC0000] w-[18rem] h-[38rem] rounded-br-2xl`}
-                        // style={{ top: '64px' }}
                     >
                         <div className='flex gap-4 relative px-4'>
                             {/* Mobile Menu Button */}
@@ -141,14 +160,14 @@ const Navbar = () => {
                             </button>
 
                             {/* Logo */}
-                            <Link href="/" className="absolute top-[-60px]">
+                            <Link href="/" className="absolute top-[-60px]" onClick={handleNavLinkClick}>
                                 <img src='blackLogo.png' className='h-48'></img>
                             </Link>
                         </div>
                         <div className="flex flex-col h-full overflow-y-auto top-20 relative px-4">
                             <div className="py-6 space-y-6 border-b-2 border-gray-200">
                                 {mobileNavSections.map((item) => (
-                                    <Link href={`/${item.page}`} key={item.label}>
+                                    <Link href={`/${item.page}`} key={item.label} onClick={handleNavLinkClick}>
                                         <div className={``}>
                                             <button className={`flex items-center justify-between w-full py-3 text-left text-gray-800`}>
                                                 <span className="text-sm font-semibold">{item.label}</span>
@@ -162,7 +181,7 @@ const Navbar = () => {
                         <div className="absolute w-full bottom-20 px-4">
                             <div className="">
                                 {mobileBottomSections.map((item) => (
-                                    <Link href={`/${item.page}`} key={item.label}>
+                                    <Link href={`/${item.page}`} key={item.label} onClick={handleNavLinkClick}>
                                         <div className={``}>
                                             <button className={`flex items-center justify-between w-full py-3 text-left text-gray-800`}>
                                                 <span className="text-sm">{item.label}</span>
