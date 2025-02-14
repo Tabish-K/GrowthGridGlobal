@@ -33,6 +33,7 @@ const HeroSection = () => {
     const [activeService, setActiveService] = useState("SRO");
     const buttonLabels = Object.keys(HERO_CONTENT);
     const buttonRefs = useRef({});
+    const scrollContainerRef = useRef(null);
 
     // Auto-rotate content every 5 seconds
     useEffect(() => {
@@ -45,16 +46,20 @@ const HeroSection = () => {
         return () => clearInterval(interval);
     }, [activeService]);
 
-    // Auto-scroll to active button
-    // useEffect(() => {
-    //     if (buttonRefs.current[activeService]) {
-    //         buttonRefs.current[activeService].scrollIntoView({
-    //             behavior: "smooth",
-    //             inline: "center",
-    //             block: "nearest",
-    //         });
-    //     }
-    // }, [activeService]);
+    // Modified auto-scroll to contain scroll within button container
+    useEffect(() => {
+        if (buttonRefs.current[activeService] && scrollContainerRef.current) {
+            const container = scrollContainerRef.current;
+            const button = buttonRefs.current[activeService];
+            
+            const scrollLeft = button.offsetLeft - (container.clientWidth / 2) + (button.clientWidth / 2);
+            
+            container.scrollTo({
+                left: scrollLeft,
+                behavior: "smooth"
+            });
+        }
+    }, [activeService]);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -84,21 +89,21 @@ const HeroSection = () => {
             scale: 1,
             backgroundColor: 'transparent',
             color: 'currentColor'
-            },
-            hover: { 
+        },
+        hover: { 
             scale: 1.02,
             backgroundColor: 'white',
             color: 'black',
             transition: { duration: 0.3 }
-            },
-            tap: { 
+        },
+        tap: { 
             scale: 0.98 
-            }
-        };
+        }
+    };
         
-        const arrowVariants = {
-            initial: { x: 0 },
-            hover: { 
+    const arrowVariants = {
+        initial: { x: 0 },
+        hover: { 
             x: 8,
             transition: {
                 duration: 0.3,
@@ -109,14 +114,6 @@ const HeroSection = () => {
 
     const currentContent = HERO_CONTENT[activeService];
     const backgroundImage = 'https://plus.unsplash.com/premium_photo-1667354156049-664188e8d53d?q=80&w=1926&auto=format&fit=crop';
-    // const backgroundImage = 'https://images.unsplash.com/photo-1542545486-b9c33cdd26a4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    // const backgroundImage = 'https://plus.unsplash.com/premium_photo-1711418213820-4eb379d10614?q=80&w=1793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    // const backgroundImage = 'https://images.unsplash.com/photo-1575041051612-323e644ca1b8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    // const backgroundImage = 'https://images.unsplash.com/photo-1569536013655-0c62cecf2618?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    // const backgroundImage = 'https://images.unsplash.com/photo-1652212976544-f385a3b484f0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
-    // const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/23/00/22/the-background-293017_960_720.png';
-    // const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/22/17/03/the-background-292729_1280.png';
-    // const backgroundImage = '';
 
     return (
         <motion.div
@@ -124,18 +121,6 @@ const HeroSection = () => {
             animate="visible"
             variants={containerVariants}
             className="bg-cover bg-center overflow-hidden min-h-[100dvh] z-20 text-white relative flex flex-col justify-between w-full p-4 lg:p-8"
-            // style={{
-            //     backgroundImage: `url('${backgroundImage}')`,
-            //     backgroundSize: 'cover',
-            //     backgroundPosition: 'center',
-            //     // transition: 'background-image 0.5s ease-in-out'
-            // }}
-            // transition={{
-            //     duration: 20,
-            //     repeat: Infinity,
-            //     repeatType: "reverse",
-            //     ease: "linear"
-            // }}
         >
             {/* Animated Background */}
             <motion.div
@@ -156,8 +141,8 @@ const HeroSection = () => {
                     backgroundPosition: 'center',
                 }}
             />
-            <div className="absolute top-0 inset-0 -z-10 bg-gradient-to-b from-black/30 via-black/20 to-transparent" />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+            <div className="absolute top-0 inset-0 -z-10 bg-gradient-to-b from-black/20 via-black/10 to-transparent" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
 
             {/* Main content section */}
             <motion.div 
@@ -203,10 +188,8 @@ const HeroSection = () => {
                         className="flex items-center gap-2 px-4 py-2 lg:px-6 lg:py-4"
                     >
                         <span>Explore Our Solutions</span>
-                        <motion.div
-                        variants={arrowVariants}
-                        >
-                        → 
+                        <motion.div variants={arrowVariants}>
+                            → 
                         </motion.div>
                     </motion.a>
                 </div>
@@ -219,8 +202,9 @@ const HeroSection = () => {
             >
                 <div className="relative">
                     <motion.div
+                        ref={scrollContainerRef}
                         variants={containerVariants}
-                        className="flex overflow-x-auto whitespace-nowrap gap-2 pb-4 scrollbar-hide"
+                        className="flex overflow-x-auto whitespace-nowrap gap-2 pb-4 scrollbar-hide scroll-smooth"
                     >
                         {buttonLabels.map((label) => (
                             <motion.button
@@ -254,7 +238,7 @@ const HeroSection = () => {
                 </div>
             </motion.div>
             <div className='absolute z-20 bottom-8'>
-            <ScrollToTop/>
+                <ScrollToTop/>
             </div>
         </motion.div>
     );

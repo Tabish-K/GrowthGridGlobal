@@ -54,14 +54,21 @@ const ContactPage = () => {
         }
     ];
 
+    const backgroundImage = 'https://cdn.pixabay.com/photo/2014/03/23/00/22/the-background-293017_960_720.png';
+
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
             <motion.section 
-                className="bg-[#CC0000] text-white py-28 relative overflow-hidden"
+                className=" text-white py-28 relative overflow-hidden"
                 initial="hidden"
                 animate="visible"
                 variants={fadeIn}
+                style={{
+                    backgroundImage: `url('${backgroundImage}')`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}
             >
                 {/* Abstract Background Pattern */}
                 <div className="absolute inset-0 opacity-10">
