@@ -148,10 +148,10 @@ const Navbar = () => {
                         animate={{ x: 0 }}
                         exit={{ x: '-100%' }}
                         transition={{ type: 'tween', duration: 0.3 }}
-                        className={`fixed z-50 inset-0 bg-white shadow-lg border-r-[8px] border-[#CC0000] w-[18rem] h-[38rem] rounded-br-2xl`}
+                        className={`fixed z-50 inset-0 bg-white shadow-lg border-r-[8px] border-[#CC0000] w-[18rem] h-[34rem]`}
+                        style={{ top: '64px' }}
                     >
-                        <div className='flex gap-4 relative px-4'>
-                            {/* Mobile Menu Button */}
+                        {/* <div className='flex gap-4 relative px-4'>
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className={`p-2 transition-colors z-10 top-4 absolute`}
@@ -159,12 +159,11 @@ const Navbar = () => {
                                 <AlignLeft size={24}/>
                             </button>
 
-                            {/* Logo */}
                             <Link href="/" className="absolute top-[-60px]" onClick={handleNavLinkClick}>
                                 <img src='blackLogo.png' className='h-48'></img>
                             </Link>
-                        </div>
-                        <div className="flex flex-col h-full overflow-y-auto top-20 relative px-4">
+                        </div> */}
+                        <div className="flex flex-col h-full overflow-y-auto relative px-6">
                             <div className="py-6 space-y-6 border-b-2 border-gray-200">
                                 {mobileNavSections.map((item) => (
                                     <Link href={`/${item.page}`} key={item.label} onClick={handleNavLinkClick}>
