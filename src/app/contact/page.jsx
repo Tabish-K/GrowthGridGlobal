@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send, Building, Globe, Clock } from 'lucide-react';
+import ScrollToTop from '@/components/ScrollToTop';
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({
@@ -189,7 +190,7 @@ const ContactPage = () => {
                                         name="firstName"
                                         value={formData.firstName}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
+                                        className="w-full px-4 py-2 border border-gray-300 outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
                                         required
                                     />
                                 </div>
@@ -203,7 +204,7 @@ const ContactPage = () => {
                                         name="lastName"
                                         value={formData.lastName}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
+                                        className="w-full px-4 py-2 border border-gray-300 outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
                                         required
                                     />
                                 </div>
@@ -220,7 +221,7 @@ const ContactPage = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
+                                    className="w-full px-4 py-2 border border-gray-300 outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
                                     required
                                 />
                             </div>
@@ -235,7 +236,7 @@ const ContactPage = () => {
                                     name="company"
                                     value={formData.company}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
+                                    className="w-full px-4 py-2 border border-gray-300 outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
                                 />
                             </div>
 
@@ -249,7 +250,7 @@ const ContactPage = () => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
+                                    className="w-full px-4 py-2 border border-gray-300 outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
                                 />
                             </div>
 
@@ -263,7 +264,7 @@ const ContactPage = () => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     rows={4}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
+                                    className="w-full px-4 py-2 border border-gray-300 outline-none focus:ring-2 focus:ring-[#CC0000] focus:border-[#CC0000] transition-all duration-200"
                                     required
                                 />
                             </div>
@@ -280,6 +281,9 @@ const ContactPage = () => {
                         </form>
                     </motion.div>
                 </div>
+            </div>
+            <div className='absolute z-20 bottom-8'>
+                <ScrollToTop/>
             </div>
         </div>
     );
