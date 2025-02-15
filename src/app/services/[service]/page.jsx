@@ -68,7 +68,7 @@ function ServicePage({ params }) {
                 <h3 className="text-[#CC0000] font-semibold text-xl mb-4">
                     Key Changes
                 </h3>
-                {/* <div className="flex flex-col gap-3 text-sm md:text-md">
+                <div className="flex flex-col gap-3 text-sm md:text-md">
                     {content.research.keyChanges.map((change, index) => (
                     <p
                         key={index}
@@ -78,7 +78,7 @@ function ServicePage({ params }) {
                         {change}
                     </p>
                     ))}
-                </div> */}
+                </div>
                 </div>
             </div>
             </div>
@@ -101,7 +101,7 @@ function ServicePage({ params }) {
                     <h3 className="text-xl font-semibold mb-6 text-gray-900">
                     <span className="text-[#CC0000]">1.</span> AI Tools We Use
                     </h3>
-                    {/* <div className="space-y-6">
+                    <div className="space-y-6">
                     {content.advantage.aiTools.map((tool, index) => (
                         <div key={index} className="bg-gray-50 border p-4">
                         <h4 className="text-[#CC0000] font-semibold mb-2">
@@ -112,7 +112,7 @@ function ServicePage({ params }) {
                         </p>
                         </div>
                     ))}
-                    </div> */}
+                    </div>
                 </div>
 
                 {/* Unique Approach */}
@@ -120,7 +120,7 @@ function ServicePage({ params }) {
                     <h3 className="text-xl font-semibold mb-6 text-gray-900">
                     <span className="text-[#CC0000]">2.</span> Our Unique Approach
                     </h3>
-                    {/* <div className="space-y-6">
+                    <div className="space-y-6">
                     {content.advantage.approach.map((item, index) => (
                         <div key={index} className="bg-gray-50 border p-4">
                         <h4 className="text-[#CC0000] font-semibold mb-2">
@@ -131,7 +131,7 @@ function ServicePage({ params }) {
                         </p>
                         </div>
                     ))}
-                    </div> */}
+                    </div>
                 </div>
                 </div>
             </div>
