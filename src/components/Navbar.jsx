@@ -78,9 +78,11 @@ const Navbar = () => {
                                 <button
                                     onClick={() => setIsOpen(!isOpen)}
                                     className={`p-2 z-50 ${
-                                        hasScrolled || isHovered || isSearchOpen
-                                        ? 'text-gray-500 hidden md:block' 
-                                        : 'text-white'
+                                        isSearchOpen 
+                                            ? 'hidden' 
+                                            : hasScrolled || isHovered 
+                                                ? 'text-gray-500' 
+                                                : 'text-white'
                                     }`}
                                 >
                                     {isOpen ? <AlignLeft size={24}/> : <AlignJustify size={24} />}
