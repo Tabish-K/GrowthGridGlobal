@@ -224,7 +224,7 @@ const HeroSection = () => {
                             </motion.button>
                         ))}
                         <motion.div variants={itemVariants} className="flex-none">
-                            <Link href="/inside">
+                            <Link href="/explore">
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.9 }}
