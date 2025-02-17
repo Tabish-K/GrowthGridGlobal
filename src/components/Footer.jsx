@@ -20,7 +20,7 @@ function Footer() {
     };
 
     const socialIcons = [
-        { Icon: Twitter, href: "#" },
+        { Icon: Twitter, href: "https://x.com/growth__grid" },
         { Icon: Instagram, href: "https://www.instagram.com/growthgrid_global?igsh=MWNtODZrY25wd2N1bQ%3D%3D&utm_source=qr" },
         { Icon: Linkedin, href: "https://www.linkedin.com/company/growthgrid-global/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B2MQEUtmaRCG7jvTcCVYdww%3D%3D" },
         // { Icon: Youtube, href: "#" }
