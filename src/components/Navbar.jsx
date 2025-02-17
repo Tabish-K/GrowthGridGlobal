@@ -81,7 +81,7 @@ const Navbar = () => {
                                         isSearchOpen 
                                             ? 'hidden' 
                                             : hasScrolled || isHovered 
-                                                ? 'text-gray-500' 
+                                                ? 'text-gray-500 md:hover:text-gray-500'  // Hover effect only on medium+ screens
                                                 : 'text-white'
                                     }`}
                                 >
