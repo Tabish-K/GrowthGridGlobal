@@ -120,6 +120,7 @@ const HeroSection = () => {
             initial="hidden"
             animate="visible"
             variants={containerVariants}
+            id='hero'
             className="bg-cover bg-center overflow-hidden min-h-[100dvh] z-20 text-white relative flex flex-col justify-between w-full p-4 lg:p-8"
         >
             {/* Animated Background */}
