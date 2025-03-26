@@ -9,37 +9,37 @@ const testimonials = [
     name: 'Sophie Tran',
     title: 'VP Marketing, FinTech Platform, UK',
     quote: '"Growth Grid worked like an embedded team—fast, sharp, and obsessed with results."',
-    image: '/images/sophie-tran.png'
+    image: 'images/sophie-tran.png'
   },
   {
     name: 'Carlos Mendes',
     title: 'Founder, HealthTech Startup, Spain',
     quote: '"They helped us launch faster, and the chatbot alone brought in 30% of early traction."',
-    image: '/images/carlos-mendes.png'
+    image: 'images/carlos-mendes.png'
   },
   {
     name: 'Maya Brooks',
     title: 'Strategy Lead, AI Automation Company, USA',
     quote: '"Clear thinkers. Excellent design and research chops. They got the results."',
-    image: '/images/maya-brooks.png'
+    image: 'images/maya-brooks.png'
   },
   {
     name: 'Aditya R',
     title: 'Growth Lead, D2C Brand (USA + India)',
     quote: '"From landing pages to influencer scripts, everything they did improved our conversions."',
-    image: '/images/aditya-r.png'
+    image: 'images/aditya-r.png'
   },
   {
     name: 'Elena Novak',
     title: 'Head of Growth, SaaS Platform, Germany',
     quote: '"Growth Grid transformed our website with a sleek design and optimized funnels, boosting our lead conversion by 3x."',
-    image: '/images/elena-novak.png'
+    image: 'images/elena-novak.png'
   },
   {
     name: 'Lucas Bennett',
     title: 'Product Lead, FinTech Startup, Australia',
     quote: '"They understood our vision and delivered a high-impact GTM strategy that accelerated our product adoption."',
-    image: '/images/lucas-bennett.png'
+    image: 'images/lucas-bennett.png'
   }
 ];
 
@@ -70,7 +70,7 @@ export default function Testimonials() {
                     className="rounded-lg overflow-hidden"
                   >
                     <div className="relative w-full h-96">
-                      <Image 
+                      <img 
                         src={testimonial.image} 
                         alt={testimonial.name}
                         fill
