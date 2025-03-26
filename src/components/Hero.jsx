@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from "next/link";
 import ScrollToTop from './ScrollToTop';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, MoveRight } from 'lucide-react';
 
 const HERO_CONTENT = {
     "SRO": {
@@ -121,7 +121,7 @@ const HeroSection = () => {
             animate="visible"
             variants={containerVariants}
             id='hero'
-            className="bg-cover bg-center overflow-hidden min-h-[100dvh] z-20 text-white relative flex flex-col justify-between w-full p-4 lg:p-8"
+            className="bg-cover font-outfit bg-center overflow-hidden min-h-[100dvh] z-20 text-white relative flex flex-col justify-between w-full p-4 lg:p-8"
         >
             {/* Animated Background */}
             <motion.div
@@ -190,7 +190,7 @@ const HeroSection = () => {
                     >
                         <span>Explore Our Solutions</span>
                         <motion.div variants={arrowVariants}>
-                            → 
+                            <MoveRight/>
                         </motion.div>
                     </motion.a>
                 </div>
@@ -231,7 +231,7 @@ const HeroSection = () => {
                                     whileTap={{ scale: 0.9 }}
                                     className="px-3 py-2 lg:px-6 lg:py-4 text-2xl hover:bg-white hover:text-black transition-colors"
                                 >
-                                    →
+                                    <MoveRight/>
                                 </motion.button>
                             </Link>
                         </motion.div>

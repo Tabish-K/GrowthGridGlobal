@@ -20,6 +20,7 @@ const Navbar = () => {
         {
         label: "Services",
         hasDropdown: true,
+        parentRoute: "services",
         links: {
             "TECHNOLOGY & DEVELOPMENT": [
             "Website and App Development",
@@ -42,6 +43,7 @@ const Navbar = () => {
         {
         label: "Portfolio",
         hasDropdown: true,
+        parentRoute: "/#",
         links: {
             "CASE STUDY": ["E-Commerce Business Transformation"],
         },
@@ -49,6 +51,7 @@ const Navbar = () => {
         {
         label: "Blogs",
         hasDropdown: true,
+        parentRoute: "/#",
         links: {
             "PRODUCT DEVELOPMENT": [
             "AI for sme digital transformation",
@@ -62,8 +65,19 @@ const Navbar = () => {
             ],
         },
         },
-        { label: "Company" },
-        { label: "Careers", page: "careers" },
+        { 
+            label: "Company",
+            hasDropdown: true,
+            parentRoute: "company",
+            links: {
+                "":[
+                    "ABOUT US",
+                    "WHY US",
+                    "LEADERSHIP",
+                    "CAREERS"
+                ],
+            }
+        },
     ];
 
     const mobileNavSections = [
@@ -72,7 +86,7 @@ const Navbar = () => {
         { label: "Consultation Services", hasDropdown: true, page: "contact" },
         { label: "Blogs", hasDropdown: true, page: "blog" },
         { label: "Retail", hasDropdown: true, page: "#" },
-        { label: "Our Story", hasDropdown: true, page: "about" },
+        { label: "About Us", hasDropdown: true, page: "company/about-us" },
         { label: "Careers", hasDropdown: true, page: "careers" },
     ];
 
@@ -157,7 +171,7 @@ const Navbar = () => {
             <div
             className={`transition-all duration-300 ${
                 hasScrolled || isHovered || isSearchOpen
-                ? "bg-white"
+                ? "bg-red-50"
                 : "bg-transparent"
             }`}
             onMouseEnter={() => setIsHovered(true)}
@@ -172,7 +186,7 @@ const Navbar = () => {
                         isSearchOpen
                         ? "hidden"
                         : hasScrolled || isHovered
-                        ? "text-gray-500 md:hover:text-gray-500" // Hover effect only on medium+ screens
+                        ? "text-gray-600 md:hover:text-gray-500" // Hover effect only on medium+ screens
                         : "text-white"
                     }`}
                     >
@@ -205,12 +219,12 @@ const Navbar = () => {
                             onMouseLeave={() => handleNavItemLeave(index)}
                         >
                             <button
-                            className={`text-xs uppercase tracking-wider flex items-center space-x-1 transition-colors ${
+                            className={`text-[14px] uppercase tracking-wider flex items-center space-x-1 transition-colors ${
                                 activeDropdown === index
-                                ? "text-gray-900 hover:text-[#CC0000]"
+                                ? "text-gray-600 hover:text-[#CC0012]"
                                 : `${
                                     hasScrolled || isHovered
-                                        ? "text-black"
+                                        ? "text-gray-600"
                                         : "text-white"
                                     } hover:text-gray-300`
                             }`}
@@ -220,19 +234,19 @@ const Navbar = () => {
 
                             {item.hasDropdown && activeDropdown === index && (
                             <div
-                                className="absolute left-0 mt-2 w-[600px] bg-white shadow-lg border rounded-lg py-4 px-6 grid grid-cols-2 gap-4"
+                                className="absolute left-0 mt-2 w-max bg-white shadow-lg border rounded-lg py-4 px-6 grid grid-cols-2 gap-4"
                                 onMouseEnter={handleDropdownHover}
                                 onMouseLeave={handleDropdownLeave}
                             >
                                 {Object.entries(item.links).map(
                                 ([category, links], i) => (
                                     <div key={i}>
-                                    <h4 className="text-[#CC0000] tracking-wide font-bold text-sm mb-2">
+                                    <h4 className="text-[#CC0012] tracking-wide font-bold text-sm mb-2">
                                         {category}
                                     </h4>
                                     {links.map((link, j) => (
                                         <Link
-                                        href={`/${link
+                                        href={`/${item.parentRoute}/${link
                                             .toLowerCase()
                                             .replace(/\s+/g, "-")}`}
                                         key={j}
@@ -250,7 +264,7 @@ const Navbar = () => {
                         ))}
 
                         <Link href="/contact">
-                        <button className="uppercase bg-red-700 text-white text-xs px-5 py-3 rounded-[4px] shadow-md">
+                        <button className="uppercase bg-[#CC0012] text-white text-xs px-5 py-3 rounded-[4px] shadow-md">
                             Contact us
                         </button>
                         </Link>
@@ -277,7 +291,7 @@ const Navbar = () => {
                         onClick={handleNavLinkClick}
                         className={`hidden lg:block text-sm tracking-wider uppercase transition-colors ${
                             hasScrolled || isHovered || isSearchOpen
-                            ? "text-gray-500 hover:text-[#CC0000]"
+                            ? "text-gray-500 hover:text-[#CC0012]"
                             : "text-white hover:text-gray-300"
                         }`}
                         >
@@ -289,7 +303,7 @@ const Navbar = () => {
                             size={24}
                             className={`transition-colors ${
                             hasScrolled || isHovered || isSearchOpen
-                                ? "text-gray-500 hover:text-[#CC0000]"
+                                ? "text-gray-500 hover:text-[#CC0012]"
                                 : "text-white hover:text-gray-300"
                             }`}
                         />
@@ -309,7 +323,7 @@ const Navbar = () => {
                 animate={{ x: 0 }}
                 exit={{ x: "-100%" }}
                 transition={{ type: "tween", duration: 0.3 }}
-                className={`fixed z-50 inset-0 bg-white shadow-lg border-r-[8px] border-[#CC0000] w-[18rem] h-[34rem]`}
+                className={`fixed z-50 inset-0 bg-white shadow-lg border-r-[8px] border-[#CC0012] w-[18rem] h-[34rem]`}
                 style={{ top: "80px" }}
                 >
                 <div className="flex flex-col h-full overflow-y-auto relative px-6">
@@ -322,7 +336,7 @@ const Navbar = () => {
                         >
                         <div className={``}>
                             <button
-                            className={`flex items-center justify-between w-full py-3 text-left text-gray-800 hover:text-[#CC0000] transition-all`}
+                            className={`flex items-center justify-between w-full py-3 text-left text-gray-800 hover:text-[#CC0012] transition-all`}
                             >
                             <span className="text-xs sm:text-sm uppercase tracking-wider">
                                 {item.label}
@@ -345,7 +359,7 @@ const Navbar = () => {
                             <button
                             className={`flex items-center justify-between w-full py-3 text-left text-gray-800`}
                             >
-                            <span className="text-xs sm:text-sm uppercase font-semibold hover:underline decoration-[#CC0000]">
+                            <span className="text-xs sm:text-sm uppercase font-semibold hover:underline decoration-[#CC0012]">
                                 {item.label}
                             </span>
                             </button>
@@ -361,7 +375,7 @@ const Navbar = () => {
                 </div>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="absolute bg-[#CC0000] top-0 -right-12 p-3 text-[#CC0000]"
+                    className="absolute bg-[#CC0012] top-0 -right-12 p-3 text-[#CC0012]"
                 >
                     <X size={20} className="text-white" />
                 </button>

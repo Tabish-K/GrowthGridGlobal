@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, MoveLeft, MoveRight } from "lucide-react";
 
 function Solutions() {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -88,11 +88,11 @@ function Solutions() {
                             px-4 py-3 text-sm font-medium 
                             border border-gray-300
                             transition-all duration-200
-                            hover:border-[#CC0000] hover:text-[#CC0000]
-                            focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-opacity-50
+                            hover:border-[#CC0012] hover:text-[#CC0012]
+                            focus:outline-none focus:ring-2 focus:ring-[#CC0012] focus:ring-opacity-50
                             ${
                             selectedIndustry === industry.id
-                                ? "border-[#CC0000] text-[#CC0000] bg-red-50"
+                                ? "border-[#CC0012] text-[#CC0012] bg-red-50"
                                 : "text-gray-700"
                             }
                             `}
@@ -102,8 +102,8 @@ function Solutions() {
                 ))}
             </div>
             <div className="flex w-full justify-between">
-                <input type="text" placeholder="Enter Your Industry Here" className="border-b-[4px] placeholder-gray-600 border-gray-400 px-4 bg-red-100 w-full outline-none"/>
-                <button className="uppercase bg-red-700 text-white px-10 py-3 text-sm">Submit</button>
+                <input type="text" placeholder="Enter Your Industry Here" className="border-b-[2px] placeholder-gray-600 border-gray-400 px-4 bg-red-50 w-full outline-none"/>
+                <button className="uppercase bg-[#CC0012] text-white px-10 py-3 text-sm">Submit</button>
             </div>
             </div>
         );
@@ -135,11 +135,11 @@ function Solutions() {
                             px-4 py-3 text-sm font-medium 
                             border border-gray-300
                             transition-all duration-200
-                            hover:border-[#CC0000] hover:text-[#CC0000]
+                            hover:border-[#CC0012] hover:text-[#CC0012]
                             focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-opacity-50
                             ${
                             selectedNeed === need.id
-                                ? "border-[#CC0000] text-[#CC0000] bg-red-50"
+                                ? "border-[#CC0012] text-[#CC0012] bg-red-50"
                                 : "text-gray-700"
                             }
                         `}
@@ -149,8 +149,8 @@ function Solutions() {
                 ))}
             </div>
             <div className="flex w-full justify-between">
-                <input type="text" placeholder="Enter Your Needs Here" className="border-b-[4px] placeholder-gray-600 border-gray-400 px-4 bg-red-100 w-full outline-none"/>
-                <button className="uppercase bg-red-700 text-white px-10 py-3 text-sm">Submit</button>
+                <input type="text" placeholder="Enter Your Needs Here" className="border-b-[2px] placeholder-gray-600 border-gray-400 px-4 bg-red-50 w-full outline-none"/>
+                <button className="uppercase bg-[#CC0012] text-white px-10 py-3 text-sm">Submit</button>
             </div>
             </div>
         );
@@ -161,7 +161,7 @@ function Solutions() {
             {currentQuestion === 1 ? (
             <>
                 <h2 className="text-xl font-semibold text-gray-800">
-                <span className="text-[#CC0000] text-2xl mr-2">1.</span>What is your industry?
+                <span className="text-[#CC0012] text-2xl mr-2">1.</span>What is your industry?
                 </h2>
                 <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
                 {initialIndustries.map((industry) => (
@@ -172,11 +172,11 @@ function Solutions() {
                             px-4 py-3 text-sm font-medium 
                             border border-gray-300
                             transition-all duration-200
-                            hover:border-[#CC0000] hover:text-[#CC0000]
-                            focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-opacity-50
+                            hover:border-[#CC0012] hover:text-[#CC0012]
+                            focus:outline-none focus:ring-2 focus:ring-[#CC0012] focus:ring-opacity-50
                             ${
                                 selectedIndustry === industry.id
-                                ? "border-[#CC0000] text-[#CC0000] bg-red-50"
+                                ? "border-[#CC0012] text-[#CC0012] bg-red-50"
                                 : "text-gray-700"
                             }
                             `}
@@ -186,18 +186,18 @@ function Solutions() {
                 ))}
                 <button
                     onClick={() => setShowAllIndustries(true)}
-                    className="px-4 py-3 text-sm font-medium border border-gray-300
-                            transition-all duration-200 hover:border-[#CC0000] hover:text-[#CC0000]
-                            focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-opacity-50"
+                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium border border-gray-300
+                            transition-all duration-200 hover:border-[#CC0012] hover:text-[#CC0012]
+                            focus:outline-none focus:ring-2 focus:ring-[#CC0012] focus:ring-opacity-50"
                 >
-                    Other Industries →
+                    Other Industries <MoveRight/>
                 </button>
                 </div>
             </>
             ) : (
             <>
                 <h2 className="text-xl font-semibold text-gray-800">
-                <span className="text-[#CC0000] text-2xl mr-2">2.</span>What is your business need?
+                <span className="text-[#CC0012] text-2xl mr-2">2.</span>What is your business need?
                 </h2>
                 <div className="grid grid-cols-2 lg:grid-cols-3 gap-3">
                 {initialNeeds.map((need) => (
@@ -208,11 +208,11 @@ function Solutions() {
                             px-4 py-3 text-sm font-medium 
                             border border-gray-300
                             transition-all duration-200
-                            hover:border-[#CC0000] hover:text-[#CC0000]
-                            focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-opacity-50
+                            hover:border-[#CC0012] hover:text-[#CC0012]
+                            focus:outline-none focus:ring-2 focus:ring-[#CC0012] focus:ring-opacity-50
                             ${
                                 selectedNeed === need.id
-                                ? "border-[#CC0000] text-[#CC0000] bg-red-50"
+                                ? "border-[#CC0012] text-[#CC0012] bg-red-50"
                                 : "text-gray-700"
                             }
                             `}
@@ -222,11 +222,11 @@ function Solutions() {
                 ))}
                 <button
                     onClick={() => setShowAllNeeds(true)}
-                    className="px-4 py-3 text-sm font-medium border border-gray-300
-                            transition-all duration-200 hover:border-[#CC0000] hover:text-[#CC0000]
-                            focus:outline-none focus:ring-2 focus:ring-[#CC0000] focus:ring-opacity-50"
+                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium border border-gray-300
+                            transition-all duration-200 hover:border-[#CC0012] hover:text-[#CC0012]
+                            focus:outline-none focus:ring-2 focus:ring-[#CC0012] focus:ring-opacity-50"
                 >
-                    Other Needs →
+                    Other Needs <MoveRight/>
                 </button>
                 </div>
             </>
@@ -237,20 +237,20 @@ function Solutions() {
             {currentQuestion === 2 && !showAllNeeds && (
                 <button
                 onClick={handleBack}
-                className="px-8 py-3 font-medium border border-gray-300 hover:border-[#CC0000] hover:text-[#CC0000] transition-colors"
+                className="px-8 flex items-center gap-2 py-3 font-medium border border-gray-300 hover:border-[#CC0012] hover:text-[#CC0012] transition-colors"
                 >
-                ← Back
+                <MoveLeft/> Back
                 </button>
             )}
             {!showAllIndustries && !showAllNeeds && (
                 <button
                 disabled={currentQuestion === 1 ? !selectedIndustry : !selectedNeed}
-                className="bg-[#CC0000] text-white px-8 py-3 font-medium hover:bg-[#CC0000]/90 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+                className="bg-[#CC0012] text-white px-8 py-3 font-medium hover:bg-[#CC0012]/90 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
                 {currentQuestion === 1 ? (
-                    <span onClick={handleNext}>Next Question →</span>
+                    <span onClick={handleNext} className="flex items-center gap-2">Next Question <MoveRight/></span>
                 ) : (
-                    <Link href="explore">Submit →</Link>
+                    <Link href="explore" className="flex items-center gap-2">Submit <MoveRight/></Link>
                 )}
             </button>
             )}
@@ -348,10 +348,10 @@ function Solutions() {
             {/* Parent Div */}
             <div className="relative bg-white rounded-xl">
                 {/* Top-left Red Blur */}
-                <div className="absolute -top-6 left-6 w-[10rem] h-[10rem] bg-red-500/50 blur-2xl rounded-full"></div>
+                <div className="absolute -top-6 left-6 w-[10rem] h-[10rem] bg-[#CC0012]/50 blur-2xl rounded-full"></div>
 
                 {/* Bottom-right Red Blur */}
-                <div className="absolute -bottom-6 right-6 w-[10rem] h-[10rem] bg-red-500/50 blur-2xl rounded-full"></div>
+                <div className="absolute -bottom-6 right-6 w-[10rem] h-[10rem] bg-[#CC0012]/50 blur-2xl rounded-full"></div>
 
                 <div className="bg-white m-2 mt-8 md:m-20 rounded-[3rem] z-20 relative">
                     {/* Challenge Section */}
@@ -365,12 +365,12 @@ function Solutions() {
                                 <div className="flex items-center space-x-2 text-sm text-gray-600">
                                 <div
                                     className={`h-2 w-2 rounded-full ${
-                                    currentQuestion >= 1 ? "bg-[#CC0000]" : "bg-gray-300"
+                                    currentQuestion >= 1 ? "bg-[#CC0012]" : "bg-gray-300"
                                     }`}
                                 />
                                 <div
                                     className={`h-2 w-2 rounded-full ${
-                                    currentQuestion >= 2 ? "bg-[#CC0000]" : "bg-gray-300"
+                                    currentQuestion >= 2 ? "bg-[#CC0012]" : "bg-gray-300"
                                     }`}
                                 />
                                 <span className="ml-2 text-gray-500">Question {currentQuestion} of 2</span>
@@ -428,7 +428,7 @@ function Solutions() {
 
                             <div className="relative">
                             <h2 className="text-2xl lg:text-3xl font-bold text-start mb-4 lg:mb-8 text-gray-800">
-                                <span className="text-[#CC0000] text-4xl lg:text-5xl mr-2">
+                                <span className="text-[#CC0012] text-4xl lg:text-5xl mr-2">
                                 {slides[currentSlide].headingCount}.
                                 </span>
                                 {slides[currentSlide].heading}
@@ -454,7 +454,7 @@ function Solutions() {
                                     onClick={() => setCurrentSlide(index)}
                                     className={`w-3 h-3 rounded-full transition-all ${
                                     currentSlide === index
-                                        ? "bg-[#CC0000] w-6"
+                                        ? "bg-[#CC0012] w-6"
                                         : "bg-gray-300"
                                     }`}
                                 />
@@ -468,7 +468,7 @@ function Solutions() {
             </div>
 
         {/* Red Section */}
-        <div className="bg-[#CC0000] text-white py-12 mt-12 mb-12">
+        <div className="bg-[#CC0012] text-white py-12 mt-12 mb-12">
             <div className="container mx-auto px-4 lg:px-10">
             <div className="max-w-4xl mx-auto text-center">
                 <h1 className="text-2xl lg:text-3xl font-semibold">
@@ -480,12 +480,12 @@ function Solutions() {
                 </p>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6 mt-8 lg:mt-20">
                 <Link href="/about">
-                <button className="border w-full px-4 lg:px-6 py-2 lg:py-3 hover:bg-white hover:text-[#CC0000] transition-colors">
+                <button className="border w-full px-4 lg:px-6 py-2 lg:py-3 hover:bg-white hover:text-[#CC0012] transition-colors">
                     Learn More About Our Approach
                 </button>
                 </Link>
                 <Link href="/contact">
-                <button className="border w-full px-4 lg:px-6 py-2 lg:py-3 hover:bg-white hover:text-[#CC0000] transition-colors">
+                <button className="border w-full px-4 lg:px-6 py-2 lg:py-3 hover:bg-white hover:text-[#CC0012] transition-colors">
                     Speak to an Expert
                 </button>
                 </Link>
