@@ -3,7 +3,6 @@ import Link from "next/link";
 import { serviceContent, services } from "../../../lib/servicesContent";
 import { JSX } from "react";
 
-// Define types for the data structures
 type Service = {
     slug: string;
     title: string;
@@ -60,12 +59,12 @@ type ServiceContent = {
     };
     relatedServices: RelatedService[];
 };
-
-type ServicePageProps = {
+interface ServicePageProps {
     params: {
         service: string;
     };
-};
+    searchParams?: Record<string, string | string[] | undefined>;
+}
 
 export async function generateStaticParams(): Promise<{ service: string }[]> {
     return services.map((service) => ({
@@ -73,7 +72,7 @@ export async function generateStaticParams(): Promise<{ service: string }[]> {
     }));
 }
 
-function ServicePage({ params }: ServicePageProps): JSX.Element {
+export default function ServicePage({ params }: ServicePageProps): JSX.Element {
     const { service } = params;
     const content = serviceContent[service] as ServiceContent | undefined;
 
@@ -334,5 +333,3 @@ return (
         </div>
     );
 }
-
-export default ServicePage;
