@@ -12,7 +12,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        outfit: ["Outfit", "sans-serif"],
+        poppins: ["poppins"],
+        afacad: ["afacad"],
       },
     },
   },
