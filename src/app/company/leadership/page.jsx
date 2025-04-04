@@ -1,12 +1,11 @@
-import ScrollNavbar from '@/components/PreNav'
 import React from 'react'
 
 function page() {
-    const approachNavLinks = [
-        { id: "services", label: "Our Services" },
-        { id: "team", label: "Our Expert Team" },
-        { id: "tech-stack", label: "Tech Stack" },
-    ];
+    // const approachNavLinks = [
+    //     { id: "services", label: "Our Services" },
+    //     { id: "team", label: "Our Expert Team" },
+    //     { id: "tech-stack", label: "Tech Stack" },
+    // ];
     
     return (
         <main>
@@ -23,8 +22,6 @@ function page() {
                     <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold bg-gradient-to-r from-white drop-shadow-2xl to-transparent text-transparent bg-clip-text">Leadership</h1>
                 </div>
             </div>
-
-                <ScrollNavbar navLinks={approachNavLinks} heroId="hero" />
 
                 {/* why-us */}
                 <section id='services'>

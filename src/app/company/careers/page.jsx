@@ -1,4 +1,4 @@
-import { ArrowRight, Building2, Users, Brain, Trophy, Heart } from 'lucide-react';
+import { Building2, Users, Brain, Trophy, Heart } from 'lucide-react';
 
 const CareersPage = () => {
   const openPositions = [

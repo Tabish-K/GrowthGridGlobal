@@ -1,6 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
-import { services } from "@/lib/servicesContent";
+import { services } from "../../lib/servicesContent";
 
 function Explore() {
 
