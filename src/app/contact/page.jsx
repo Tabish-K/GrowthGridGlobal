@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Send, Building, Globe, Clock } from 'lucide-react';
-import ScrollToTop from '@/components/ScrollToTop';
+import ScrollToTop from '../../components/ScrollToTop';
 
 const ContactPage = () => {
     const [formData, setFormData] = useState({

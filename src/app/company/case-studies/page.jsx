@@ -1,4 +1,3 @@
-import ScrollNavbar from '@/components/PreNav'
 import React from 'react'
 
 function page() {
@@ -23,8 +22,6 @@ function page() {
                     <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold bg-gradient-to-r from-white drop-shadow-2xl to-transparent text-transparent bg-clip-text">Case Study</h1>
                 </div>
             </div>
-
-            <ScrollNavbar navLinks={whyUsNavLinks} heroId="hero" />
 
             {/* why-us */}
             <section id='study-1'>

@@ -1,9 +1,9 @@
 'use client';
 
-import { blogPosts } from '@/lib/blogs';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, User, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import { blogPosts } from '../../../lib/blogs';
 
 const BlogPost = ({ params }) => {
     const { id } = params;

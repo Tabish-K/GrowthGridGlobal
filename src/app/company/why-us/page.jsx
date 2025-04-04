@@ -1,6 +1,5 @@
 "use client"
 
-import ScrollNavbar from '@/components/PreNav'
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Minus, MoveDown, MoveRight, Plus } from 'lucide-react';
@@ -167,8 +166,6 @@ function page() {
                     <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold bg-gradient-to-r from-white drop-shadow-2xl to-transparent text-transparent bg-clip-text">Why Us</h1>
                 </div>
             </div>
-
-            <ScrollNavbar navLinks={whyUsNavLinks} heroId="hero" />
 
             {/* why-us */}
             <section id='why-us' className='py-12 md:py-20 max-w-7xl relative right-0 left-0 lg:mx-auto md:mx-6 mx-4'>

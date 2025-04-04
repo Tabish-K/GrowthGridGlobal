@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowRight, User } from 'lucide-react';
 import Link from 'next/link';
-import { blogPosts } from '@/lib/blogs';
+import { blogPosts } from '../../lib/blogs';
 
 const BlogListing = ({ params }) => {
     // const { id } = params;
