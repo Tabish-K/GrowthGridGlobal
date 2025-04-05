@@ -107,7 +107,7 @@ const WhyUs: React.FC = () => {
     return (
         <div
         id="why-us"
-        className="bg-white text-black px-4"
+        className="bg-white text-black py-8"
         >
         <motion.div
             ref={sectionRef}
@@ -117,25 +117,25 @@ const WhyUs: React.FC = () => {
             className="max-w-7xl mx-auto"
         >
             {/* Header Section */}
-            <div className="">
+            <div className="px-4">
             <motion.div variants={itemVariants} className="mb-6">
-                <h1 className="text-4xl md:text-6xl font-medium font-poppins mb-3">
+                <h1 className="text-4xl md:text-6xl font-bold font-poppins mb-3">
                 We are <br />
-                <span className="text-[#4F1C51] font-bold">Growth Grid</span>
+                <span className="text-[#4F1C51]">Growth Grid</span>
                 </h1>
 
-                <p className="text-xl md:text-2xl font-afacad">
+                <p className="text-xl md:text-2xl font-afacad leading-tight text-justify">
                     {`we specialize in AI-driven business solutions, cloud migration services leveraging predictive analytics to craft high-impact strategies for scalable success.`}
                 </p>
             </motion.div>
             </div>
 
             {/* Stats Grid - 2x2 on mobile, 3x2 on desktop */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-6 mb-12">
             {/* First stat card with world map */}
             <motion.div
                 variants={itemVariants}
-                className="relative rounded-lg overflow-hidden"
+                className="relative sm:rounded-lg overflow-hidden"
             >
                 <div className="relative aspect-video overflow-hidden bg-black">
                 <Image
@@ -145,7 +145,7 @@ const WhyUs: React.FC = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 flex flex-col justify-end p-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
                     <h2 className="text-4xl font-bold text-white font-poppins">
                     <AnimatedNumber
                         value={stats[0].value}
@@ -153,7 +153,7 @@ const WhyUs: React.FC = () => {
                         suffix={stats[0].suffix}
                     />
                     </h2>
-                    <p className="text-white text-lg md:text-2xl font-afacad">{stats[0].description}</p>
+                    <p className="text-white text-lg w-[14rem] font-bold md:text-2xl font-afacad">{stats[0].description}</p>
                 </div>
                 </div>
             </motion.div>
@@ -161,7 +161,7 @@ const WhyUs: React.FC = () => {
             {/* Second stat card with office */}
             <motion.div
                 variants={itemVariants}
-                className="relative rounded-lg overflow-hidden"
+                className="relative sm:rounded-lg overflow-hidden"
             >
                 <div className="relative aspect-video overflow-hidden bg-black">
                 <Image
@@ -171,15 +171,15 @@ const WhyUs: React.FC = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 flex flex-col justify-end p-4">
-                    <h2 className="text-4xl font-bold text-white font-poppins">
+                <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-transparent flex flex-col justify-end p-4">
+                    <h2 className="text-4xl font-bold text-black font-poppins">
                     <AnimatedNumber
                         value={stats[1].value}
                         isInView={isInView}
                         suffix={stats[1].suffix}
                     />
                     </h2>
-                    <p className="text-white text-lg md:text-2xl font-afacad">{stats[1].description}</p>
+                    <p className="text-black font-bold text-xl w-[14rem] md:text-2xl font-afacad">{stats[1].description}</p>
                 </div>
                 </div>
             </motion.div>
@@ -187,7 +187,7 @@ const WhyUs: React.FC = () => {
             {/* Third stat card with money */}
             <motion.div
                 variants={itemVariants}
-                className="relative rounded-lg overflow-hidden md:col-span-2 lg:col-span-1"
+                className="relative sm:rounded-lg overflow-hidden md:col-span-2 lg:col-span-1"
             >
                 <div className="relative aspect-video overflow-hidden bg-black">
                 <Image
@@ -197,7 +197,7 @@ const WhyUs: React.FC = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 flex flex-col justify-end p-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4">
                     <h2 className="text-4xl font-bold text-white font-poppins">
                     <AnimatedNumber
                         value={stats[2].value}
@@ -206,7 +206,7 @@ const WhyUs: React.FC = () => {
                         suffix={stats[2].suffix}
                     />
                     </h2>
-                    <p className="text-white text-lg md:text-2xl font-afacad">{stats[2].description}</p>
+                    <p className="text-white text-lg font-bold w-[14rem] md:text-2xl font-afacad">{stats[2].description}</p>
                 </div>
                 </div>
             </motion.div>
@@ -239,8 +239,8 @@ const WhyUs: React.FC = () => {
             </div>
 
             {/* Text content in mobile/tablet view */}
-            <motion.div variants={itemVariants} className="lg:hidden mb-8">
-            <p className="text-lg md:text-xl mb-6 font-afacad">
+            <motion.div variants={itemVariants} className="lg:hidden mb-8 px-4">
+            <p className="text-lg leading-tight text-justify md:text-xl mb-6 font-afacad">
                 Our scalable technologies ensure cloud-first, secure, and
                 future-ready systems that empower long-term growth. With a{" "}
                 <span className="text-[#4F1C51] font-semibold">
@@ -249,18 +249,17 @@ const WhyUs: React.FC = () => {
                 of success across industries, we bring deep expertise, impactful
                 results, and satisfied clients.
             </p>
-            <div className="mt-8 flex justify-center font-afacad">
+            <div className="mt-8 md:flex justify-center font-afacad hidden">
                 <button className="flex items-center justify-center bg-[#4F1C51] hover:bg-[#4F1C51] text-white py-3 px-8 rounded-full transition-all">
                 <span className="text-lg font-medium">Learn more about Us</span>
                 </button>
             </div>
             </motion.div>
 
-            <div className="flex flex-col gap-10 justify-center w-full relative items-center">
-                <div className="bg-black h-[2px] w-[70dvw] mx-auto"/>
+            <div className="flex flex-col gap-10 justify-center w-full relative items-center px-4 md:px-0">
+                <div className="bg-black h-[2px] w-[80dvw] mx-auto"/>
                 <div>
-                    <h1 className="text-black text-start text-[22px] md:text-5xl font-extrabold font-poppins">Our capabilities & <span className="text-[#D77914]">Real impact</span></h1>
-                <p className="text-lg md:text-xl font-afacad tracking-wide text-justify mt-2">{`SEO consulting services, growth hacking strategies, and AI-powered marketing solutions for business acceleration.`}</p>
+                    <h1 className="text-black px-4 md:px-0 md:text-start text-4xl text-center md:text-5xl font-extrabold font-poppins">Our capabilities & <span className="text-[#D77914]">Real impact</span></h1>
                 </div>
                 <div className="flex flex-col gap-6 text-justify">
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
@@ -279,8 +278,14 @@ const WhyUs: React.FC = () => {
                         <CheckCircle/>
                         <p>{`Built viral content(1.2M views), improved UX, and rebranded startups from scratch.`}</p>
                     </div>
+
+                    <div className="mt-2 flex justify-center font-afacad md:hidden">
+                        <button className="flex items-center justify-center bg-[#4F1C51] hover:bg-[#4F1C51] text-white py-2 px-8 rounded-full transition-all">
+                        <span className="text-xl font-medium">Learn more about Us</span>
+                        </button>
+                    </div>
                 </div>
-                <div className="bg-black h-[2px] w-[70dvw] mx-auto mt-10"/>
+                <div className="bg-black h-[2px] w-[80dvw] mx-auto mt-6"/>
             </div>
         </motion.div>
         </div>

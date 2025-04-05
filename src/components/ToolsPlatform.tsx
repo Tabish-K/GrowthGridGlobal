@@ -46,9 +46,9 @@ const ToolsAndPlatforms: React.FC = () => {
     ];
 
 return (
-    <div className="pb-20 px-4 max-w-6xl mx-auto">
+    <div className="pb-10 md:pb-20 px-4 max-w-6xl mx-auto">
         <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-5xl font-extrabold text-[#4F1C51] mb-4 font-poppins">Tools & Platforms we work with</h2>
+            <div className="text-4xl text-start md:text-center md:text-5xl font-extrabold text-[#4F1C51] mb-4 font-poppins">Tools & Platforms <span className='text-black'>We Work With</span></div>
             <p className="text-black max-w-5xl mx-auto font-afacad text-lg md:text-2xl text-justify md:text-center">
             {`Harnessing the power of industry-leading tools to streamline workflows, enhance
             collaboration, and drive measurable results.`}
@@ -58,7 +58,7 @@ return (
         <div className="grid grid-cols-4 gap-6 md:gap-12">
             {tools.map((tool) => (
             <div key={tool.name} className="flex justify-center items-center">
-                <div className="w-10 h-10 md:h-12 md:w-12 flex items-center justify-center">
+                <div className="w-7 h-7 md:h-12 md:w-12 flex items-center justify-center">
                 <Image
                     src={tool.icon}
                     alt={tool.alt}
@@ -70,7 +70,7 @@ return (
             </div>
             ))}
         </div>
-        <div className="bg-black h-[2px] w-[70dvw] mx-auto mt-10 md:mt-20"/>
+        <div className="bg-black h-[2px] w-[70dvw] mx-auto mt-12 md:mt-20"/>
         </div>
     );
 };

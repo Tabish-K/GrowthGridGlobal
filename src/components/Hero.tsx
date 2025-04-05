@@ -105,7 +105,7 @@ import { MoveRight } from "lucide-react";
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
 
         <motion.div className="hero-content px-6 sm:px-8 max-w-screen-lg w-full flex flex-col justify-center min-h-[90dvh]">
-            <motion.h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-10 lg:mb-6 font-poppins">
+            <motion.h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-10 lg:mb-6 font-poppins tracking-wide leading-1 py-4">
             {currentContent.title}
             </motion.h1>
             <motion.p className="hero-description text-xl sm:text-2xl lg:text-3xl mb-6 lg:mb-8 max-w-3xl font-afacad">

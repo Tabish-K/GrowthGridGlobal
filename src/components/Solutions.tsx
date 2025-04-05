@@ -52,30 +52,30 @@ const Solutions: React.FC = () => {
   const [showAllNeeds, setShowAllNeeds] = useState(false);
 
   const industries: Industry[] = [
-    { id: 1, icon: <Laptop size={20} />, label: "Technology" }, // Tech-related
-    { id: 2, icon: <ShoppingCart size={20} />, label: "E-Commerce" }, // Shopping-related
-    { id: 3, icon: <HeartPulse size={20} />, label: "Healthcare" }, // Medical/Health
-    { id: 4, icon: <Banknote size={20} />, label: "Financial Services" }, // Finance/Banking
-    { id: 5, icon: <Factory size={20} />, label: "Manufacturing" }, // Industrial/Production
-    { id: 6, icon: <School size={20} />, label: "Education" }, // Learning/Education
-    { id: 7, icon: <Building size={20} />, label: "Real Estate" }, // Property/Infrastructure
-    { id: 8, icon: <Plane size={20} />, label: "Travel & Hospitality" }, // Travel/Tourism
-    { id: 9, icon: <Car size={20} />, label: "Automotive" }, // Vehicles/Cars
+    { id: 1, icon: <Laptop size={16} />, label: "Technology" }, // Tech-related
+    { id: 2, icon: <ShoppingCart size={16} />, label: "E-Commerce" }, // Shopping-related
+    { id: 3, icon: <HeartPulse size={16} />, label: "Healthcare" }, // Medical/Health
+    { id: 4, icon: <Banknote size={16} />, label: "Financial Services" }, // Finance/Banking
+    { id: 5, icon: <Factory size={16} />, label: "Manufacturing" }, // Industrial/Production
+    { id: 6, icon: <School size={16} />, label: "Education" }, // Learning/Education
+    { id: 7, icon: <Building size={16} />, label: "Real Estate" }, // Property/Infrastructure
+    { id: 8, icon: <Plane size={16} />, label: "Travel & Hospitality" }, // Travel/Tourism
+    { id: 9, icon: <Car size={16} />, label: "Automotive" }, // Vehicles/Cars
   ];
 
   const businessNeeds: BusinessNeeds[] = [
-    { id: 1, icon: <LineChart size={20} />, label: "Digital Strategy" }, // Strategy-related
-    { id: 2, icon: <CreditCard size={20} />, label: "Cost Reduction" }, // Finance-related
-    { id: 3, icon: <Globe size={20} />, label: "Market Expansion" }, // Global expansion
-    { id: 4, icon: <Settings size={20} />, label: "Operations" }, // Process/Operations
-    { id: 5, icon: <Lightbulb size={20} />, label: "Innovation" }, // Creativity/Innovation
-    { id: 6, icon: <Shuffle size={20} />, label: "Change Management" }, // Change/Adaptability
-    { id: 7, icon: <TrendingUp size={20} />, label: "Revenue Growth" }, // Business Growth
-    { id: 8, icon: <BarChart3 size={20} />, label: "Data Analytics" }, // Data/Reports
-    { id: 9, icon: <Users size={20} />, label: "Customer Experience" }, // User/Customer-focused
-    { id: 10, icon: <RefreshCw size={20} />, label: "Transformation" }, // Business transformation
-    { id: 11, icon: <Megaphone size={20} />, label: "Sales & Marketing" }, // Marketing/Promotion
-    { id: 12, icon: <Building2 size={20} />, label: "Organization" }, // Business Structure
+    { id: 1, icon: <LineChart size={16} />, label: "Digital Strategy" }, // Strategy-related
+    { id: 2, icon: <CreditCard size={16} />, label: "Cost Reduction" }, // Finance-related
+    { id: 3, icon: <Globe size={16} />, label: "Market Expansion" }, // Global expansion
+    { id: 4, icon: <Settings size={16} />, label: "Operations" }, // Process/Operations
+    { id: 5, icon: <Lightbulb size={16} />, label: "Innovation" }, // Creativity/Innovation
+    { id: 6, icon: <Shuffle size={16} />, label: "Change Management" }, // Change/Adaptability
+    { id: 7, icon: <TrendingUp size={16} />, label: "Revenue Growth" }, // Business Growth
+    { id: 8, icon: <BarChart3 size={16} />, label: "Data Analytics" }, // Data/Reports
+    { id: 9, icon: <Users size={16} />, label: "Customer Experience" }, // User/Customer-focused
+    { id: 10, icon: <RefreshCw size={16} />, label: "Transformation" }, // Business transformation
+    { id: 11, icon: <Megaphone size={16} />, label: "Sales & Marketing" }, // Marketing/Promotion
+    { id: 12, icon: <Building2 size={16} />, label: "Organization" }, // Business Structure
   ];
 
   // Initial limited options
@@ -112,7 +112,7 @@ const Solutions: React.FC = () => {
             >
               <ArrowLeft className="w-5 h-5" />
             </button>
-            <h2 className="text-xl font-semibold text-gray-800">
+            <h2 className="text-xl font-semibold text-black font-poppins">
               All Industries
             </h2>
           </div>
@@ -124,11 +124,11 @@ const Solutions: React.FC = () => {
                   setSelectedIndustry(industry.id);
                   setShowAllIndustries(false);
                 }}
-                className={`flex items-center justify-center gap-2 px-4 py-2 border border-black rounded-full font-medium transition-all duration-200
+                className={`flex items-center justify-center font-afacad text-sm md:text-md gap-2 md:px-4 md:py-2 px-2 py-1 border border-black rounded-full font-medium transition-all duration-200
                               ${
                                 selectedIndustry === industry.id
                                   ? "text-[#FFFFFF] bg-[#D77914]"
-                                  : "text-gray-800"
+                                  : "text-black"
                               }
                               `}
               >
@@ -140,9 +140,9 @@ const Solutions: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Your Industry Here"
-              className="border-b-[2px] placeholder-gray-600 border-gray-400 px-4 bg-red-50 w-full outline-none"
+              className="placeholder-gray-600 px-4 bg-red-50 w-full rounded-l-full outline-none font-afacad text-md md:text-lg"
             />
-            <button className="uppercase rounded-full bg-[#D77914] text-white px-10 py-3 text-sm">
+            <button className="uppercase bg-[#D77914] text-white px-10 rounded-r-full py-3 text-sm font-afacad">
               Submit
             </button>
           </div>
@@ -172,7 +172,7 @@ const Solutions: React.FC = () => {
                   setSelectedNeed(need.id);
                   setShowAllNeeds(false);
                 }}
-                className={`flex items-center justify-center gap-2 px-4 py-2 rounded-full border-black border font-medium transition-all duration-200
+                className={`flex items-center justify-center gap-2 md:px-4 md:py-2 px-2 py-1 text-sm md:text-md font-afacad rounded-full border-black border font-medium transition-all duration-200
                               ${
                                 selectedNeed === need.id
                                   ? "text-[#FFFFFF] bg-[#D77914]"
@@ -188,9 +188,9 @@ const Solutions: React.FC = () => {
             <input
               type="text"
               placeholder="Enter Your Needs Here"
-              className="border-b-[2px] placeholder-gray-600 border-gray-400 px-4 bg-red-50 w-full outline-none"
+              className="placeholder-gray-600 px-4 bg-yellow-50 rounded-l-full w-full outline-none font-afacad"
             />
-            <button className="uppercase bg-[#D77914] text-white px-10 rounded-full py-3 text-sm">
+            <button className="uppercase bg-[#D77914] text-white px-10 rounded-r-full py-3 text-sm font-afacad">
               Submit
             </button>
           </div>
@@ -202,25 +202,24 @@ const Solutions: React.FC = () => {
       <div className="space-y-6">
         {currentQuestion === 1 ? (
           <>
-            <div className="flex items-center flex-col md:flex-row gap-3">
-              <h2 className="text-2xl lg:text-3xl font-bold text-black font-poppins">
-                <span className="text-[#D77914] mr-2">1.</span>What is your
-                industry?
+            <div className="flex items-center flex-row gap-3">
+              <h2 className="text-md lg:text-3xl font-semibold text-black font-poppins">
+                1. What is your industry?
               </h2>
               {/* Progress Indicator */}
               {!showAllIndustries && !showAllNeeds && (
                 <div className="flex items-center space-x-2 text-md md:text-lg text-gray-600 font-afacad">
                   <div
-                    className={`h-2 w-2 rounded-full ${
+                    className={`md:h-2 md:w-2 h-1 w-1 rounded-full ${
                       currentQuestion >= 1 ? "bg-[#D77914]" : "bg-gray-300"
                     }`}
                   />
                   <div
-                    className={`h-2 w-2 rounded-full ${
+                    className={`md:h-2 md:w-2 h-1 w-1 rounded-full ${
                       currentQuestion >= 2 ? "bg-[#D77914]" : "bg-gray-300"
                     }`}
                   />
-                  <span className="ml-2 text-gray-500">
+                  <span className="md:ml-2 text-sm text-gray-500">
                     Question {currentQuestion} of 2
                   </span>
                 </div>
@@ -231,7 +230,7 @@ const Solutions: React.FC = () => {
                 <button
                   key={industry.id}
                   onClick={() => setSelectedIndustry(industry.id)}
-                  className={`flex items-center justify-center gap-2 px-4 py-2 rounded-full border border-black font-medium transition-all duration-200
+                  className={`flex items-center justify-center font-afacad text-sm md:text-md gap-2 md:px-4 md:py-2 px-2 py-1 rounded-full border border-black font-medium transition-all duration-200
                               ${
                                 selectedIndustry === industry.id
                                   ? "text-[#FFFFFF] bg-[#D77914]"
@@ -244,7 +243,7 @@ const Solutions: React.FC = () => {
               ))}
               <button
                 onClick={() => setShowAllIndustries(true)}
-                className="flex items-center justify-center text-[#4F1C51] underline font-afacad text-xl gap-2 px-4 py-2 rounded-full font-medium transition-all duration-200"
+                className="flex items-center justify-center text-[#4F1C51] underline font-afacad text-sm md:text-md gap-2 rounded-full font-medium transition-all duration-200"
               >
                 View All Industries
               </button>
@@ -252,30 +251,27 @@ const Solutions: React.FC = () => {
           </>
         ) : (
           <>
-            <div className="flex items-center gap-3">
-              <h2 className="text-xl md:text-3xl font-semibold text-black font-poppins">
-                <span className="text-[#D77914] text-2xl md:text-3xl mr-2">
-                  2.
-                </span>
-                What is your business need?
+            <div className="flex items-center md:gap-3">
+              <h2 className="text-md lg:text-3xl font-semibold text-black font-poppins">
+                2. What is your business need?
               </h2>
               {/* Progress Indicator */}
               {!showAllIndustries && !showAllNeeds && (
-                <div className="flex items-center space-x-2 font-afacad text-md md:text-large text-gray-600">
-                  <div
-                    className={`h-2 w-2 rounded-full ${
-                      currentQuestion >= 1 ? "bg-[#D77914]" : "bg-gray-300"
-                    }`}
-                  />
-                  <div
-                    className={`h-2 w-2 rounded-full ${
-                      currentQuestion >= 2 ? "bg-[#D77914]" : "bg-gray-300"
-                    }`}
-                  />
-                  <span className="ml-2 text-gray-500">
-                    Question {currentQuestion} of 2
-                  </span>
-                </div>
+                <div className="flex items-center space-x-2 text-md md:text-lg text-gray-600 font-afacad">
+                <div
+                  className={`md:h-2 md:w-2 h-1 w-1 rounded-full ${
+                    currentQuestion >= 1 ? "bg-[#D77914]" : "bg-gray-300"
+                  }`}
+                />
+                <div
+                  className={`md:h-2 md:w-2 h-1 w-1 rounded-full ${
+                    currentQuestion >= 2 ? "bg-[#D77914]" : "bg-gray-300"
+                  }`}
+                />
+                <span className="md:ml-2 text-sm text-gray-500">
+                  Question {currentQuestion} of 2
+                </span>
+              </div>
               )}
             </div>
             <div className="flex flex-wrap gap-3 w-full max-w-xl font-afacad">
@@ -283,7 +279,7 @@ const Solutions: React.FC = () => {
                 <button
                   key={need.id}
                   onClick={() => setSelectedNeed(need.id)}
-                  className={`flex items-center justify-center text-md md:text-lg gap-2 px-4 py-2 rounded-full border border-black font-medium transition-all duration-200
+                  className={`flex items-center justify-center text-sm md:text-md gap-2 md:px-4 px-2 md:py-2 py-1 rounded-full border border-black font-medium transition-all duration-200
                               ${
                                 selectedNeed === need.id
                                   ? "border-[#D77914] text-[#FFFFFF] bg-[#D77914]"
@@ -296,7 +292,7 @@ const Solutions: React.FC = () => {
               ))}
               <button
                 onClick={() => setShowAllNeeds(true)}
-                className="flex items-center text-[#4F1C51] underline text-xl justify-center gap-2 px-4 py-2 rounded-full font-medium transition-all duration-200"
+                className="flex items-center text-[#4F1C51] underline text-sm md:text-md justify-center gap-2 px-4 py-2 rounded-full font-medium transition-all duration-200"
               >
                 View All Needs
               </button>
@@ -305,13 +301,13 @@ const Solutions: React.FC = () => {
         )}
 
         {/* Navigation Buttons */}
-        <div className="flex gap-4 pt-4">
+        <div className="flex gap-4">
           {currentQuestion === 2 && !showAllNeeds && (
             <button
               onClick={handleBack}
-              className="px-8 flex items-center gap-2 py-3 font-medium border rounded-full border-gray-300 hover:border-[#D77914] hover:text-[#D77914] transition-colors"
+              className="md:px-6 px-4 flex items-center gap-2 md:py-3 py-1 font-medium font-afacad text-sm md:text-md border rounded-full border-gray-300 hover:border-[#D77914] hover:text-[#D77914] transition-colors"
             >
-              <MoveLeft /> Back
+              <MoveLeft size={16}/> Back
             </button>
           )}
           {!showAllIndustries && !showAllNeeds && (
@@ -319,15 +315,15 @@ const Solutions: React.FC = () => {
               disabled={
                 currentQuestion === 1 ? !selectedIndustry : !selectedNeed
               }
-              className="bg-[#D77914] text-white px-8 py-3 font-medium rounded-full hover:bg-[#D77914]/90 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
+              className="bg-[#D77914] text-white md:px-6 md:py-3 px-4 py-2 font-medium rounded-full hover:bg-[#D77914]/90 transition-colors disabled:bg-gray-300 disabled:cursor-not-allowed"
             >
               {currentQuestion === 1 ? (
-                <span onClick={handleNext} className="flex items-center gap-2">
-                  Next Question <MoveRight />
+                <span onClick={handleNext} className="flex items-center gap-2 font-afacad text-sm md:text-md">
+                  Next Question <MoveRight size={16}/>
                 </span>
               ) : (
-                <Link href="explore" className="flex items-center gap-2">
-                  Submit <MoveRight />
+                <Link href="explore" className="flex items-center gap-2 font-afacad text-sm md:text-md">
+                  Submit <MoveRight size={20} />
                 </Link>
               )}
             </button>
@@ -338,18 +334,18 @@ const Solutions: React.FC = () => {
   };
 
   return (
-    <div className="bg-white w-full py-8 md:pt-12 md:pb-20">
+    <div className="bg-white w-full py-4 md:pt-12 md:pb-20">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center md:mb-16 mb-6">
-          <h1 className="text-[26px] md:text-6xl capitalize relative md:mb-4 font-poppins">
-            <span className="text-[#4F1C51] font-extrabold">
+          <h1 className="text-[26px] leading-tight md:text-6xl font-bold capitalize relative md:mb-4 font-poppins">
+            <span className="text-[#4F1C51] font-bold">
               Trusted by brands across{" "}
             </span>
             <span className="text-[#D77914] font-extrabold">12+ countries</span>
           </h1>
-          <p className="text-lg md:text-3xl tracking-wider font-afacad text-justify px-3 md:text-center md:px-0">
-            {`Empowering businesses with AI automation solutions, business process automation, and digital transformation consulting to drive measurable growth.`}
+          <p className="text-md leading-tight md:text-3xl tracking-wider font-afacad px-2 text-center md:px-0">
+            {`Empowering global innovators, fast-growing scale-ups, and pioneering startups to achieve extraordinary results.`}
           </p>
         </div>
       </div>
@@ -365,7 +361,7 @@ const Solutions: React.FC = () => {
         <div className="md:w-1/2 px-4">
           {/* Header Content */}
           {!showAllIndustries && !showAllNeeds && (
-            <div className="mb-4">
+            <div className="mb-4 hidden md:block">
               <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 font-poppins">
                 {`What's Your Business Challenge?`}
               </h1>
@@ -385,17 +381,27 @@ const Solutions: React.FC = () => {
         {/* Right Column - Image */}
         {/* Right Image - Hide when showing all options */}
         {!showAllIndustries && !showAllNeeds && (
-          <div className="md:w-1/2">
-            <div className="md:rounded-lg overflow-hidden shadow-lg">
-              <Image
-                src="/meeting-desk-chair.jpg"
-                alt="Modern conference room with chairs and a desk"
-                width={600}
-                height={500}
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="relative w-full md:w-1/2">
+          <div className="md:rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/meeting-desk-chair.jpg"
+              alt="Modern conference room with chairs and a desk"
+              width={600}
+              height={500}
+              className="w-full h-full object-cover"
+            />
           </div>
+          
+          {/* Text overlay with gradient background */}
+          <div className="absolute md:hidden inset-x-0 bottom-0 bg-gradient-to-t from-black via-black/70 to-transparent px-4 py-6">
+            <h1 className="text-lg md:text-3xl font-bold text-white font-poppins">
+              {`What's Your Business Challenge?`}
+            </h1>
+            <p className="text-sm md:text-lg text-white font-afacad">
+              Answer two questions and let us tackle your biggest challenges.
+            </p>
+          </div>
+        </div>
         )}
       </div>
     </div>

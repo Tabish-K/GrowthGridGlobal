@@ -1,190 +1,348 @@
-"use client";
+"use client"
 
-import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
-import { X, BookmarkIcon, AlignJustify, AlignLeft } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import SearchBar from "./SearchBar"; // Import the SearchBar component
-import Image from "next/image";
+import { useState, useEffect, useRef, type ReactNode } from "react"
+import Link from "next/link"
+import { motion, AnimatePresence } from "framer-motion"
+import aws from "../../public/aws.png";
+import { 
+  AlignJustify, 
+  ArrowsUpFromLine, 
+  BatteryFull, 
+  Building, 
+  ChartLine, 
+  Cloud, 
+  Code, 
+  File, 
+  Laptop, 
+  Rocket, 
+  ShieldAlert, 
+  ShoppingCart, 
+  Users, 
+  X, 
+  ChevronDown,
+  Waypoints,
+  Sparkles,
+  GalleryVertical,
+  ShoppingBag,
+  ChartNoAxesColumn,
+  ChartNoAxesCombined,
+  ShieldHalf,
+  WandSparkles,
+  Package,
+  Headset,
+  ServerCog, 
+} from "lucide-react"
+import Image from "next/image"
+import SearchBar from "./SearchBar";
 
-// Define TypeScript interfaces for our data structures
+// Define strong TypeScript interfaces
 interface NavLink {
-  label: string;
-  hasDropdown: boolean;
-  parentRoute: string;
-  links: {
-    [category: string]: string[];
-  };
-}
-
-interface MobileNavItem {
-  label: string;
-  hasDropdown: boolean;
-  page: string;
+  label: string
+  hasDropdown: boolean
+  parentRoute: string
+  links?: Record<string, string[]>
+  page?: string
+  content?: Array<{
+    icon?: ReactNode
+    text: ReactNode | string
+    description?: string
+    isLink?: boolean
+  }>
 }
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [hasScrolled, setHasScrolled] = useState<boolean>(false);
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
-  const [activeDropdown, setActiveDropdown] = useState<number | null>(null);
-  const [isDropdownHovered, setIsDropdownHovered] = useState<boolean>(false);
-  const navRef = useRef<HTMLDivElement>(null);
-  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [isOpen, setIsOpen] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [activeDropdown, setActiveDropdown] = useState<number | null>(null)
+  const [isDropdownHovered, setIsDropdownHovered] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null)
+  
+  const navRef = useRef<HTMLDivElement>(null)
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const mainNavItems: NavLink[] = [
     {
-      label: "Services",
+      label: "Our Services",
       hasDropdown: true,
-      parentRoute: "services",
+      parentRoute: "explore",
       links: {
-        "TECHNOLOGY & DEVELOPMENT": [
-          "Website and App Development",
-          "E-Commerce Optimization",
-          "Data and Cloud Solutions",
-        ],
-        "AUTOMATION & ANALYTICS": [
-          "Workflow Automation",
-          "Predictive Analytics",
-        ],
-        "MARKETING & BRANDING": [
-          "Social Media Management",
-          "Paid Advertising",
-          "Content Creation",
-          "Market Research",
-          "Engagement with AI",
-        ],
+        "": [  // Empty category
+          "Technology & Development",
+          "Data & Cloud Solutions",
+          "Automation & Analytics",
+          "Cybersecurity Services",
+          "Engagement with AI"
+        ]
       },
+      content: [
+        {
+          icon: <Code size={20} className="text-[#D77914]" />,
+          text: "Technology & Development",
+          description:
+            "We craft scalable websites, mobile apps, and custom digital solutions that accelerate business growth.",
+        },
+        {
+          icon: <Cloud size={20} className="text-purple-700" />,
+          text: "Data & Cloud Solutions",
+          description:
+            "Our secure cloud infrastructure and data management systems optimize performance and ensure reliability.",
+        },
+        {
+          icon: <Waypoints size={20} className="text-[#D77914]" />,
+          text: "Automation & Analytics",
+          description: "Streamline your processes with intelligent automation and actionable insights powered by AI.",
+        },
+        {
+          icon: <ShieldAlert size={20} className="text-gray-700" />,
+          text: "Cybersecurity Services",
+          description:
+            "Protect your digital assets with advanced security protocols, risk assessments, and compliance strategies.",
+        },
+        {
+          icon: <Sparkles size={20} className="text-[#D77914]" />,
+          text: "Engagement with AI",
+          description: "Enhance customer interactions and business processes using smart AI-driven solutions.",
+        },
+        {
+          text: (
+            <Link
+              href="/explore"
+              className="text-black hover:text-[#4F1C51] transition duration-300 inline-flex items-center text-md md:text-lg font-medium font-afacad"
+            >
+              Explore All Services
+              <svg className="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12H19" />
+                <path d="M12 5L19 12L12 19" />
+              </svg>
+            </Link>
+          ),
+          isLink: true,
+        },
+      ],
     },
     {
-      label: "Portfolio",
+      label: "Portofolio",
       hasDropdown: true,
       parentRoute: "portfolio",
       links: {
-        "CASE STUDY": ["E-Commerce Business Transformation"],
+        "": [  // Empty category for clean list
+          "UI Path - Process Automation",
+          "Dynamic Yield - E-Commerce Optimization",
+          "AWS - Cloud Migration Strategy",
+          "Revolut - Digital Transformation",
+          "Palo Alto Prisma - Security & Compliance"
+        ]
       },
+      content: [
+        {
+          icon: <GalleryVertical size={20} className="text-[#D77914]" />,
+          text: "UI Path - Process Automation",
+          description: "Reduced operational costs by 40% through streamlined workflows and system integrations.",
+        },
+        {
+          icon: <ShoppingBag size={20} className="text-[#4F1C51]" />,
+          text: "Dynamic Yield - E-Commerce Optimization",
+          description: "Increased revenue by 68% with personalized retargeting and loyalty program development.",
+        },
+        {
+          icon: <Image src={aws} height={100} width={100} alt="aws" className="h-full w-full"/>,
+          text: "AWS - Cloud Migration Strategy",
+          description: "Achieved 40% cost savings with advanced cloud migration and security solutions.",
+        },
+        {
+          icon: <ChartNoAxesCombined size={20} className="text-[#4F1C51]" />,
+          text: "Revolut - Digital Transformation",
+          description: "Scaled a FinTech giant using AI and cloud technologies, driving 4x revenue growth.",
+        },
+        {
+          icon: <ShieldHalf size={20} className="text-[#D77914]" />,
+          text: "Palo Alto Prisma - Security & Compliance",
+          description: "Enhanced security and compliance through advanced threat protection and monitoring.",
+        },
+        {
+          text: (
+            <Link
+              href="/#"
+              className="text-black hover:text-[#4F1C51] transition duration-300 inline-flex items-center text-md md:text-lg font-medium font-afacad"
+            >
+              Explore All Case Studies
+              <svg className="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12H19" />
+                <path d="M12 5L19 12L12 19" />
+              </svg>
+            </Link>
+          ),
+          isLink: true,
+        },
+      ],
     },
     {
       label: "Blogs",
       hasDropdown: true,
       parentRoute: "blogs",
       links: {
-        "PRODUCT DEVELOPMENT": [
-          "AI for sme digital transformation",
-          "AI in product development",
-          "AI in e-com customer experience",
-        ],
-        "SUPPLY CHAIN": ["AI driven supply chain optimization"],
-        "BUSINESS OPERATIONS": [
-          "Automation business workflows",
-          "AI in content marketing & engagement",
-        ],
+        "": [  // Empty category for clean list
+          "AI for SME Digital Transformation",
+          "AI in Product Development",
+          "AI in E-Commerce Customer Experience",
+          "Automating Business Workflows",
+          "AI in Content Marketing & Engagement"
+        ]
       },
+      content: [
+        {
+          icon: <WandSparkles size={20} className="text-[#D77914]" />,
+          text: "AI for SME Digital Transformation",
+          description: "Explore how AI empowers small and medium enterprises to scale and innovate.",
+        },
+        {
+          icon: <Package size={20} className="text-[#4F1C51]" />,
+          text: "AI in Product Development",
+          description: "Discover how AI accelerates product design and enhances customer feedback loops.",
+        },
+        {
+          icon: <Headset size={20} className="text-[#D77914]" />,
+          text: "AI in E-Commerce Customer Experience",
+          description: "Learn how AI-driven recommendations and personalization improve user satisfaction.",
+        },
+        {
+          icon: <File size={20} className="text-[#D77914]" />,
+          text: "Automating Business Workflows",
+          description: "See how automation streamlines operations and increases productivity.",
+        },
+        {
+          icon: <ServerCog size={20} className="text-[#4F1C51]" />,
+          text: "AI in Content Marketing & Engagement",
+          description: "Explore how AI optimizes content strategies and improves audience engagement.",
+        },
+        {
+          text: (
+            <Link
+              href="/blog"
+              className="text-black hover:text-[#4F1C51] transition duration-300 inline-flex items-center text-md md:text-lg font-medium font-afacad"
+            >
+              Read All Blog Stories
+              <svg className="ml-1 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12H19" />
+                <path d="M12 5L19 12L12 19" />
+              </svg>
+            </Link>
+          ),
+          isLink: true,
+        },
+      ],
     },
     {
-      label: "Company",
-      hasDropdown: true,
+      label: "About Us",
+      hasDropdown: false,
       parentRoute: "company",
-      links: {
-        "": ["ABOUT US", "WHY US", "LEADERSHIP", "CAREERS"],
-      },
+      page: "about-us",
     },
-  ];
+    {
+      label: "Why Us",
+      hasDropdown: false,
+      parentRoute: "company",
+      page: "why-us",
+    },
+    {
+      label: "Careers",
+      hasDropdown: false,
+      parentRoute: "company",
+      page: "careers",
+    },
+  ]
 
-  const mobileNavSections: MobileNavItem[] = [
-    { label: "Industries", hasDropdown: true, page: "#" },
-    { label: "Services", hasDropdown: true, page: "explore" },
-    { label: "Consultation Services", hasDropdown: true, page: "contact" },
-    { label: "Blogs", hasDropdown: true, page: "blog" },
-    { label: "Retail", hasDropdown: true, page: "retail" },
-    { label: "About Us", hasDropdown: true, page: "company/about-us" },
-    { label: "Careers", hasDropdown: true, page: "careers" },
-  ];
+  const mobileNavSections = mainNavItems;
 
-  const mobileBottomSections: MobileNavItem[] = [
-    { label: "Explore", hasDropdown: true, page: "explore" },
-    { label: "Contact", hasDropdown: true, page: "contact" },
-  ];
+  const toggleDropdown = (index: number) => {
+    setOpenDropdown(openDropdown === index ? null : index)
+  }
 
-  // Handle dropdown hover
-  const handleNavItemHover = (index: number): void => {
-    // Clear any existing timeout
+  const handleNavItemHover = (index: number) => {
     if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
     }
-    setActiveDropdown(index);
-  };
+    setActiveDropdown(index)
+  }
 
-  // Handle dropdown hover exit
-  const handleNavItemLeave = (): void => {
-    // Set a timeout before closing the dropdown
-    // This gives the user time to move mouse to the dropdown
+  const handleNavItemLeave = () => {
     closeTimeoutRef.current = setTimeout(() => {
-      // Only close if dropdown itself is not being hovered
       if (!isDropdownHovered) {
-        setActiveDropdown(null);
+        setActiveDropdown(null)
       }
-    }, 150); // 150ms delay
-  };
+    }, 150)
+  }
 
-  // Handle dropdown hover
-  const handleDropdownHover = (): void => {
-    setIsDropdownHovered(true);
-    // Clear any pending close timers
+  const handleDropdownHover = () => {
+    setIsDropdownHovered(true)
     if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
+      clearTimeout(closeTimeoutRef.current)
+      closeTimeoutRef.current = null
     }
-  };
+  }
 
-  // Handle dropdown exit
-  const handleDropdownLeave = (): void => {
-    setIsDropdownHovered(false);
-    // Set a timeout to close the dropdown
+  const handleDropdownLeave = () => {
+    setIsDropdownHovered(false)
     closeTimeoutRef.current = setTimeout(() => {
-      setActiveDropdown(null);
-    }, 150);
-  };
+      setActiveDropdown(null)
+    }, 150)
+  }
 
+  const handleNavLinkClick = () => {
+    setIsOpen(false)
+    setIsSearchOpen(false)
+  }
+
+  // Effects
   useEffect(() => {
-    const handleScroll = (): void => {
-      setHasScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 20)
+    }
 
-    const handleClickOutside = (event: MouseEvent): void => {
+    const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll)
+    document.addEventListener("mousedown", handleClickOutside)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("mousedown", handleClickOutside);
-      // Clear any pending timeouts when component unmounts
+      window.removeEventListener("scroll", handleScroll)
+      document.removeEventListener("mousedown", handleClickOutside)
       if (closeTimeoutRef.current) {
-        clearTimeout(closeTimeoutRef.current);
+        clearTimeout(closeTimeoutRef.current)
       }
-    };
-  }, []);
+    }
+  }, [])
 
-  const handleNavLinkClick = (): void => {
-    setIsOpen(false);
-    setIsSearchOpen(false);
-  };
+  // Generate class strings dynamically to avoid redundancy
+  const getNavLinkClass = (isActive: boolean = false) => {
+    return `text-[14px] uppercase tracking-wider flex items-center space-x-1 transition-colors font-afacad ${
+      isActive
+        ? "text-gray-600 hover:text-[#4F1C51]"
+        : `${hasScrolled || isHovered ? "text-gray-600" : "text-white"} hover:text-gray-300`
+    }`
+  }
+
+  const getIconClass = () => {
+    return `transition-colors ${
+      hasScrolled || isHovered || isSearchOpen
+        ? "text-gray-500 hover:text-[#4F1C51]"
+        : "text-white hover:text-gray-300"
+    }`
+  }
 
   return (
     <>
       <div className="fixed w-full z-40" ref={navRef}>
         <div
           className={`transition-all duration-300 ${
-            hasScrolled || isHovered || isSearchOpen
-              ? "bg-white"
-              : "bg-transparent"
+            hasScrolled || isHovered || isSearchOpen ? "bg-white" : "bg-transparent"
           }`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -198,44 +356,28 @@ const Navbar = () => {
                     isSearchOpen
                       ? "hidden"
                       : hasScrolled || isHovered
-                      ? "text-gray-600 md:hover:text-gray-500" // Hover effect only on medium+ screens
-                      : "text-white"
+                        ? "text-gray-600 md:hover:text-gray-500"
+                        : "text-white"
                   }`}
+                  aria-label="Toggle menu"
                 >
-                  {isOpen ? (
-                    <AlignLeft size={24} />
-                  ) : (
-                    <AlignJustify size={24} />
-                  )}
+                  {isOpen ? <X size={24} /> : <AlignJustify size={24} />}
                 </button>
 
-                <Link
-                  href="/"
-                  className={`${isSearchOpen ? "hidden md:block" : "block"}`}
-                  onClick={handleNavLinkClick}
-                >
-                  {hasScrolled || isHovered || isSearchOpen ? (
-                    <Image
-                      src="/blackLogo1.png"
-                      width={100}
-                      height={56}
-                      className="h-14 w-auto"
-                      alt="Logo"
-                    />
-                  ) : (
-                    <Image
-                      src="/whiteLogo1.png"
-                      width={100}
-                      height={48}
-                      className="h-12 w-auto"
-                      alt="Logo"
-                    />
-                  )}
+                <Link href="/" className={`${isSearchOpen ? "hidden md:block" : "block"}`} onClick={handleNavLinkClick}>
+                  {/* Logo image based on scroll/hover state */}
+                  <Image 
+                    src={hasScrolled || isHovered || isSearchOpen ? "/blackLogo1.png" : "/whiteLogo1.png"} 
+                    className="h-full" 
+                    height={100}
+                    width={100}
+                    alt="Growth Grid" 
+                  />
                 </Link>
 
                 {!isSearchOpen && (
                   <div className="hidden lg:flex items-center space-x-8 ml-8">
-                    {mainNavItems.map((item, index) => (
+                    {mainNavItems.slice(0, 3).map((item, index) => (
                       <div
                         key={item.label}
                         className="relative group"
@@ -243,59 +385,71 @@ const Navbar = () => {
                         onMouseLeave={() => handleNavItemLeave()}
                       >
                         <button
-                          className={`text-[14px] uppercase tracking-wider flex items-center space-x-1 transition-colors ${
-                            activeDropdown === index
-                              ? "text-gray-600 hover:text-[#CC0012]"
-                              : `${
-                                  hasScrolled || isHovered
-                                    ? "text-gray-600"
-                                    : "text-white"
-                                } hover:text-gray-300`
-                          }`}
+                          className={getNavLinkClass(activeDropdown === index)}
+                          aria-expanded={activeDropdown === index}
                         >
-                          {item.label}
+                          {item.label} {item.hasDropdown && <ChevronDown size={14} className={activeDropdown === index ? "ml-1 rotate-180" : "ml-1"} />}
                         </button>
 
-                        {item.hasDropdown && activeDropdown === index && (
+                        {item.hasDropdown && activeDropdown === index && item.content && (
                           <div
-                            className="absolute left-0 mt-2 w-max bg-white shadow-lg border rounded-lg py-4 px-6 grid grid-cols-2 gap-4"
+                            className="absolute left-0 mt-2 w-max bg-white shadow-lg rounded-lg py-6 px-6"
                             onMouseEnter={handleDropdownHover}
                             onMouseLeave={handleDropdownLeave}
                           >
-                            {Object.entries(item.links).map(
-                              ([category, links], i) => (
-                                <div key={i}>
-                                  {category && (
-                                    <h4 className="text-[#CC0012] tracking-wide font-bold text-sm mb-2">
-                                      {category}
-                                    </h4>
+                              <Link href={`/${item.parentRoute}`}>
+                            <div className="space-y-4">
+                              {item.content.map((subItem, subIndex) => (
+                                <div
+                                  key={subIndex}
+                                  className={`flex items-start space-x-3 ${subItem.isLink ? "pt-2" : ""}`}
+                                >
+                                  {!subItem.isLink && subItem.icon && (
+                                    <span className="text-lg mt-1 min-w-[20px]">{subItem.icon}</span>
                                   )}
-                                  {links.map((link, j) => (
-                                    <Link
-                                      href={`/${item.parentRoute}/${link
-                                        .toLowerCase()
-                                        .replace(/\s+/g, "-")}`}
-                                      key={j}
-                                      className="block tracking-wide text-gray-700 hover:text-[#CC0000] uppercase text-xs py-1"
-                                    >
-                                      {link}
-                                    </Link>
-                                  ))}
+                                  <div>
+                                    {subItem.isLink ? (
+                                      <div>{subItem.text}</div>
+                                    ) : (
+                                      <>
+                                        <span className="font-medium text-sm font-poppins">{subItem.text}</span>
+                                        {subItem.description && (
+                                          <p className="text-gray-500 text-sm mt-1 font-afacad">
+                                            {subItem.description}
+                                          </p>
+                                        )}
+                                      </>
+                                    )}
+                                  </div>
                                 </div>
-                              )
-                            )}
+                              ))}
+                            </div>
+                        </Link>
                           </div>
                         )}
                       </div>
                     ))}
-
-                    <Link href="/contact">
-                      <button className="uppercase bg-[#CC0012] text-white text-xs px-5 py-3 rounded-[4px] shadow-md">
-                        Contact us
-                      </button>
-                    </Link>
                   </div>
                 )}
+              </div>
+
+              <div className="hidden lg:flex items-center space-x-6">
+                {!isSearchOpen && mainNavItems.slice(3).map((item, index) => (
+                  <Link 
+                    key={item.label}
+                    href={`/${item.parentRoute}/${item.page}`}
+                    onClick={handleNavLinkClick}
+                    className={getNavLinkClass()}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                
+                <Link href="/contact">
+                  <button className="uppercase bg-[#4F1C51] text-white border-[2px] text-xs px-5 py-3 rounded-full shadow-md font-afacad">
+                    Contact Us
+                  </button>
+                </Link>
               </div>
 
               <div
@@ -303,45 +457,17 @@ const Navbar = () => {
                   isSearchOpen ? "w-full md:w-[35rem]" : "justify-end"
                 }`}
               >
-                <SearchBar
-                  isSearchOpen={isSearchOpen}
-                  setIsSearchOpen={setIsSearchOpen}
-                  hasScrolled={hasScrolled}
-                  isHovered={isHovered}
-                />
-
-                {!isSearchOpen && (
-                  <>
-                    <Link
-                      href="/explore"
-                      onClick={handleNavLinkClick}
-                      className={`hidden lg:block text-sm tracking-wider uppercase transition-colors ${
-                        hasScrolled || isHovered || isSearchOpen
-                          ? "text-gray-500 hover:text-[#CC0012]"
-                          : "text-white hover:text-gray-300"
-                      }`}
-                    >
-                      Explore
-                    </Link>
-
-                    <button className="hidden lg:block">
-                      <BookmarkIcon
-                        size={24}
-                        className={`transition-colors ${
-                          hasScrolled || isHovered || isSearchOpen
-                            ? "text-gray-500 hover:text-[#CC0012]"
-                            : "text-white hover:text-gray-300"
-                        }`}
-                      />
-                    </button>
-                  </>
-                )}
+                {/* {!isSearchOpen && (
+                  <button className="lg:hidden">
+                    <SearchBar />
+                  </button>
+                )} */}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - with AnimatePresence for smooth transitions */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -349,70 +475,97 @@ const Navbar = () => {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "tween", duration: 0.3 }}
-              className="fixed z-50 inset-0 bg-white shadow-lg border-r-[8px] border-[#CC0012] w-[18rem] h-[34rem]"
-              style={{ top: "80px" }}
+              className="fixed inset-0 bg-white shadow-lg z-50 w-full max-w-md h-full overflow-y-auto px-3"
             >
-              <div className="flex flex-col h-full overflow-y-auto relative px-6">
-                <div className="py-6 space-y-6 border-b-2 border-gray-200">
-                  {mobileNavSections.map((item) => (
-                    <Link
-                      href={`/${item.page}`}
-                      key={item.label}
-                      onClick={handleNavLinkClick}
-                    >
-                      <div>
-                        <button className="flex items-center justify-between w-full py-3 text-left text-gray-800 hover:text-[#CC0012] transition-all">
-                          <span className="text-xs sm:text-sm uppercase tracking-wider">
+              <div className="flex flex-col h-full p-4 space-y-2">
+                <div className="flex justify-between items-center py-2">
+                  <Image src="/blackLogo1.png" alt="Growth Grid" className="h-full" height={100} width={100} />
+                  <button 
+                    onClick={() => setIsOpen(false)} 
+                    className=""
+                    aria-label="Close menu"
+                  >
+                    <X size={24} />
+                  </button>
+                </div>
+
+                <nav className="space-y-0">
+                  {mobileNavSections.map((item, index) => (
+                    <div key={item.label} className="border-b border-gray-200">
+                      {item.hasDropdown ? (
+                        <>
+                          <button
+                            className="w-full text-left font-medium text-lg md:text-xl flex justify-between items-center py-4 font-afacad"
+                            onClick={() => toggleDropdown(index)}
+                            aria-expanded={openDropdown === index}
+                          >
                             {item.label}
-                          </span>
-                        </button>
-                      </div>
-                    </Link>
+                            {item.hasDropdown && (
+                              <ChevronDown
+                                className={`text-gray-500 transition-transform ${
+                                  openDropdown === index ? "rotate-180" : ""
+                                }`}
+                              />
+                            )}
+                          </button>
+
+                          {item.hasDropdown && openDropdown === index && item.content && (
+                            <div className="py-2 space-y-6">
+                              {item.content.filter(item => !item.isLink).map((subItem, subIndex) => (
+                                <div
+                                  key={subIndex}
+                                  className="flex items-start space-x-3"
+                                >
+                                  {subItem.icon && (
+                                    <span className="mt-1 min-w-[20px]">{subItem.icon}</span>
+                                  )}
+                                  <div>
+                                    <span className="text-xs md:text-sm font-[550] tracking-wide font-poppins">{subItem.text}</span>
+                                    {subItem.description && (
+                                      <p className="text-gray-500 text-sm mt-1 font-afacad">
+                                        {subItem.description}
+                                      </p>
+                                    )}
+                                  </div>
+                                </div>
+                              ))}
+                              {item.content.find(item => item.isLink) && (
+                                <div className="pt-2 pb-4 border-t border-gray-200 mt-4 font-afacad">
+                                  {item.content.find(item => item.isLink)?.text}
+                                </div>
+                              )}
+                            </div>
+                          )}
+                        </>
+                      ) : (
+                        <Link
+                          href={`/${item.parentRoute}/${item.page}`}
+                          className="block w-full text-left font-medium text-lg md:text-xl py-4 hover:text-[#4F1C51] transition-colors font-afacad"
+                          onClick={handleNavLinkClick}
+                        >
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
                   ))}
+                </nav>
+
+                <div className="mt-auto pt-6 pb-4">
+                  <div className="flex justify-center">
+                    <Link href="/contact">
+                      <button className="bg-[#4F1C51] text-white py-3 px-8 rounded-full shadow-md uppercase font-medium text-sm w-full max-w-xs font-afacad">
+                        Contact Us
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <div className="absolute w-full bottom-4 space-y-4 px-4">
-                <div>
-                  {mobileBottomSections.map((item) => (
-                    <Link
-                      href={`/${item.page}`}
-                      key={item.label}
-                      onClick={handleNavLinkClick}
-                    >
-                      <div>
-                        <button className="flex items-center justify-between w-full py-3 text-left text-gray-800">
-                          <span className="text-xs sm:text-sm uppercase font-semibold hover:underline decoration-[#CC0012]">
-                            {item.label}
-                          </span>
-                        </button>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-                <div className="relative right-0 left-0 m-auto w-max">
-                  <Link href="/">
-                    <Image
-                      src="/blackLogo1.png"
-                      width={100}
-                      height={56}
-                      className="h-14 w-auto"
-                      alt="Logo"
-                    />
-                  </Link>
-                </div>
-              </div>
-              <button
-                onClick={() => setIsOpen(!isOpen)}
-                className="absolute bg-[#CC0012] top-0 -right-12 p-3 text-[#CC0012]"
-              >
-                <X size={20} className="text-white" />
-              </button>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
 
-      {/* Backdrop */}
+      {/* Backdrop for search */}
       <AnimatePresence>
         {isSearchOpen && (
           <motion.div
@@ -422,11 +575,12 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-black/20 z-30"
             onClick={() => setIsSearchOpen(false)}
+            aria-hidden="true"
           />
         )}
       </AnimatePresence>
     </>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

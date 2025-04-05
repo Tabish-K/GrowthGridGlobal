@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 // Import Brands Pngs
 import coursera from "../../public/BrandsPng/logos_coursera.png";
@@ -23,47 +24,68 @@ interface Brand {
 }
 
 const HorizontallyScrollableBrands: React.FC = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+        setIsMobile(window.innerWidth < 768);
+        };
+        
+        checkMobile();
+        
+        window.addEventListener("resize", checkMobile);
+        
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
     const brandsLogo: Brand[] = [
-        { id: 1, name: "Coursera", img: coursera, classes: "h-4 md:h-10 w-auto" },
-        { id: 2, name: "Webflow", img: webflow, classes: "h-6 md:h-10 w-auto" },
-        { id: 3, name: "Monday.com", img: monday, classes: "h-6 md:h-10 w-auto" },
-        { id: 4, name: "Asana", img: asana, classes: "h-6 md:h-10 w-auto" },
-        { id: 6, name: "Pipedrive", img: pipedrive, classes: "h-6 md:h-10 w-auto" },
-        { id: 7, name: "Intercom", img: intercom, classes: "h-12 w-auto" },
-        { id: 8, name: "Fiverr", img: fiverr, classes: "h-12 md:h-18 w-auto" },
-        { id: 9, name: "Hubspot", img: hubspot, classes: "h-12 w-auto" },
-        { id: 10, name: "Notion", img: notion, classes: "h-12 w-auto" },
+        { id: 1, name: "Coursera", img: coursera, classes: "h-3 md:h-5 w-auto" },
+        { id: 2, name: "Webflow", img: webflow, classes: "h-5 md:h-8 w-auto" },
+        { id: 3, name: "Monday.com", img: monday, classes: "h-6 md:h-8 w-auto" },
+        { id: 4, name: "Fiverr", img: fiverr, classes: "h-6 md:h-8 w-auto" },
+        { id: 5, name: "Asana", img: asana, classes: "h-5 md:h-8 w-auto" },
+        { id: 6, name: "Pipedrive", img: pipedrive, classes: "h-6 md:h-8 w-auto" },
+        { id: 7, name: "Intercom", img: intercom, classes: "h-7 md:h-8 w-auto" },
+        { id: 8, name: "Hubspot", img: hubspot, classes: "h-6 md:h-8 w-auto" },
+        { id: 9, name: "Notion", img: notion, classes: "h-8 w-auto" },
     ];
 
-    // Duplicate the logos for infinite scrolling effect
-    const duplicatedLogos: Brand[] = [...brandsLogo, ...brandsLogo];
+    // Duplicate the logos to ensure continuous scrolling
+    const allLogos = [...brandsLogo, ...brandsLogo];
 
     return (
-        <div className="overflow-hidden whitespace-nowrap bg-[#B771E5]/10 py-4 md:mb-14">
+        <div className="relative overflow-hidden bg-[#B771E5]/10 py-4 md:py-6">
+        {/* First carousel */}
         <motion.div
-            className="flex space-x-14 sm:space-x-44 items-center"
-            animate={{ x: ["0%", "-100%"] }}
+            className="flex space-x-12 md:space-x-24 items-center"
+            animate={{
+            x: [0, -1920], // Approximate full width of duplicated content
+            }}
             transition={{
             x: {
-                duration: 60,
+                duration: isMobile ? 30 : 45,
                 ease: "linear",
                 repeat: Infinity,
                 repeatType: "loop",
             },
             }}
         >
-            {duplicatedLogos.map((logo, index) => (
-            <motion.div
+            {allLogos.map((logo, index) => (
+            <div
                 key={`${logo.id}-${index}`}
-                className="flex-shrink-0 flex flex-col items-center justify-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: index * 0.3, duration: 0.5 }} // Staggered delay for smooth appearance
+                className="flex-shrink-0 flex items-center justify-center"
             >
-                <div className="py-4">
-                <Image src={logo.img} alt={logo.name} width={96} height={48} className={logo.classes} />
+                <div className="py-3 px-2">
+                <Image
+                    src={logo.img}
+                    alt={logo.name}
+                    width={96}
+                    height={48}
+                    className={logo.classes}
+                    priority={index < 9}
+                />
                 </div>
-            </motion.div>
+            </div>
             ))}
         </motion.div>
         </div>

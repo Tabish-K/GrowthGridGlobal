@@ -38,31 +38,31 @@ function Footer() {
         <div className="relative">
             {/* Call to Action Section */}
             <motion.div 
-                className="relative bg-gradient-to-t from-black via-black/60 to-transparent py-16 px-4"
+                className="relative bg-gradient-to-t from-black via-black/60 to-transparent pt-16 px-4"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                <div className="text-center max-w-4xl mx-auto">
+                <div className="text-center max-w-2xl mx-auto">
                     <motion.h1 
-                        className="text-3xl lg:text-4xl font-bold text-[#4F1C51] font-poppins"
+                        className="text-xl lg:text-4xl font-bold text-[#4F1C51] font-poppins"
                         {...fadeInUp}
                     >
                         {`Let's Shape the Future Together`}
                     </motion.h1>
                     <motion.p 
-                        className="text-lg md:text-xl tracking-wide text-black font-afacad mt-6 leading-relaxed"
+                        className="text-lg leading-tight md:text-xl tracking-wide text-black font-afacad mt-3 md:mt-6"
                         {...fadeInUp}
                     >
-                        {`Boost your AI automation solutions today. Get in touch today to start your journey toward innovation, efficiency and growth`}
+                        {`Get in touch today to start your journey toward innovation, efficiency and growth`}
                     </motion.p>
                     <motion.div 
                         className="grid grid-cols-1 gap-6 mt-12"
                         variants={staggerChildren}
                     >
                         <motion.button 
-                            className="group text-lg md:text-2xl font-afacad text-white bg-[#D77914] px-8 py-4 font-semibold rounded-full flex items-center justify-center gap-2 hover:bg-[#D77914]/80 transition-colors"
+                            className="group text-lg md:text-2xl font-afacad text-white bg-[#D77914] px-8 py-4 font-semibold shadow-xl rounded-full flex items-center justify-center gap-2 hover:bg-[#D77914]/80 transition-colors"
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                         >

@@ -3,28 +3,53 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Check, Minus, MoveDown, MoveRight, Plus } from 'lucide-react';
+import Image from "next/image";
+
+// Define interfaces for the data structures
+interface Section {
+  title: string;
+  content: string;
+}
+
+interface PartnershipSection {
+  title: string;
+  desc: string;
+  points: string[];
+}
+
+interface ProcessStep {
+  id: number;
+  title: string;
+  content: string;
+}
+
+interface Benefit {
+  prefix: string;
+  highlight: string;
+  suffix: string;
+}
 
 // Why Us
-const sections = [
+const sections: Section[] = [
     {
         title: "A Culture of Continuous Innovation",
         content:
-        "We’re constantly pushing boundaries. Whether it’s reimagining the customer journey or deploying a custom tech solution, we believe in staying one step ahead of the curve.",
+        "We’re constantly pushing boundaries—whether reimagining customer journeys, implementing AI-driven business solutions, or enabling digital transformation consulting that adapts to tomorrow’s needs.",
     },
     {
         title: "True Partnership",
         content:
-        "We don’t just deliver a project and walk away. We’re with you every step of the way—from ideation and execution to continuous optimization—ensuring that our solutions evolve as your business grows.",
+        "We don't just deliver a project and walk away. We're with you every step of the way—from ideation and execution to continuous optimization—ensuring that our solutions evolve as your business grows.",
     },
     {
         title: "Your Future, Our Mission",
         content:
-        "At Growth Grid, we’re not just building solutions; we’re building the future of business. Our mission is to empower you to lead in a digital-first world, armed with the tools and insights to turn every challenge into an opportunity for explosive growth.",
+        "At Growth Grid, we're not just building solutions; we're building the future of business. Our mission is to empower you to lead in a digital-first world, armed with the tools and insights to turn every challenge into an opportunity for explosive growth.",
     },
 ];  
 
-// Partenership
-const partSection = [
+// Partnership
+const partSection: PartnershipSection[] = [
         {
             title: "Data-Driven Solutions",
             desc: "Customized strategies powered by AI, automation, and predictive analytics.",
@@ -61,10 +86,10 @@ const partSection = [
                 "Ongoing Optimization",
             ],
         },
-]
+];
 
 // Approach
-const processSteps = [
+const processSteps: ProcessStep[] = [
     {
         id: 1,
         title: "Consultation",
@@ -93,7 +118,7 @@ const processSteps = [
         id: 5,
         title: "Reporting and Communication",
         content:
-            "Regular updates and transparent reporting keep you informed about progress, performance, and key insights, ensuring that you're always aligned with the project’s trajectory.",
+            "Regular updates and transparent reporting keep you informed about progress, performance, and key insights, ensuring that you're always aligned with the project's trajectory.",
     },
     {
         id: 6,
@@ -103,8 +128,8 @@ const processSteps = [
     },
 ];  
 
-// Benifits
-const benefits = [
+// Benefits
+const benefits: Benefit[] = [
     {
         prefix: "Reduce development costs by up to",
         highlight: "50%.",
@@ -137,15 +162,20 @@ const benefits = [
     }
 ];
 
-function page() {
-    const [openIndex, setOpenIndex] = useState(null);
-    const [activeStep, setActiveStep] = useState(null);
+interface NavLink {
+  id: string;
+  label: string;
+}
 
-    const toggleSection = (index) => {
+const Page: React.FC = () => {
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const [activeStep, setActiveStep] = useState<number | null>(null);
+
+    const toggleSection = (index: number): void => {
         setOpenIndex(openIndex === index ? null : index);
     };    
 
-    const whyUsNavLinks = [
+    const whyUsNavLinks: NavLink[] = [
         { id: "why-us", label: "Why Us" },
         { id: "partenership", label: "Partenership" },
         { id: "approach", label: "Our Approach" },
@@ -163,26 +193,26 @@ function page() {
             >
                 <div className="absolute inset-0 bg-black/20" />
                 <div className="max-w-7xl relative mt-12 right-0 left-0 mx-auto">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold bg-gradient-to-r from-white drop-shadow-2xl to-transparent text-transparent bg-clip-text">Why Us</h1>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold bg-gradient-to-r from-white drop-shadow-2xl to-transparent text-transparent bg-clip-text font-poppins">Why Us</h1>
                 </div>
             </div>
 
             {/* why-us */}
-            <section id='why-us' className='py-12 md:py-20 max-w-7xl relative right-0 left-0 lg:mx-auto md:mx-6 mx-4'>
+            <section id='why-us' className='py-6 md:py-20 max-w-7xl relative right-0 left-0 lg:mx-auto md:mx-6 mx-4'>
                 <div className="mb-8 text-left space-y-4">
-                    <h2 className="text-4xl md:text-6xl text-gray-900 leading-tight">
+                    <h2 className="text-3xl text-center md:text-start md:text-4xl font-bold text-black font-poppins leading-tight">
                     Why{" "}
-                    <span className="font-bold bg-gradient-to-r from-[#CC0012] to-[#CC0012]/40 text-transparent bg-clip-text">
+                    <span className="text-[#D77914]">
                         Growth Grid?
                     </span>
                     </h2>
-                    <p className="text-[20px] md:text-3xl font-medium tracking-wide text-gray-900 mt-2">
-                        Because We Transform Complexity Into Opportunity
+                    <p className="text-[18px] md:text-[22px] text-center md:text-xl font-medium font-afacad tracking-wide text-gray-900 mt-2">
+                        {`Because we turn complexity into opportunity using AI automation solutions, workflow automation software, and predictive analytics to help businesses scale faster.`}
                     </p>
                 </div>
 
                 {/* Content Section */}
-                <div className="flex h-full lg:h-[22rem] flex-col justify-between md:flex-row my-10 gap-10 md:gap-0">
+                <div className="flex h-full lg:h-[22rem] flex-col-reverse justify-between md:flex-row my-10 gap-10 md:gap-0 px-2">
                     {/* Left Side: Collapsible Sections (Standalone) */}
                     <div className="md:w-1/2 flex flex-col justify-between gap-8 md:gap-0">
                     {sections.map((section, index) => (
@@ -193,15 +223,15 @@ function page() {
                         <div
                             className="flex justify-between items-center"
                             onClick={() => toggleSection(index)}
-                            onKeyDown={(e) => {
+                            onKeyDown={(e: React.KeyboardEvent) => {
                             if (e.key === "Enter" || e.key === " ") toggleSection(index);
                             }}
                             tabIndex={0}
                             role="button"
                         >
-                            <h3 className="text-[22px] flex items-center pb-4 justify-between font-semibold text-[#CC0012] border-b-2 border-red-500 w-full">
+                            <h3 className="text-[22px] flex items-center pb-4 justify-between font-semibold text-[#4F1C51] border-b-2 border-[#4F1C51] font-afacad w-full">
                             {section.title}
-                            <span className="text-[#CC0012] text-2xl">
+                            <span className="text-[#4F1C51] text-2xl">
                             {openIndex === index ? <MoveDown/> : <MoveRight/>}
                             </span>
                             </h3>
@@ -212,7 +242,7 @@ function page() {
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: "auto" }}
                                 exit={{ opacity: 0, height: 0 }}
-                                className="text-gray-900 text-lg md:text-xl tracking-wide capitalize mt-2"
+                                className="text-black text-lg md:text-xl tracking-wide capitalize mt-2 font-afacad"
                             >
                                 {section.content}
                             </motion.p>
@@ -223,9 +253,11 @@ function page() {
                     </div>
                      {/* Right Side: Image Control */}
                     <div className="">
-                    <img
+                    <Image
                         src="/images/pointing-laptop.avif"
                         alt="Growth Grid"
+                            height={500}
+                            width={700}
                         className="rounded-lg shadow-lg object-cover h-full w-[28rem]"
                     />
                     </div>
@@ -233,35 +265,32 @@ function page() {
             </section>
 
             {/* partenership */}
-            <section id='partenership' className='py-12 md:py-20 max-w-7xl relative right-0 left-0 lg:mx-auto md:mx-6 mx-4'>
+            <section id='partenership' className='md:py-16 max-w-7xl relative right-0 left-0 lg:mx-auto md:mx-6 mx-4'>
                 {/* Heading */}
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-4">
-                    Why <span className="text-[#CC0012]">Partner </span>
-                    <span className="bg-gradient-to-r from-[#CC0012] to-red-300 text-transparent bg-clip-text">
-                        With Us?
-                    </span>
+                    <h2 className="text-2xl md:text-4xl font-bold mb-4 font-poppins">
+                    Why <span className="text-[#D77914]">Partner With Us?</span>
                     </h2>
-                    <p className="text-gray-900 max-w-3xl tracking-wide text-lg md:text-2xl mx-auto">
+                    <p className="text-black font-afacad max-w-3xl tracking-wide text-lg md:text-2xl mx-auto">
                     {`From Industry-Leading Expertise To Innovative Technologies, Here's Why
                     Growth Grid Is The Right Choice For Your Business.`}
                     </p>
                 </div>
 
                 {/* Cards Section */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-20 md:px-20 mt-8">
+                <div className="grid grid-cols-2 md:gap-y-6 md:gap-x-20 gap-2 md:px-20 mt-8">
                     {partSection.map((card, index) => (
                         <div
                             key={index}
-                            className="bg-[#CC0012] text-white p-6 rounded-lg shadow-lg"
+                            className="bg-[#4F1C51] flex flex-col justify-evenly text-white p-2 md:p-6 rounded-lg shadow-lg"
                         >
-                            <h3 className="text-2xl font-bold mb-2">{card.title}</h3>
-                            <p className="mb-2 text-white/80">{card.desc}</p>
-                            <ul className="space-y-3 mt-6">
+                            <h3 className="text-sm md:text-2xl font-bold font-poppins md:font-bold mb-0 md:mb-2">{card.title}</h3>
+                            <p className="md-0 md:mb-2 text-white/80 text-xs md:text-sm font-afacad">{card.desc}</p>
+                            <ul className="md:space-y-3 mt-2 md:mt-6">
                             {card.points.map((point, idx) => (
-                                <li key={idx} className="flex items-center">
-                                <span className="bg-white p-1 text-[#CC0012] rounded-full w-5 h-5 flex items-center justify-center mr-2">
-                                    <Check/>
+                                <li key={idx} className="flex items-center text-xs md:text-sm font-afacad">
+                                <span className="bg-white md:p-1 text-[#4F1C51] rounded-full w-3 h-3 md:w-5 md:h-5 flex items-center justify-center mr-2">
+                                    <Check />
                                 </span>
                                 {point}
                                 </li>
@@ -273,18 +302,15 @@ function page() {
                 </div>
 
                 {/* Partnerships Section */}
-                <div className="py-12 md:py-20">
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900">
-                    Building <span className="text-[#CC0012]">Meaningful </span>
-                    <span className="bg-gradient-to-r from-[#CC0012] to-[#CC0012]/50 text-transparent bg-clip-text">
-                        Partnerships
-                    </span>
+                <div className="py-12 md:py-20 px-3">
+                    <h2 className="text-2xl md:text-4xl font-bold text-black font-poppins">
+                    Building <span className="text-[#D77914]">Meaningful Partnerships</span>
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-12 items-center mt-8">
-                    <p className="text-gray-900 text-lg md:text-xl tracking-wide text-justify">
+                    <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-6 md:gap-12 items-center mt-2 md:mt-8">
+                    <p className="text-black text-lg md:text-xl tracking-wide text-justify font-afacad">
                         {`At Growth Grid, We Believe In Fostering Long-Term Partnerships Built On`}
                         {" "}
-                        <span className="text-[#CC0012] font-bold">
+                        <span className="text-[#4F1C51] font-bold">
                         {`Trust, Transparency, And Collaboration.`}
                         </span>
                         {" "}
@@ -292,36 +318,33 @@ function page() {
                         Measurable Results And Sustainable Growth.`}
                     </p>
                     {/* Seperator line */}
-                    <div className="md:w-[2px] md:h-36 w-full h-[2px] bg-[#CC0012]"></div>
+                    <div className="md:w-[2px] md:h-36 w-full h-[2px] bg-[#4F1C51]"></div>
 
-                    <p className="text-gray-900 text-lg md:text-xl tracking-wide text-justify">
-                        {`We Go Beyond Delivering Services. We Become An Extension Of Your
-                        Team, Ensuring That Every Solution Is Aligned With Your Business
-                        Objectives. This Is Why Many Of Our Clients Choose To Grow With Us
-                        For Years.`}
+                    <p className="text-black text-lg md:text-xl tracking-wide text-justify font-afacad">
+                        {`We go beyond delivering services—we become an AI-augmented extension of your team, aligning every solution with your business objectives using cloud migration services, data analytics, and automation tools.`}
                     </p>
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row justify-between w-full items-start gap-8 mt-12">
+                <div className="flex flex-col md:flex-row justify-between w-full items-start md:gap-8 md:mt-12 px-2">
                     <div className="">
-                    <h2 className="text-4xl md:text-5xl text-gray-900 font-bold">
+                    <h2 className="text-2xl md:text-4xl text-gray-900 font-bold font-poppins">
                         Driving Business{" "}
-                        <span className="bg-gradient-to-r from-[#CC0012] to-[#CC0012]/50 text-transparent bg-clip-text">
+                        <span className="text-[#D77914]">
                         Growth!
                         </span>
                     </h2>
-                    <p className="text-gray-900 mt-4 text-xl md:text-2xl">
-                        When You Choose Growth Grid, You Can Expect To:
+                    <p className="text-black md:mt-4 text-lg sm:text-xl md:text-2xl font-afacad">
+                        When you choose Growth Grid, you can expect To:
                     </p>
                     </div>
-                    <div className=" mx-auto px-4 py-6">
+                    <div className=" mx-auto md:px-4 py-6 font-afacad">
                         <ul className="space-y-5 md:space-y-7">
                             {benefits.map((item, index) => (
                             <li key={index} className="flex">
                                 {/* Checkbox container - fixed width on mobile */}
                                 <div className="flex-shrink-0 mt-1">
-                                <span className="bg-[#CC0012] rounded-full w-5 h-5 md:w-6 md:h-6 flex items-center justify-center text-white">
+                                <span className="bg-[#4F1C51] rounded-full w-4 h-4 md:w-6 md:h-6 flex items-center justify-center text-white">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3 md:w-4 md:h-4">
                                     <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd" />
                                     </svg>
@@ -331,7 +354,7 @@ function page() {
                                 {/* Text content - with wrapping capabilities */}
                                 <div className="ml-3 text-base md:text-lg lg:text-[22px] text-gray-900 tracking-wide leading-tight">
                                 {item.prefix && <span>{item.prefix} </span>}
-                                <span className="text-[#CC0012] font-bold">{item.highlight}</span>
+                                <span className="text-[#4F1C51] font-bold">{item.highlight}</span>
                                 {item.suffix && <span> {item.suffix}</span>}
                                 </div>
                             </li>
@@ -342,25 +365,24 @@ function page() {
             </section>
 
             {/* approach */}
-            <section id='approach' className='py-12 md:py-20 w-full relative right-0 left-0 lg:mx-auto'>
-            <section className='bg-[#CC0012] py-12 md:py-16 lg:py-20'>
+            <section id='approach' className='w-full relative right-0 left-0 lg:mx-auto'>
+            <section className='bg-[#4F1C51] px-6 py-6 md:py-16 lg:py-20'>
                 <div className="max-w-7xl mx-4 sm:mx-6 lg:mx-auto flex flex-col lg:flex-row justify-between gap-8 lg:gap-12 items-start">
                     {/* Left Side - Heading and Image */}
                     <div className="w-full lg:w-1/2">
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
-                        Our{" "}
-                        <span className="bg-gradient-to-r from-yellow-50 to-yellow-200 text-transparent bg-clip-text">
-                        Approach
-                        </span>
+                    <h2 className="text-2xl md:text-4xl font-poppins font-bold leading-tight text-white text-center md:text-start">
+                        Our Approach
                     </h2>
-                    <p className="mt-2 text-lg sm:text-xl md:text-2xl tracking-wide text-white">
+                    <p className="mt-2 text-lg sm:text-xl md:text-2xl tracking-wide text-white font-afacad text-center md:text-start">
                         Marrying Innovation with Impact
                     </p>
                     <div className="mt-6 bg-white/40 py-4 px-3 rounded-xl w-full overflow-hidden">
                         <div className="flex justify-center">
-                        <img
+                        <Image
                             src="/images/desk-laptop.avif"
                             alt="Office"
+                            height={400}
+                            width={700}
                             className="rounded-lg w-full h-auto object-cover max-w-full lg:max-w-[600px] min-h-[180px] sm:min-h-[200px] md:h-[280px] lg:h-[320px]"
                             loading="lazy"
                         />
@@ -369,38 +391,38 @@ function page() {
                     </div>
                     
                     {/* Right Side - Content */}
-                    <div className="w-full lg:w-1/2 mt-8 lg:mt-0 text-white">
+                    <div className="w-full lg:w-1/2 lg:mt-0 text-white">
                     <div className="space-y-6">
                         <div>
-                        <h3 className="text-xl md:text-2xl font-bold">AI-Enhanced Marketing</h3>
-                        <p className="mt-2 text-base md:text-lg tracking-wide text-justify">
-                            We harness the power of AI to create hyper-personalized campaigns
+                        <h3 className="text-lg md:text-2xl font-bold font-poppins">AI-Enhanced Marketing</h3>
+                        <p className="mt-2 text-[14px] md:text-lg tracking-wide text-justify font-afacad">
+                            {`We harness the power of AI to create hyper-personalized campaigns
                             from social media strategies that boost engagement by 3x to paid
                             advertising that delivers 5x ROAS. Our campaigns aren't just
-                            creative they're calculated.
+                            creative they're calculated.`}
                         </p>
                         </div>
                         
                         <hr className="border-white/70" />
                         
                         <div>
-                        <h3 className="text-xl md:text-2xl font-bold">Smart Automation</h3>
-                        <p className="mt-2 text-base md:text-lg tracking-wide text-justify">
-                            We replace tedious manual processes with seamless, AI-powered
+                        <h3 className="text-lg md:text-2xl font-bold font-poppins">Smart Automation</h3>
+                        <p className="mt-2 text-[14px] md:text-lg tracking-wide font-afacad text-justify">
+                            {`We replace tedious manual processes with seamless, AI-powered
                             workflows. By integrating advanced tools like UiPath and Power
                             Automate, we ensure that your business runs smarter, faster, and
-                            more efficiently.
+                            more efficiently.`}
                         </p>
                         </div>
                         
                         <hr className="border-white/70" />
                         
                         <div>
-                        <h3 className="text-xl md:text-2xl font-bold">Predictive Precision</h3>
-                        <p className="mt-2 text-base md:text-lg tracking-wide text-justify">
-                            In today's rapidly evolving market, intuition isn't enough. We
+                        <h3 className="text-lg md:text-2xl font-bold font-poppins">Predictive Precision</h3>
+                        <p className="mt-2 text-[14px] md:text-lg font-afacad tracking-wide text-justify">
+                            {`In today's rapidly evolving market, intuition isn't enough. We
                             employ predictive analytics to forecast trends, optimize
-                            inventory, and fine-tune every customer interaction in real time.
+                            inventory, and fine-tune every customer interaction in real time.`}
                         </p>
                         </div>
                     </div>
@@ -410,13 +432,13 @@ function page() {
 
                 <section className='max-w-7xl py-12 md:py-20 w-full relative right-0 left-0 lg:mx-auto'>
                         <div className=''>
-                            <h2 className="text-4xl md:text-5xl text-[#CC0012] font-extrabold text-center tracking-wide">
+                            <h2 className="text-2xl md:text-5xl text-black font-bold text-center tracking-wide font-poppins">
                             Our{" "}
-                            <span className="bg-gradient-to-r from-[#CC0012] to-[#CC0012]/50 text-transparent bg-clip-text">
+                            <span className="text-[#D77914]">
                                 Working Process
                             </span>
                             </h2>
-                            <p className="text-center text-gray-900 font-semibold text-xl md:text-2xl tracking-wide mt-2">
+                            <p className="text-center text-black font-afacad text-xl md:text-2xl tracking-wide mt-2">
                             Step-By-Step Guide To Achieving Your Business Goals
                             </p>
                         </div>
@@ -425,15 +447,15 @@ function page() {
                     {processSteps.map((step) => (
                         <motion.div
                         key={step.id}
-                        className="mb-4 border-2 border-black rounded-lg overflow-hidden shadow-[0_4px_0px_black]"
+                        className="mb-4 border border-black overflow-hidden shadow-[0_4px_0px_black]"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: step.id * 0.1 }}
                         >
                         <div
-                            className={`flex justify-between items-center p-5 text-xl md:text-2xl cursor-pointer tracking-wide border-b-2 border-white ${
+                            className={`flex font-afacad justify-between items-center p-5 text-xl md:text-2xl cursor-pointer tracking-wide border-b-2 border-white ${
                             activeStep === step.id
-                                ? "bg-[#CC0012] text-white"
+                                ? "bg-[#4F1C51] text-white"
                                 : "bg-white text-black"
                             }`}
                             onClick={() => setActiveStep(activeStep === step.id ? null : step.id)}
@@ -457,7 +479,7 @@ function page() {
                         <AnimatePresence>
                             {activeStep === step.id && (
                             <motion.div
-                                className="bg-[#CC0012] text-white font-medium overflow-hidden"
+                                className="bg-[#4F1C51] font-afacad text-white font-medium overflow-hidden"
                                 initial={{ height: 0, opacity: 0 }}
                                 animate={{ height: "auto", opacity: 1 }}
                                 exit={{ height: 0, opacity: 0 }}
@@ -478,7 +500,7 @@ function page() {
                 </section>
             </section>
         </main>
-    )
-}
+    );
+};
 
-export default page
+export default Page;

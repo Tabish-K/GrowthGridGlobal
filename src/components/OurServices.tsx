@@ -140,14 +140,14 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div className="flex-grow font-afacad">
             <ul className="space-y-2">
             {features.map((feature, index) => (
-                <li key={index} className={`${color} flex items-center gap-2 text-sm md:text-lg`}>
-                <CheckCircle size={20}/>
+                <li key={index} className={`${color} flex items-center gap-2 font-bold tracking-wide text-sm md:text-lg`}>
+                <CheckCircle size={16}/>
                 <span>{feature}</span>
                 </li>
             ))}
             </ul>
         </div>
-        <div className={`h-[1px] bg-white/60 w-full mt-12 mb-8`}></div>
+        <div className={`h-[1px] bg-white/60 w-full mt-6 mb-2`}></div>
         </div>
     );
 };
@@ -304,7 +304,7 @@ export default function OurServices() {
 
 return (
     <div className="max-w-7xl mx-auto pb-10">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12 font-poppins">
             <span className="text-[#4F1C51]">Services</span> designed to drive
             <span className="text-[#D77914]"> Results</span>
         </h2>

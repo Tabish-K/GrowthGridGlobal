@@ -25,13 +25,13 @@ const services = [
 
 export default function ServicesGrid() {
     return (
-        <section className="py-16 bg-white text-center">
+        <section className="py-4 md:py-16 bg-white text-center">
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20">
-            <h2 className="text-2xl md:text-5xl font-bold text-black text-start font-poppins">
+            <h2 className="text-4xl md:text-5xl font-bold text-black text-center md:text-start font-poppins">
             Explore our key <span className="text-[#D77914]">Solutions</span>
             </h2>
-            <p className="mt-4 text-black text-lg md:text-2xl font-afacad text-justify">
-            {`Unlock the power of AI for business growth, no-code automation tools, and automation solutions with our key services.`}
+            <p className="mt-4 text-black text-xl md:text-2xl font-afacad text-center">
+            {`A glimpse of our top services like Cloud, AI Engagement, and Custom Tech Solutions with much more to offer.`}
             </p>
             
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -51,9 +51,9 @@ export default function ServicesGrid() {
                     />
                 </div>
                 <div className="p-6 bg-black text-white">
-                    <h3 className="text-xl md:text-2xl font-semibold font-poppins">{service.title}</h3>
-                    <p className="mt-2 text-gray-300 font-afacad text-md md:text-xl text-justify">{service.description}</p>
-                    <button className="mt-4 w-full bg-[#4F1C51] text-white py-3 rounded-full font-medium text-lg md:text-2xl tracking-wide shadow-md transition-all font-afacad">
+                    <h3 className="text-2xl font-semibold font-poppins text-start">{service.title}</h3>
+                    <p className="mt-2 leading-tight text-gray-300 font-afacad text-lg md:text-xl text-start">{service.description}</p>
+                    <button className="mt-4 w-full bg-[#4F1C51] text-white py-2 rounded-full font-medium text-2xl tracking-wide shadow-md transition-all font-afacad">
                     Learn more
                     </button>
                 </div>
@@ -74,9 +74,9 @@ export default function ServicesGrid() {
                 />
                 </div>
                 <div className="p-6 bg-black text-white">
-                <h3 className="text-xl md:text-4xl font-semibold font-poppins">{services[2].title}</h3>
-                <p className="mt-2 text-gray-300 font-afacad text-md md:text-xl text-justify">{services[2].description}</p>
-                <button className="mt-4 w-full bg-[#4F1C51] text-white py-3 rounded-full font-medium text-lg md:text-2xl tracking-wide shadow-md transition-all font-afacad">
+                <h3 className="text-2xl md:text-4xl font-semibold font-poppins text-start">{services[2].title}</h3>
+                <p className="mt-2 leading-tight text-gray-300 font-afacad text-md md:text-xl text-justify">{services[2].description}</p>
+                <button className="mt-4 w-full bg-[#4F1C51] text-white py-2 rounded-full font-medium text-2xl md:text-2xl tracking-wide shadow-md transition-all font-afacad">
                     Learn more
                 </button>
                 </div>
@@ -87,7 +87,7 @@ export default function ServicesGrid() {
             Explore all services
             </button>
         </div>
-        <div className="bg-black h-[2px] w-[70dvw] mx-auto mt-24"/>
+        <div className="bg-black h-[2px] w-[80dvw] mx-auto mt-10 md:mt-20"/>
         </section>
     );
 }

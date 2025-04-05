@@ -1,6 +1,5 @@
 "use client"
 
-import React from 'react';
 import Image from 'next/image';
 import techcrunch from "../../public/Featured-Icons/simple-icons_techcrunch (1).png";
 import phunt from "../../public/Featured-Icons/simple-icons_producthunt.png";
@@ -69,24 +68,24 @@ const platforms: Platform[] = [
 
 export default function FeaturedIn() {
     return (
-        <section className="py-16 bg-white">
+        <section className="py-8 md:py-12 bg-white">
         <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-5xl font-extrabold font-poppins text-[#D77914]">
+            <h2 className="text-4xl md:text-5xl font-extrabold font-poppins text-[#D77914]">
                 Featured in
             </h2>
-            <p className="text-lg text-justify md:text-center md:text-2xl tracking-wide text-black font-afacad mt-2">
+            <p className="text-xl leading-tight text-center md:text-2xl tracking-wide text-black font-afacad mt-2">
                 Recognized by leading industry platforms and trusted by innovators worldwide.
             </p>
             </div>
 
-            <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-x-0 gap-y-8 md:gap-12 max-w-4xl mx-auto">
             {platforms.map((platform) => (
                 <div 
                 key={platform.name} 
                 className="flex flex-col items-center"
                 >
-                <div className="w-10 h-10 md:w-16 md:h-16 relative flex items-center justify-center">
+                <div className="w-8 h-8 md:w-16 md:h-16 relative flex items-center justify-center">
                     {/* Use a div with background image as fallback if you don't have the SVGs yet */}
                     <div 
                     className="w-full h-full flex items-center justify-center rounded-md"
@@ -101,7 +100,7 @@ export default function FeaturedIn() {
                     />
                     
                     {/* Temporary text placeholders for logos */}
-                    <span className="text-white text-xs font-medium">
+                    <span className="text-white text-sm font-medium">
                         {platform.name === 'TechCrunch' && 'TC'}
                         {platform.name === 'Product Hunt' && 'P'}
                         {platform.name === 'Indie Hackers' && 'IH'}
@@ -114,7 +113,7 @@ export default function FeaturedIn() {
                     </span>
                     </div>
                 </div>
-                <p className="text-xs md:text-lg text-[#4F1C51] mt-2 text-center font-medium font-afacad">
+                <p className="text-xs font-semibold md:text-lg text-[#4F1C51] mt-2 text-center font-afacad">
                     {platform.name === 'TechCrunch' && 'TechCrunch'}
                     {platform.name === 'Product Hunt' && 'Product Hunt'}
                     {platform.name === 'Indie Hackers' && 'Indie Hackers'}

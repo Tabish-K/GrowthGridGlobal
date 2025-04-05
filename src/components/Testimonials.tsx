@@ -121,7 +121,7 @@ export default function Testimonials() {
   return (
     <div id="testimonials" className="bg-white w-full">
       <div className="max-w-screen-xl mx-auto px-4">
-        <h2 className="text-center text-3xl md:text-5xl font-bold mb-10 md:mb-16 font-poppins">
+        <h2 className="text-start text-4xl md:text-5xl font-bold mb-10 md:mb-16 font-poppins">
           What our <span className="text-[#D77914]">Satisfied clients</span> say?
         </h2>
         
@@ -142,7 +142,7 @@ export default function Testimonials() {
                   className={`flex-none px-2 md:px-3 ${
                     visibleSlides === 3 ? 'w-1/3' : 
                     visibleSlides === 2 ? 'w-1/2' : 
-                    'w-full'
+                    'w-[80dvw]'
                   }`}
                 >
                   <div className="rounded-lg overflow-hidden h-full flex flex-col">
@@ -152,20 +152,20 @@ export default function Testimonials() {
                         src={testimonial.image} 
                         alt={testimonial.name}
                         fill
-                        className="absolute inset-0 w-full h-full object-cover object-center"
+                        className="absolute inset-0 w-full h-full object-cover object-center rounded-md"
                         style={{ objectFit: 'cover' }}
                       />
                     </div>
                     
                     {/* Text below image */}
                     <div className="pt-3 font-afacad">
-                      <div className="font-semibold text-md md:text-xl text-[#4F1C51]">
+                      <div className="font-semibold text-xl text-[#4F1C51]">
                         {testimonial.name}
                       </div>
-                      <div className="text-xs md:text-sm text-gray-600 mb-2">
+                      <div className="text-md text-gray-600 mb-2">
                         {testimonial.title}
                       </div>
-                      <div className="text-sm md:text-lg italic text-black">
+                      <div className="text-lg italic text-black">
                         {testimonial.quote}
                       </div>
                     </div>
