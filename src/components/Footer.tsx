@@ -92,10 +92,10 @@ function Footer() {
                     
                     {/* Services with hover effects */}
                     <div>
-                        <h3 className="text-[#D77914] font-bold mb-4 flex items-center gap-2">
+                        <h3 className="text-[#D77914] font-poppins font-bold mb-4 flex items-center gap-2">
                             SERVICES
                         </h3>
-                        <ul className="space-y-2 text-gray-300 text-sm tracking-wide">
+                        <ul className="space-y-2 font-afacad text-gray-300 text-sm md:text-md tracking-wide">
                             {[
                                 "Website And App Development",
                                 "E-Commerce Optimization",
@@ -120,10 +120,10 @@ function Footer() {
 
                     {/* Industries with similar hover effects */}
                     <div>
-                        <h3 className="text-[#D77914] font-bold mb-4 flex items-center gap-2">
+                        <h3 className="text-[#D77914] font-poppins font-bold mb-4 flex items-center gap-2">
                             INDUSTRIES
                         </h3>
-                        <ul className="space-y-2 text-gray-300 text-sm tracking-wide">
+                        <ul className="space-y-2 font-afacad text-gray-300 text-sm md:text-md tracking-wide">
                             {[
                                 "Technology",
                                 "E-Commerce",
@@ -143,10 +143,10 @@ function Footer() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-[#D77914] font-bold mb-4 flex items-center gap-2">
+                        <h3 className="text-[#D77914] font-poppins font-bold mb-4 flex items-center gap-2">
                             COMPANY
                         </h3>
-                        <ul className="space-y-2 text-gray-300 text-sm tracking-wide w-max">
+                        <ul className="space-y-2 font-afacad text-gray-300 text-sm md:text-md tracking-wide w-max">
                             {[
                                 "About Us",
                                 "Why Us",
@@ -165,10 +165,10 @@ function Footer() {
 
                     {/* Top Reads with animation */}
                     <div>
-                        <h3 className="text-[#D77914] font-bold mb-4 flex items-center gap-2">
+                        <h3 className="text-[#D77914] font-poppins font-bold mb-4 flex items-center gap-2">
                             TOP READS
                         </h3>
-                        <ul className="space-y-2 text-gray-300 text-sm tracking-wide w-max">
+                        <ul className="space-y-2 text-gray-300 font-afacad text-sm md:text-sm tracking-wide w-max">
                             {[
                                 "AI For SME Digital Transformation",
                                 "AI In Product Development",
@@ -186,29 +186,29 @@ function Footer() {
                             ))}
                         </ul>
                             <Link href="/blog">
-                                <p className="uppercase text-sm text-gray-500 font-bold relative top-2">read all blog posts</p>
+                                <p className="uppercase text-sm text-gray-400 font-bold relative top-2 font-afacad">read all blog posts</p>
                             </Link>
                     </div>
                     
                     {/* Contact Section with glassmorphism effect */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-red-500/5 backdrop-blur-sm rounded-lg -z-10"></div>
+                        <div className="absolute inset-0 backdrop-blur-sm rounded-lg -z-10"></div>
                         <div className="">
-                            <h3 className="text-[#D77914] font-bold mb-4 flex items-center gap-2">
+                            <h3 className="text-[#D77914] font-bold mb-4 flex items-center gap-2 font-poppins">
                                 CONTACT US
                             </h3>
-                            <a href="mailto:Ceo@Growthgrid.in" className="text-gray-300 text-sm tracking-wide hover:text-red-400 transition-colors flex items-center gap-2">
+                            <a href="mailto:Ceo@Growthgrid.in" className="text-gray-300 font-afacad text-sm tracking-wide hover:text-[#D77914] transition-colors flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                 </svg>
                                 {`info@Growthgrid.in`}
                             </a>
                             
-                            <h3 className="text-[#D77914] tracking-wide font-bold mt-4 flex items-center gap-2">
+                            <h3 className="text-[#D77914] font-poppins tracking-wide font-bold mt-4 flex items-center gap-2">
                                 CALL
                             </h3>
                             {["+91 9990 006 274"].map((phone, index) => (
-                                <a key={index} href={`tel:${phone.replace(/\s+/g, '')}`} className="text-gray-300 text-sm block hover:text-red-400 transition-colors items-center gap-2">
+                                <a key={index} href={`tel:${phone.replace(/\s+/g, '')}`} className="text-gray-300 font-afacad flex text-sm hover:text-[#D77914] transition-colors items-center gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
@@ -216,10 +216,10 @@ function Footer() {
                                 </a>
                             ))}
                             
-                            <h3 className="text-[#D77914] font-bold mt-4 flex items-center gap-2">
+                            <h3 className="text-[#D77914] font-poppins font-bold mt-4 flex items-center gap-2">
                                 OFFICE
                             </h3>
-                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 text-sm tracking-wide hover:text-red-400 transition-colors flex items-center gap-2">
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 font-afacad text-sm tracking-wide hover:text-[#D77914] transition-colors flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -247,10 +247,10 @@ function Footer() {
                 
                 {/* Newsletter Section with animated button */}
                 <div className="mt-12 max-w-lg">
-                        <p className="text-gray-500 text-sm py-[15px]">
+                        <p className="text-gray-500 text-sm md:text-md py-[15px] font-afacad">
                             {`"Stay Updates on the latest in AI and Business Growth"`}
                         </p>
-                    <div className="relative overflow-hidden bg-gray-800">
+                    <div className="relative font-afacad overflow-hidden bg-gray-800">
                         <div className="relative flex">
                             <input 
                                 type="email" 
@@ -269,9 +269,9 @@ function Footer() {
                     <div className="w-full max-w-md mx-auto h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent mb-6"></div>
                     <p>© {new Date().getFullYear()} Growth Grid. All rights reserved.</p>
                     <div className="flex justify-center gap-6 mt-4">
-                        <a href="/#/privacy-policy" className="hover:text-red-400 transition-colors">Privacy Policy</a>
-                        <a href="/#/terms" className="hover:text-red-400 transition-colors">Terms of Service</a>
-                        <a href="/#/sitemap" className="hover:text-red-400 transition-colors">Sitemap</a>
+                        <a href="/#/privacy-policy" className="hover:text-[#D77914] transition-colors">Privacy Policy</a>
+                        <a href="/#/terms" className="hover:text-[#D77914] transition-colors">Terms of Service</a>
+                        <a href="/#/sitemap" className="hover:text-[#D77914] transition-colors">Sitemap</a>
                     </div>
                 </div> */}
             </div>

@@ -120,8 +120,8 @@ export default function Testimonials() {
 
   return (
     <div id="testimonials" className="bg-white w-full">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <h2 className="text-start text-4xl md:text-5xl font-bold mb-10 md:mb-16 font-poppins">
+      <div className="max-w-screen-xl mx-auto px-4 mt-2 md:mt-6">
+        <h2 className="text-center text-wrap md:text-start text-4xl md:text-5xl font-bold mb-10 md:mb-16 font-poppins">
           What our <span className="text-[#D77914]">Satisfied clients</span> say?
         </h2>
         

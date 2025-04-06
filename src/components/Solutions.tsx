@@ -351,7 +351,7 @@ const Solutions: React.FC = () => {
       </div>
 
       {/* AutoScrollableBrands - Full Width */}
-      <div className="w-full">
+      <div className="w-full mb-0 md:mb-12">
         <HorizontallyScrollableBrands />
       </div>
 

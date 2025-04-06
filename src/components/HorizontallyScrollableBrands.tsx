@@ -54,7 +54,7 @@ const HorizontallyScrollableBrands: React.FC = () => {
     const allLogos = [...brandsLogo, ...brandsLogo];
 
     return (
-        <div className="relative overflow-hidden bg-[#B771E5]/10 py-4 md:py-6">
+        <div className="relative overflow-hidden bg-[#B771E5]/10 py-1 md:py-2">
         {/* First carousel */}
         <motion.div
             className="flex space-x-12 md:space-x-24 items-center"

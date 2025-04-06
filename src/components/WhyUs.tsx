@@ -153,7 +153,7 @@ const WhyUs: React.FC = () => {
                         suffix={stats[0].suffix}
                     />
                     </h2>
-                    <p className="text-white text-lg w-[14rem] font-bold md:text-2xl font-afacad">{stats[0].description}</p>
+                    <p className="text-white  leading-tighttext-lg w-[14rem] font-bold md:text-2xl font-afacad">{stats[0].description}</p>
                 </div>
                 </div>
             </motion.div>
@@ -171,15 +171,15 @@ const WhyUs: React.FC = () => {
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-white/50 via-transparent to-transparent flex flex-col justify-end p-4">
-                    <h2 className="text-4xl font-bold text-black font-poppins">
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent flex flex-col justify-end p-4">
+                    <h2 className="text-4xl font-bold text-white font-poppins">
                     <AnimatedNumber
                         value={stats[1].value}
                         isInView={isInView}
                         suffix={stats[1].suffix}
                     />
                     </h2>
-                    <p className="text-black font-bold text-xl w-[14rem] md:text-2xl font-afacad">{stats[1].description}</p>
+                    <p className="text-white leading-tight font-bold text-xl w-[14rem] md:text-2xl font-afacad">{stats[1].description}</p>
                 </div>
                 </div>
             </motion.div>
@@ -206,7 +206,7 @@ const WhyUs: React.FC = () => {
                         suffix={stats[2].suffix}
                     />
                     </h2>
-                    <p className="text-white text-lg font-bold w-[14rem] md:text-2xl font-afacad">{stats[2].description}</p>
+                    <p className="text-white leading-tight text-lg font-bold w-[14rem] md:text-2xl font-afacad">{stats[2].description}</p>
                 </div>
                 </div>
             </motion.div>
@@ -263,19 +263,19 @@ const WhyUs: React.FC = () => {
                 </div>
                 <div className="flex flex-col gap-6 text-justify">
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
-                        <CheckCircle/>
+                        <CheckCircle className="h-8 w-8 md:h-12 md:w-12"/>
                         <p>{`Increased leads by 63% and cut support time by 72%, with 4.6x in driving conversions.`}</p>
                     </div>
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
-                        <CheckCircle/>
+                        <CheckCircle className="h-8 w-8 md:h-12 md:w-12"/>
                         <p>{`Boosted form submissions by 41%, improved load time by 1.8s, and reduced bounce rate by 33%`}</p>
                     </div>
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
-                        <CheckCircle/>
+                        <CheckCircle className="h-8 w-8 md:h-12 md:w-12"/>
                         <p>{`Delivered investor-ready positioning, global GTM plans, competitor play books.`}</p>
                     </div>
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
-                        <CheckCircle/>
+                        <CheckCircle className="h-8 w-8 md:h-12 md:w-12"/>
                         <p>{`Built viral content(1.2M views), improved UX, and rebranded startups from scratch.`}</p>
                     </div>
 
