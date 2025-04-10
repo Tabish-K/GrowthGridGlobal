@@ -5,26 +5,17 @@ import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import aws from "../../public/aws.png";
 import { 
-  AlignJustify, 
-  ArrowsUpFromLine, 
-  BatteryFull, 
-  Building, 
-  ChartLine, 
+  AlignJustify,
   Cloud, 
   Code, 
-  File, 
-  Laptop, 
-  Rocket, 
-  ShieldAlert, 
-  ShoppingCart, 
-  Users, 
+  File,
+  ShieldAlert,
   X, 
   ChevronDown,
   Waypoints,
   Sparkles,
   GalleryVertical,
   ShoppingBag,
-  ChartNoAxesColumn,
   ChartNoAxesCombined,
   ShieldHalf,
   WandSparkles,
@@ -33,7 +24,6 @@ import {
   ServerCog, 
 } from "lucide-react"
 import Image from "next/image"
-import SearchBar from "./SearchBar";
 
 // Define strong TypeScript interfaces
 interface NavLink {
@@ -68,7 +58,7 @@ const Navbar = () => {
       hasDropdown: true,
       parentRoute: "explore",
       links: {
-        "": [  // Empty category
+        "": [
           "Technology & Development",
           "Data & Cloud Solutions",
           "Automation & Analytics",
@@ -510,31 +500,34 @@ const Navbar = () => {
                           </button>
 
                           {item.hasDropdown && openDropdown === index && item.content && (
-                            <div className="py-2 space-y-6">
-                              {item.content.filter(item => !item.isLink).map((subItem, subIndex) => (
-                                <div
-                                  key={subIndex}
-                                  className="flex items-start space-x-3"
-                                >
-                                  {subItem.icon && (
-                                    <span className="mt-1 min-w-[20px]">{subItem.icon}</span>
-                                  )}
-                                  <div>
-                                    <span className="text-xs md:text-sm font-[550] tracking-wide font-poppins">{subItem.text}</span>
-                                    {subItem.description && (
-                                      <p className="text-gray-500 text-sm mt-1 font-afacad">
-                                        {subItem.description}
-                                      </p>
+                            
+                            <Link href={`/${item.parentRoute}`} onClick={() => setIsOpen(false)}>
+                              <div className="py-2 space-y-6">
+                                {item.content.filter(item => !item.isLink).map((subItem, subIndex) => (
+                                  <div
+                                    key={subIndex}
+                                    className="flex items-start space-x-3"
+                                  >
+                                    {subItem.icon && (
+                                      <span className="mt-1 min-w-[20px]">{subItem.icon}</span>
                                     )}
+                                    <div>
+                                      <span className="text-xs md:text-sm font-[550] tracking-wide font-poppins">{subItem.text}</span>
+                                      {subItem.description && (
+                                        <p className="text-gray-500 text-sm mt-1 font-afacad">
+                                          {subItem.description}
+                                        </p>
+                                      )}
+                                    </div>
                                   </div>
-                                </div>
-                              ))}
-                              {item.content.find(item => item.isLink) && (
-                                <div className="pt-2 pb-4 border-t border-gray-200 mt-4 font-afacad">
-                                  {item.content.find(item => item.isLink)?.text}
-                                </div>
-                              )}
-                            </div>
+                                ))}
+                                {item.content.find(item => item.isLink) && (
+                                  <div className="pt-2 pb-4 border-t border-gray-200 mt-4 font-afacad">
+                                    {item.content.find(item => item.isLink)?.text}
+                                  </div>
+                                )}
+                              </div>
+                            </Link>
                           )}
                         </>
                       ) : (
