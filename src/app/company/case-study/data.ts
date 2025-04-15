@@ -1,17 +1,9 @@
-import img01 from "../../../../public/case-study-imgs/img01.png"
-import img02 from "../../../../public/case-study-imgs/img02.png"
-import img03 from "../../../../public/case-study-imgs/img03.png"
-import img04 from "../../../../public/case-study-imgs/img04.png"
-import img05 from "../../../../public/case-study-imgs/img05.png"
-import img06 from "../../../../public/case-study-imgs/img06.png"
-import img07 from "../../../../public/case-study-imgs/img07.png"
-
 export interface CaseStudy {
     id: string;
     title: string;
     subtitle: string;
     description: string;
-    image: any;
+    image: string;
     bgColor: string;
     tag1: string
     tag2: string
@@ -41,7 +33,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Transforming Workflow Automation For A Global Tech Firm",
         description:
         "A multinational technology company with over 5,000 employees and operations in 15 countries faced significant challenges with disjointed workflow automation across dozens of teams, impacting operational costs and employee burnout.",
-        image: img01,
+        image: "/case-study-imgs/img01.png",
         bgColor: "bg-yellow-500",
         tag1: "Automation",
         tag2: "UI Path",
@@ -122,7 +114,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Scaling Revenue Through Product Innovation",
         description:
         "A growing SaaS company with 50+ employees needed to accelerate growth and increase market share in a competitive landscape. Their existing feature set was solid but not driving the conversion rates needed for sustainable growth.",
-        image: img02,
+        image: "/case-study-imgs/img02.png",
         bgColor: "bg-blue-500",
         tag1: "E-Commerce",
         tag2: "Dynamic Yield",
@@ -206,7 +198,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Optimizing Cloud Infrastructure for Scalable Growth",
         description:
         "A rapidly growing French tech startup with 75 employees was experiencing skyrocketing cloud costs as they scaled. Their inefficient infrastructure was limiting growth and eating into profitability.",
-        image: img03,
+        image: "/case-study-imgs/img03.png",
         bgColor: "bg-orange-500",
         tag1: "FinTech",
         tag2: "AWS",
@@ -289,7 +281,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Transforming Customer Engagement Through Digital Innovation",
         description:
         "A leading technology company with global operations needed to revitalize their customer engagement strategy to combat increasing churn and declining satisfaction scores.",
-        image: img04,
+        image: "/case-study-imgs/img04.png",
         bgColor: "bg-purple-500",
         tag1: "Technology",
         tag2: "Social Media",
@@ -371,7 +363,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Revolutionizing Retail Through Digital Transformation",
         description:
         "A major retail chain with 500+ locations needed to transform their digital capabilities to compete with e-commerce giants while leveraging their physical store presence as a competitive advantage.",
-        image: img05,
+        image: "/case-study-imgs/img05.png",
         bgColor: "bg-indigo-500",
         tag1: "FinTech",
         tag2: "AI & ML",
@@ -454,7 +446,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Accelerating Growth Through AI-Powered Marketing",
         description:
         "A direct-to-consumer (DTC) brand in the health and wellness space was struggling to scale beyond $2M in annual revenue with traditional marketing approaches.",
-        image: img06,
+        image: "/case-study-imgs/img06.png",
         bgColor: "bg-gray-500",
         tag1: "DTC Marketing",
         tag2: "Paid Advertising",
@@ -536,7 +528,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: "Revolutionizing Digital Fitness Through Personalized Nutrition",
         description:
         "A leading fitness technology company needed to expand beyond workout content to compete with holistic wellness platforms and reduce subscriber churn.",
-        image: img07,
+        image: "/case-study-imgs/img07.png",
         bgColor: "bg-pink-500",
         tag1: "Cloud Storage",
         tag2: "AWS S3 Solution",

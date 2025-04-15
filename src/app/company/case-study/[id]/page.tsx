@@ -1,15 +1,17 @@
-"use client"
-
 import { notFound } from "next/navigation"
-import { getCaseStudyById } from "../data"
 import CaseStudyDetail from "./details"
+import { getCaseStudyById } from "../data"
 
 interface CaseStudyParams {
-  params: { id: string }
+  params: {
+    id: string
+  }
 }
 
-export default function CaseStudyDetailPage({ params }: CaseStudyParams) {
-  const caseStudy = getCaseStudyById(params.id)
+export default async function CaseStudyDetailPage({ params }: CaseStudyParams) {
+  // Make sure to await the params object
+  const ids = await params
+  const caseStudy = getCaseStudyById(ids.id)
 
   // Check if the case study exists
   if (!caseStudy) {
