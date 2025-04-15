@@ -1,4 +1,4 @@
-import { Activity, ArrowUpRight, AudioWaveform, BarChart, BarChart4, Barcode, Boxes, Brain, BrainCircuit, ChartBar, ChartCandlestick, ChartColumnBig, ChartNetwork, ChartNoAxesColumn, ChartPieIcon, CircleFadingPlus, Cloud, Code, Code2, Codesandbox, CodeXml, Combine, Component, CopyPlus, Database, DiamondPercent, Eye, Factory, FilePenLine, FileSearch, FileWarning, Gauge, HandCoins, HardDrive, Hourglass, Layout, LayoutDashboard, Lightbulb, LineChart, Link, Lock, Map, Megaphone, MessageCircleQuestion, MessageSquare, MessagesSquare, MonitorPlay, NotebookPen, PackageOpen, Paintbrush, Rainbow, RefreshCcw, Rss, ScanFace, Search, SearchCheck, Settings, Share2, Shield, ShieldAlert, ShieldCheck, ShieldEllipsis, ShoppingCart, Smartphone, Sparkles, Sprout, Target, Telescope, Terminal, TextSearch, TextSelect, TrendingUp, UserCog, Users, UsersRound, WandSparkles, Waypoints, Workflow } from "lucide-react";
+import { Activity, ActivitySquare, ArrowUpRight, AudioWaveform, BarChart, BarChart4, Barcode, Boxes, Brain, BrainCircuit, ChartBar, ChartCandlestick, ChartColumnBig, ChartNetwork, ChartNoAxesColumn, ChartPieIcon, CircleFadingPlus, Cloud, CloudCog, Code, Code2, Codesandbox, CodeXml, Combine, Component, CopyPlus, Database, DiamondPercent, Eye, Factory, FilePenLine, FileSearch, FileWarning, Gauge, HandCoins, HardDrive, Hourglass, Layout, LayoutDashboard, Lightbulb, LineChart, Link, Lock, Map, Megaphone, MessageCircleQuestion, MessageSquare, MessagesSquare, MonitorPlay, NotebookPen, PackageOpen, Paintbrush, Plug, Rainbow, RefreshCcw, Rss, ScanFace, Search, SearchCheck, Settings, Share2, Shield, ShieldAlert, ShieldCheck, ShieldEllipsis, ShoppingCart, Smartphone, Sparkles, Sprout, Target, Telescope, Terminal, TextSearch, TextSelect, TrendingUp, UserCog, Users, UsersRound, WandSparkles, Waypoints, Workflow } from "lucide-react";
 
 export const services = [
     {
@@ -1488,16 +1488,139 @@ guide users down the sales funnel.`
     },
     "relatedServices": [
         {
-            "icon": <Cloud/>,
-            "title": "Cloud Security",
-            "description": "Secure cloud environments and applications with specialized protection strategies.",
-            "slug": "cloud-security"
+            title: `Content Creation`,
+            slug: `content-creation`,
+            description: `Craft compelling stories and visuals that inspire action, powered by AI insights.`,
+            icon: <NotebookPen/>
         },
         {
-            "icon": <FileWarning/>,
-            "title": "Data Protection",
-            "description": "Implement encryption, DLP, and data governance frameworks to safeguard sensitive information.",
-            "slug": "data-protection"
+            title: `E-Commerce Optimization`,
+            slug: `e-commerce-optimization`,
+            description: `Transform your e-commerce platform with seamless shopping experiences and AI-driven personalization`,
+            icon: <ShoppingCart/>
+        }
+    ]
+    },
+    "custom-tech-solutions": {
+    "hero": {
+        "title": "Custom Tech Solutions: Tailored Software for Business Excellence",
+        "backgroundImage": "https://images.unsplash.com/photo-1581090700227-1c6524af0c87?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "research": {
+        "title": "Why Custom Software?",
+        "content": "Off-the-shelf software often lacks the flexibility and scalability modern businesses require. Custom tech solutions offer full control, integration, and optimization to align with your specific workflows. In 2024, 78% of businesses that adopted custom solutions reported improved operational efficiency and ROI (Gartner).",
+        "keyChanges": [
+            "Generic tools result in mismatched features and limited scalability.",
+            "Data silos and integration issues cause workflow inefficiencies.",
+            "Modern businesses need unique, adaptable solutions to stay competitive."
+        ]
+    },
+    "advantage": {
+        "title": "Growth Grid's Custom Tech Expertise",
+        "description": "We develop tailor-made digital solutions with scalable architecture, robust APIs, and seamless UI/UX—backed by agile methodologies and full-stack expertise.",
+        "aiTools": [
+            {
+                "icon": <Code/>,
+                "title": "Bespoke Web & App Development",
+                "description": "Custom platforms built using React, Next.js, Node.js, Python, and more."
+            },
+            {
+                "icon": <Database/>,
+                "title": "Scalable Backend Architecture",
+                "description": "Designing robust APIs and databases using PostgreSQL, MongoDB, and Firebase."
+            },
+            {
+                "icon": <LayoutDashboard/>,
+                "title": "User-Centric Design",
+                "description": "Crafting seamless UI/UX through Figma prototyping and Tailwind CSS."
+            }
+        ],
+        "approach": [
+            {
+                "icon": <Settings/>,
+                "title": "Agile Development",
+                "description": "Sprint-based development with continuous feedback and rapid iteration."
+            },
+            {
+                "icon": <Plug/>,
+                "title": "Third-Party Integration",
+                "description": "Connect your software with CRMs, ERPs, and payment gateways."
+            },
+            {
+                "icon": <ShieldCheck/>,
+                "title": "Security & Compliance",
+                "description": "Ensure data protection and industry-standard compliance (GDPR, HIPAA, etc.)."
+            }
+        ]
+    },
+    "process": {
+        "title": "Our Development Process",
+        "phases": [
+            {
+                "title": "Requirement Analysis",
+                "steps": [
+                    "Understand business workflows and pain points.",
+                    "Define project scope, timelines, and KPIs."
+                ]
+            },
+            {
+                "title": "Design & Development",
+                "steps": [
+                    "Build UI/UX prototypes and finalize technical architecture.",
+                    "Develop front-end and back-end modules with iterative reviews."
+                ]
+            },
+            {
+                "title": "Testing & Deployment",
+                "steps": [
+                    "Perform QA, unit testing, and UAT.",
+                    "Deploy with CI/CD pipelines and monitor performance post-launch."
+                ]
+            }
+        ]
+    },
+    "results": {
+        "title": "Delivering Tangible Impact",
+        "items": [
+            {
+                "title": "Boosted Productivity",
+                "description": "How We Achieve It: Automate redundant tasks and unify tools for streamlined workflows."
+            },
+            {
+                "title": "Scalable Growth",
+                "description": "How We Achieve It: Modular architecture supports feature expansion as your business grows."
+            },
+            {
+                "title": "Enhanced ROI",
+                "description": "How We Achieve It: Custom tech aligns precisely with business goals, reducing unnecessary spend."
+            }
+        ]
+    },
+    "caseStudy": {
+        "title": "Case Study: Scaling Operations for a Logistics Startup",
+        "problem": "A logistics company struggled with outdated manual systems and communication breakdowns.",
+        "solution": [
+            "Built a custom operations dashboard with real-time vehicle tracking and automated dispatch.",
+            "Integrated it with WhatsApp APIs and CRM for seamless communication."
+        ],
+        "results": [
+            "Reduced manual errors by 75%.",
+            "Improved delivery turnaround by 40%.",
+            "Achieved 2x faster decision-making through data visualization."
+        ]
+    },
+    "relatedServices": [
+        {
+            title: `Workflow Automation`,
+            slug: `workflow-automation`,
+            description: `Streamline processes and boost productivity with AI-powered automation tools`,
+            icon: <Waypoints/>
+        },
+        {
+            title: `Data and Cloud Solutions`,
+            slug: `data-and-cloud-solutions`,
+            description: `Simplify data management and scale your operations with secure cloud-based solutions.`,
+            icon: <Cloud/>
         }
     ]
 }
