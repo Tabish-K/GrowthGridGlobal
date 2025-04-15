@@ -1,21 +1,22 @@
 import { notFound } from "next/navigation"
 import { getCaseStudyById } from "../data"
 import CaseStudyDetail from "../[id]/details"
+import { type Metadata } from "next"
 
-interface CaseStudyParams {
-  params: {
-    id: string
-  }
+interface Params {
+  id: string
 }
 
-export default function CaseStudyDetailPage({ params }: CaseStudyParams) {
-  const caseStudy = getCaseStudyById(params.id)
+interface CaseStudyPageProps {
+  params: Params
+}
 
-  // Check if the case study exists
+export default async function CaseStudyDetailPage({ params }: CaseStudyPageProps) {
+  const caseStudy = await getCaseStudyById(params.id)
+
   if (!caseStudy) {
     notFound()
   }
 
-  // Pass the case study data to the detail component
   return <CaseStudyDetail caseStudy={caseStudy} />
 }
