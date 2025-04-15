@@ -1,4 +1,4 @@
-import { Boxes, ChartBar, ChartCandlestick, Cloud, Code, CodeXml, DiamondPercent, Factory, FilePenLine, FileSearch, Megaphone, NotebookPen, ScanFace, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Terminal, TrendingUp, WandSparkles, Waypoints } from "lucide-react";
+import { Activity, ArrowUpRight, AudioWaveform, BarChart, BarChart4, Barcode, Boxes, Brain, BrainCircuit, ChartBar, ChartCandlestick, ChartColumnBig, ChartNetwork, ChartNoAxesColumn, ChartPieIcon, CircleFadingPlus, Cloud, Code, Code2, Codesandbox, CodeXml, Combine, Component, CopyPlus, Database, DiamondPercent, Eye, Factory, FilePenLine, FileSearch, FileWarning, Gauge, HandCoins, HardDrive, Hourglass, Layout, LayoutDashboard, Lightbulb, LineChart, Link, Lock, Map, Megaphone, MessageCircleQuestion, MessageSquare, MessagesSquare, MonitorPlay, NotebookPen, PackageOpen, Paintbrush, Rainbow, RefreshCcw, Rss, ScanFace, Search, SearchCheck, Settings, Share2, Shield, ShieldAlert, ShieldCheck, ShieldEllipsis, ShoppingCart, Smartphone, Sparkles, Sprout, Target, Telescope, Terminal, TextSearch, TextSelect, TrendingUp, UserCog, Users, UsersRound, WandSparkles, Waypoints, Workflow } from "lucide-react";
 
 export const services = [
     {
@@ -213,9 +213,9 @@ average of $2 for every $1 spent on Google Ads. However, 65% of businesses fail 
 desired ROI due to poor targeting and ad copy. Effective paid advertising requires precise
 audience segmentation, compelling creatives, and continuous performance optimization.`,
             keyChanges: [
-                "",
-                "",
-                ""
+                "Paid Advertising",
+                "ROI (Return on Investment)",
+                "Audience Segmentation"
             ]
         },
         advantage: {
@@ -224,16 +224,19 @@ audience segmentation, compelling creatives, and continuous performance optimiza
 deliver campaigns that convert.`,
             aiTools: [
                 {
+                    icon: <Target/>,
                     title: "Audience Targeting",
                     description: `Tools like Facebook Audience Insights and Google Ads
 Smart Bidding refine targeting for better ROI.`
                 },
                 {
+                    icon: <CopyPlus/>,
                     title: "Ad Copy Optimization",
                     description: `Phrasee uses AI to craft compelling ad headlines and
 descriptions.`
                 },
                 {
+                    icon: <HandCoins/>,
                     title: "Budget Allocation",
                     description: `Platforms like Adzooma automate budget distribution across
 high-performing channels.`
@@ -241,16 +244,19 @@ high-performing channels.`
             ],
             approach: [
                 {
+                    icon: <TextSearch/>,
                     title: "Deep Keyword Research",
                     description: `Use tools like SEMrush and Ahrefs to identify
 high-intent keywords for Google and YouTube ads.`
                 },
                 {
+                    icon: <ShieldEllipsis/>,
                     title: "A/B Testing",
                     description: `Experiment with multiple ad variations to identify top-performing
 creatives.`
                 },
                 {
+                    icon: <Rainbow/>,
                     title: "Cross-Platform Optimization",
                     description: `Deploy campaigns across Google, Meta, and
 LinkedIn, ensuring unified messaging and optimal results.`
@@ -271,7 +277,7 @@ LinkedIn, ensuring unified messaging and optimal results.`
                     title: "Execution",
                     steps: [
                         "Launch campaigns using AI-driven tools for real-time performance tracking",
-                        "Focus on retargeting to convert visitors who didn’t initially purchase",
+                        "Focus on retargeting to convert visitors who didn't initially purchase",
                     ]
                 },
                 {
@@ -313,11 +319,13 @@ purchases, improving conversion rates by up to 25%`
         },
         relatedServices: [
             {
+                icon: <LineChart/>,
                 title: "Market Research",
                 description: "Identify audience preferences for more precise targeting.",
                 slug: "market-research"
             },
             {
+                icon: <Share2/>,
                 title: "Social Media Management",
                 description: "Complement paid ads with organic engagement strategies.",
                 slug: "social-media-management"
@@ -331,9 +339,9 @@ purchases, improving conversion rates by up to 25%`
         },
         research: {
             title: "Research and Market Insights",
-            content: `Content is no longer optional in today’s digital economy—it is a strategic business tool. Studies
+            content: `Content is no longer optional in today's digital economy—it is a strategic business tool. Studies
 reveal that companies investing in content marketing experience 6x higher conversion rates
-compared to those that don’t (Content Marketing Institute, 2024). Furthermore, video content
+compared to those that don't (Content Marketing Institute, 2024). Furthermore, video content
 dominates, with 91% of businesses citing positive ROI from video campaigns (Wyzowl).`,
             keyChanges: [
                 `Consumer Preferences: 70% of consumers prefer learning about a company through
@@ -351,20 +359,24 @@ with your brand and drives measurable results. Our AI-driven content strategy en
 every piece resonates with your target audience`,
             aiTools: [
                 {
+                    icon: <CircleFadingPlus/>,
                     title: "Content Ideation",
                     description: `Use tools like BuzzSumo and Frase to generate trending,`
                 },
                 {
+                    icon: <TextSelect/>,
                     title: "SEO Optimization:",
                     description: `Platforms like Surfer SEO and Clearscope optimize content
 for search engines, ensuring high visibility.`
                 },
                 {
+                    icon: <MonitorPlay/>,
                     title: "AI Video Editing",
                     description: `Tools like Descript and Pictory create professional-grade videos
 with minimal effort.`
                 },
                 {
+                    icon: <UsersRound/>,
                     title: "Audience Insights",
                     description: `HubSpot AI tracks audience behavior to recommend formats
 and messaging`
@@ -372,16 +384,19 @@ and messaging`
             ],
             approach: [
                 {
+                    icon: <Sprout/>,
                     title: "Data-Driven Planning:",
-                    description: `Conduct a deep analysis of your audience’s preferences,
+                    description: `Conduct a deep analysis of your audience's preferences,
 pain points, and search intent.`
                 },
                 {
+                    icon: <Rss/>,
                     title: "Multi-Channel Strategy",
                     description: `Tailor content formats (blogs, videos, reels, podcasts) for
 maximum impact across platforms like LinkedIn, Instagram, and YouTube.`
                 },
                 {
+                    icon: <CircleFadingPlus/>,
                     title: "Interactive Content",
                     description: `Introduce engaging formats like polls, infographics, and
 interactive PDFs to boost engagement and retention.`
@@ -458,13 +473,15 @@ guide users down the sales funnel.`
         },
         relatedServices: [
             {
+                icon: <Share2/>,
                 title: "Social Media Management",
-                description: "",
+                description: "Amplify your content reach through strategic platform management",
                 slug: "social-media-management"
             },
             {
+                icon: <Target/>,
                 title: "Paid Advertising",
-                description: "",
+                description: "Boost content visibility with targeted promotion campaigns",
                 slug: "paid-advertising"
             }
         ]
@@ -484,36 +501,43 @@ guide users down the sales funnel.`
             ]
         },
         advantage: {
-            title: "Growth Grid’s AI-Powered Advantage",
+            title: "Growth Grid's AI-Powered Advantage",
             description: `At Growth Grid, we use AI and advanced analytics to deliver actionable insights, helping businesses make informed decisions that drive growth.`,
             aiTools: [
                 {
+                    icon: <HardDrive/>,
                     title: "Data Collection",
                     description: `Use tools like Qualtrics and Google Consumer Surveys for primary research.`
                 },
                 {
+                    icon: <ChartColumnBig/>,
                     title: "Behavioral Analysis",
                     description: `Leverage Nielsen AI for real-time consumer behavior tracking.`
                 },
                 {
+                    icon: <ChartPieIcon/>,
                     title: "Competitor Analysis",
                     description: `Platforms like Crayon and SEMrush provide deep insights into competitor strategies.`
                 },
                 {
+                    icon: <ChartNoAxesColumn/>,
                     title: "Predictive Insights",
                     description: `Use Tableau and IBM Watson Analytics for forecasting trends and customer preferences.`
                 }
             ],
             approach: [
                 {
+                    icon: <Paintbrush/>,
                     title: "Custom Research Design",
                     description: `Tailor surveys and focus groups to answer your most pressing business questions.`
                 },
                 {
+                    icon: <Database/>,
                     title: "Data-Driven Strategies",
                     description: `Combine primary research with secondary sources (industry reports, market data) for robust insights.`
                 },
                 {
+                    icon: <AudioWaveform/>,
                     title: "Real-Time Tracking",
                     description: `Use AI dashboards to monitor key market metrics and adjust strategies on the fly.`
                 }
@@ -577,11 +601,13 @@ guide users down the sales funnel.`
         },
         relatedServices: [
             {
+                icon: <BarChart4/>,
                 title: "Predictive Analytics",
                 description: "Anticipate market shifts with AI-driven forecasting.",
                 slug: "predictive-analytics"
             },
             {
+                icon: <Code2/>,
                 title: "Custom Tech Solutions",
                 description: "Develop tailored platforms for research and reporting.",
                 slug: "custom-tech-solutions"
@@ -607,32 +633,39 @@ guide users down the sales funnel.`
         "description": "At Growth Grid, we combine data-driven research with advanced AI technologies to deliver websites and apps designed for performance, engagement, and scalability.",
         "aiTools": [
             {
+                icon: <Layout/>,
                 "title": "Dynamic Personalization",
                 "description": "Tools like Dynamic Yield and Adobe Target deliver personalized user journeys in real-time, adapting layouts and content based on user behavior and preferences."
             },
             {
+                icon: <Gauge/>,
                 "title": "Performance Optimization",
                 "description": "AI tools like Google Lighthouse and NitroPack continuously monitor and optimize load times, ensuring peak performance."
             },
             {
+                icon: <Eye/>,
                 "title": "Predictive Design Insights",
                 "description": "Use Hotjar and Crazy Egg to analyze heatmaps and session recordings, predicting and resolving pain points in the user journey."
             },
             {
+                icon: <MessagesSquare/>,
                 "title": "Chatbot Integration",
                 "description": "Deploy AI chatbots using Dialogflow or Zendesk AI to provide instant support, boosting customer satisfaction."
             }
         ],
         "approach": [
             {
+                icon: <Database/>,
                 "title": "Data-Driven Foundations",
                 "description": "Before development, we perform a comprehensive audit of your competitors, target audience, and industry trends."
             },
             {
+                icon: <BrainCircuit/>,
                 "title": "AI-Enhanced Development",
                 "description": "Our use of machine learning algorithms ensures predictive personalization and dynamic content delivery."
             },
             {
+                icon: <PackageOpen/>,
                 "title": "Full-Service Offering",
                 "description": "From ideation to deployment, we provide end-to-end solutions, including testing, security, and post-launch optimization."
             }
@@ -696,11 +729,13 @@ guide users down the sales funnel.`
     },
     "relatedServices": [
         {
+            icon: <ShoppingCart/>,
             "title": "E-Commerce Optimization",
             "description": "Enhance your e-commerce platform with tailored AI solutions.",
             "slug": "e-commerce-optimization"
         },
         {
+            icon: <Target/>,
             "title": "Paid Advertising",
             "description": "Drive traffic with hyper-targeted ad campaigns across platforms.",
             "slug": "paid-advertising"
@@ -708,243 +743,261 @@ guide users down the sales funnel.`
     ]
     },
     "e-commerce-optimization": {
-        "hero": {
-            "title": "E-Commerce Optimization: Supercharging Online Sales",
-            "backgroundImage": "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        "research": {
-            "title": "Research and Market Insights",
-            "content": `With global e-commerce sales expected to reach $7 trillion by 2025, businesses must prioritize user experience and personalization to remain competitive. Studies show that 70% of online shoppers abandon carts, often due to poor navigation or inefficient checkout processes.`,
-            "keyChanges": [
-                `Cart Abandonment: Ineffective checkout processes result in lost revenue.`,
-                `Poor Product Discovery: Limited personalization reduces user engagement.`,
-                `Inefficient Backend Operations: Manual inventory updates and slow order processing cause delays.`
-            ]
-        },
-        "advantage": {
-            "title": "Growth Grid’s AI-Powered Advantage",
-            "description": `We optimize e-commerce platforms with AI-driven tools and scalable technologies to create seamless shopping experiences.`,
-            "aiTools": [
-                {
-                    "title": "Personalization Engines",
-                    "description": `Tools like Dynamic Yield and Adobe Target deliver personalized product recommendations in real time.`
-                },
-                {
-                    "title": "Visual Search",
-                    "description": `Use Slyce to enable shoppers to find products via image-based searches.`
-                },
-                {
-                    "title": "Demand Forecasting",
-                    "description": `Implement predictive models using Google BigQuery to anticipate sales trends and optimize inventory.`
-                },
-                {
-                    "title": "Checkout Optimization",
-                    "description": `Platforms like Bolt simplify and speed up the checkout process.`
-                }
-            ],
-            "approach": [
-                {
-                    "title": "User-Centric Design",
-                    "description": "Redesign e-commerce platforms to improve navigation and usability."
-                },
-                {
-                    "title": "AI-Powered Analytics",
-                    "description": "Track and analyze user behavior to refine marketing and sales strategies."
-                },
-                {
-                    "title": "Backend Automation",
-                    "description": "Integrate AI tools for real-time inventory updates and automated order processing."
-                }
-            ]
-        },
-        "process": {
-            "title": "What to Expect",
-            "phases": [
-                {
-                    "title": "Audit and Redesign",
-                    "steps": [
-                        `Perform a comprehensive review of your platform using Hotjar heatmaps and session recordings.`,
-                        `Redesign navigation, product pages, and checkout flows to reduce friction.`
-                    ]
-                },
-                {
-                    "title": "AI Integration",
-                    "steps": [
-                        `Add dynamic content that adapts to user preferences in real time.`,
-                        `Use predictive analytics to automate restocking and offer tailored promotions.`
-                    ]
-                },
-                {
-                    "title": "Campaign Optimization",
-                    "steps": [
-                        `Create targeted email and ad campaigns based on user behavior and purchasing history.`
-                    ]
-                }
-            ]
-        },
-        "results": {
-            "title": "Impact: How We Deliver Results",
-            "items": [
-                {
-                    "title": "Higher Conversion Rates",
-                    "description": `How We Achieve It: Personalized product recommendations and dynamic pricing increase conversions by 20%.`
-                },
-                {
-                    "title": "Increased Average Order Value",
-                    "description": `How We Achieve It: Cross-selling and upselling techniques powered by AI boost order values by 25%.`
-                },
-                {
-                    "title": "Improved Customer Retention",
-                    "description": `How We Achieve It: Loyalty programs and personalized marketing campaigns increase repeat purchases by 40%.`
-                }
-            ]
-        },
-        "caseStudy": {
-            "title": "Case Study: Scaling Online Sales for a Niche Fashion Brand",
-            "problem": "A boutique e-commerce retailer faced high cart abandonment rates and low repeat customer engagement.",
-            "solution": [
-                `Redesigned the website for mobile-first responsiveness.`,
-                `Integrated Dynamic Yield to offer personalized product suggestions.`,
-                `Used Klaviyo for retargeting campaigns targeting cart abandoners.`
-            ],
-            "results": [
-                `Reduced cart abandonment rates by 35%.`,
-                `Increased monthly revenue by 50%.`,
-                `Achieved a 40% uplift in returning customer purchases.`
-            ]
-        },
-        "relatedServices": [
+    "hero": {
+        "title": "E-Commerce Optimization: Supercharging Online Sales",
+        "backgroundImage": "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "research": {
+        "title": "Research and Market Insights",
+        "content": `With global e-commerce sales expected to reach $7 trillion by 2025, businesses must prioritize user experience and personalization to remain competitive. Studies show that 70% of online shoppers abandon carts, often due to poor navigation or inefficient checkout processes.`,
+        "keyChanges": [
+            `Cart Abandonment: Ineffective checkout processes result in lost revenue.`,
+            `Poor Product Discovery: Limited personalization reduces user engagement.`,
+            `Inefficient Backend Operations: Manual inventory updates and slow order processing cause delays.`
+        ]
+    },
+    "advantage": {
+        "title": "Growth Grid's AI-Powered Advantage",
+        "description": `We optimize e-commerce platforms with AI-driven tools and scalable technologies to create seamless shopping experiences.`,
+        "aiTools": [
             {
-                "title": "Website and App Development",
-                "description": "Build responsive and fast-loading e-commerce platforms.",
-                "slug": "website-and-app-development"
+                "icon": <Settings/>,
+                "title": "Personalization Engines",
+                "description": `Tools like Dynamic Yield and Adobe Target deliver personalized product recommendations in real time.`
             },
             {
-                "title": "Paid Advertising",
-                "description": "Drive traffic with hyper-targeted ad campaigns across platforms.",
-                "slug": "paid-advertising"
+                "icon": <SearchCheck/>,
+                "title": "Visual Search",
+                "description": `Use Slyce to enable shoppers to find products via image-based searches.`
+            },
+            {
+                "icon": <Codesandbox/>,
+                "title": "Demand Forecasting",
+                "description": `Implement predictive models using Google BigQuery to anticipate sales trends and optimize inventory.`
+            },
+            {
+                "icon": <Barcode/>,
+                "title": "Checkout Optimization",
+                "description": `Platforms like Bolt simplify and speed up the checkout process.`
+            }
+        ],
+        "approach": [
+            {
+                "icon": <Component/>,
+                "title": "User-Centric Design",
+                "description": "Redesign e-commerce platforms to improve navigation and usability."
+            },
+            {
+                "icon": <ChartNetwork/>,
+                "title": "AI-Powered Analytics",
+                "description": "Track and analyze user behavior to refine marketing and sales strategies."
+            },
+            {
+                icon: <Workflow/>,
+                "title": "Backend Automation",
+                "description": "Integrate AI tools for real-time inventory updates and automated order processing."
             }
         ]
     },
-    "workflow-automation": {
-        "hero": {
-            "title": "Workflow Automation: Streamlining Efficiency, Amplifying Productivity",
-            "backgroundImage": "https://images.unsplash.com/photo-1636956026491-86a9da7001c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        },
-        "research": {
-            "title": "Research and Market Insights",
-            "content": `Workflow automation is revolutionizing how businesses operate, with companies reporting up to a 50% increase in operational efficiency through automated processes (McKinsey). By eliminating manual, repetitive tasks, workflow automation enhances accuracy and saves time. The global workflow automation market is projected to grow from $9.8 billion in 2023 to $26 billion by 2030, driven by increasing adoption of AI and machine learning technologies.`,
-            "keyChanges": [
-                `Time-Consuming Processes: Manual workflows lead to bottlenecks, reducing team efficiency.`,
-                `Error-Prone Tasks: Repetitive tasks are prone to human error, affecting operational reliability.`,
-                `Scalability Issues: Growing businesses struggle to scale manual processes efficiently.`
-            ]
-        },
-        "advantage": {
-            "title": "Growth Grid’s AI-Powered Advantage",
-            "description": `We implement AI-driven workflow automation solutions to help businesses achieve seamless operations. By identifying inefficiencies and automating processes, we enable your organization to scale with agility and accuracy.`,
-            "aiTools": [
-                {
-                    "title": "Automation Platforms",
-                    "description": `Tools like UiPath, Zapier, and Microsoft Power Automate streamline task execution and system integration.`
-                },
-                {
-                    "title": "Process Mining",
-                    "description": `Platforms like Celonis identify bottlenecks and inefficiencies in workflows.`
-                },
-                {
-                    "title": "Predictive Workflow Optimization",
-                    "description": `Use IBM Watson and Google AI to anticipate workload peaks and allocate resources proactively.`
-                },
-                {
-                    "title": "Data Integration",
-                    "description": `APIs like Workato seamlessly connect disparate systems for unified workflows.`
-                }
-            ],
-            "approach": [
-                {
-                    "title": "Workflow Mapping",
-                    "description": "Use AI-powered tools to analyze and optimize current processes."
-                },
-                {
-                    "title": "Customized Automation",
-                    "description": "Develop workflows tailored to your business needs, from invoice approvals to inventory tracking."
-                },
-                {
-                    "title": "Real-Time Monitoring",
-                    "description": "Implement dashboards to track task progress and identify issues before they escalate."
-                }
-            ]
-        },
-        "process": {
-            "title": "What to Expect",
-            "phases": [
-                {
-                    "title": "Assessment and Design",
-                    "steps": [
-                        `Conduct an in-depth audit of existing workflows using Celonis Process Mining.`,
-                        `Identify high-impact areas for automation, such as repetitive data entry or report generation.`
-                    ]
-                },
-                {
-                    "title": "Automation Implementation",
-                    "steps": [
-                        `Develop workflows using tools like UiPath to automate key processes.`,
-                        `Integrate systems like CRMs, ERPs, and collaboration tools (e.g., Slack) for seamless data exchange.`
-                    ]
-                },
-                {
-                    "title": "Monitoring and Optimization",
-                    "steps": [
-                        `Provide real-time tracking dashboards built with Power BI to measure automation ROI.`,
-                        `Use machine learning to refine workflows based on performance data.`
-                    ]
-                }
-            ]
-        },
-        "results": {
-            "title": "Impact: How We Deliver Results",
-            "items": [
-                {
-                    "title": "Time Savings",
-                    "description": `How We Achieve It: Automate repetitive tasks to free up 20–30% of employee time for strategic work.`
-                },
-                {
-                    "title": "Error Reduction",
-                    "description": `How We Achieve It: Automating workflows ensures consistency, reducing errors by 90%.`
-                },
-                {
-                    "title": "Cost Efficiency",
-                    "description": `How We Achieve It: Streamlined processes cut operational costs by up to 25%.`
-                }
-            ]
-        },
-        "caseStudy": {
-            "title": "Case Study: Streamlining HR Workflows for a Tech Firm",
-            "problem": "A tech company with 1,000+ employees struggled with manual HR processes like onboarding and payroll, leading to delays and errors.",
-            "solution": [
-                `Automated onboarding workflows using Microsoft Power Automate.`,
-                `Developed a self-service portal where employees could request leave, update profiles, and view payroll details.`,
-                `Integrated tools like Slack and BambooHR for seamless communication.`
-            ],
-            "results": [
-                `HR team saved 20 hours weekly by automating repetitive tasks.`,
-                `Payroll errors decreased by 90%, improving employee satisfaction.`,
-                `Reduced HR operational costs by $100,000 annually.`
-            ]
-        },
-        "relatedServices": [
+    "process": {
+        "title": "What to Expect",
+        "phases": [
             {
-                "title": "AI Integration",
-                "description": "Enhance workflows with intelligent tools for predictive resource allocation.",
-                "slug": "ai-integration"
+                "title": "Audit and Redesign",
+                "steps": [
+                    `Perform a comprehensive review of your platform using Hotjar heatmaps and session recordings.`,
+                    `Redesign navigation, product pages, and checkout flows to reduce friction.`
+                ]
             },
             {
-                "title": "Custom Tech Solutions",
-                "description": "Build bespoke platforms tailored to your unique workflow needs.",
-                "slug": "custom-tech-solutions"
+                "title": "AI Integration",
+                "steps": [
+                    `Add dynamic content that adapts to user preferences in real time.`,
+                    `Use predictive analytics to automate restocking and offer tailored promotions.`
+                ]
+            },
+            {
+                "title": "Campaign Optimization",
+                "steps": [
+                    `Create targeted email and ad campaigns based on user behavior and purchasing history.`
+                ]
             }
         ]
+    },
+    "results": {
+        "title": "Impact: How We Deliver Results",
+        "items": [
+            {
+                "title": "Higher Conversion Rates",
+                "description": `How We Achieve It: Personalized product recommendations and dynamic pricing increase conversions by 20%.`
+            },
+            {
+                "title": "Increased Average Order Value",
+                "description": `How We Achieve It: Cross-selling and upselling techniques powered by AI boost order values by 25%.`
+            },
+            {
+                "title": "Improved Customer Retention",
+                "description": `How We Achieve It: Loyalty programs and personalized marketing campaigns increase repeat purchases by 40%.`
+            }
+        ]
+    },
+    "caseStudy": {
+        "title": "Case Study: Scaling Online Sales for a Niche Fashion Brand",
+        "problem": "A boutique e-commerce retailer faced high cart abandonment rates and low repeat customer engagement.",
+        "solution": [
+            `Redesigned the website for mobile-first responsiveness.`,
+            `Integrated Dynamic Yield to offer personalized product suggestions.`,
+            `Used Klaviyo for retargeting campaigns targeting cart abandoners.`
+        ],
+        "results": [
+            `Reduced cart abandonment rates by 35%.`,
+            `Increased monthly revenue by 50%.`,
+            `Achieved a 40% uplift in returning customer purchases.`
+        ]
+    },
+    "relatedServices": [
+        {
+            "icon": <Code/>,
+            "title": "Website and App Development",
+            "description": "Build responsive and fast-loading e-commerce platforms.",
+            "slug": "website-and-app-development"
+        },
+        {
+            "icon": <Target/>,
+            "title": "Paid Advertising",
+            "description": "Drive traffic with hyper-targeted ad campaigns across platforms.",
+            "slug": "paid-advertising"
+        }
+    ]
+    },
+    "workflow-automation": {
+    "hero": {
+        "title": "Workflow Automation: Streamlining Efficiency, Amplifying Productivity",
+        "backgroundImage": "https://images.unsplash.com/photo-1636956026491-86a9da7001c9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "research": {
+        "title": "Research and Market Insights",
+        "content": `Workflow automation is revolutionizing how businesses operate, with companies reporting up to a 50% increase in operational efficiency through automated processes (McKinsey). By eliminating manual, repetitive tasks, workflow automation enhances accuracy and saves time. The global workflow automation market is projected to grow from $9.8 billion in 2023 to $26 billion by 2030, driven by increasing adoption of AI and machine learning technologies.`,
+        "keyChanges": [
+            `Time-Consuming Processes: Manual workflows lead to bottlenecks, reducing team efficiency.`,
+            `Error-Prone Tasks: Repetitive tasks are prone to human error, affecting operational reliability.`,
+            `Scalability Issues: Growing businesses struggle to scale manual processes efficiently.`
+        ]
+    },
+    "advantage": {
+        "title": "Growth Grid's AI-Powered Advantage",
+        "description": `We implement AI-driven workflow automation solutions to help businesses achieve seamless operations. By identifying inefficiencies and automating processes, we enable your organization to scale with agility and accuracy.`,
+        "aiTools": [
+            {
+                "icon": <Workflow/>,
+                "title": "Automation Platforms",
+                "description": `Tools like UiPath, Zapier, and Microsoft Power Automate streamline task execution and system integration.`
+            },
+            {
+                "icon": <Search/>,
+                "title": "Process Mining",
+                "description": `Platforms like Celonis identify bottlenecks and inefficiencies in workflows.`
+            },
+            {
+                "icon": <LineChart/>,
+                "title": "Predictive Workflow Optimization",
+                "description": `Use IBM Watson and Google AI to anticipate workload peaks and allocate resources proactively.`
+            },
+            {
+                "icon": <Link/>,
+                "title": "Data Integration",
+                "description": `APIs like Workato seamlessly connect disparate systems for unified workflows.`
+            }
+        ],
+        "approach": [
+            {
+                "icon": <Map/>,
+                "title": "Workflow Mapping",
+                "description": "Use AI-powered tools to analyze and optimize current processes."
+            },
+            {
+                "icon": <Settings/>,
+                "title": "Customized Automation",
+                "description": "Develop workflows tailored to your business needs, from invoice approvals to inventory tracking."
+            },
+            {
+                "icon": <Activity/>,
+                "title": "Real-Time Monitoring",
+                "description": "Implement dashboards to track task progress and identify issues before they escalate."
+            }
+        ]
+    },
+    "process": {
+        "title": "What to Expect",
+        "phases": [
+            {
+                "title": "Assessment and Design",
+                "steps": [
+                    `Conduct an in-depth audit of existing workflows using Celonis Process Mining.`,
+                    `Identify high-impact areas for automation, such as repetitive data entry or report generation.`
+                ]
+            },
+            {
+                "title": "Automation Implementation",
+                "steps": [
+                    `Develop workflows using tools like UiPath to automate key processes.`,
+                    `Integrate systems like CRMs, ERPs, and collaboration tools (e.g., Slack) for seamless data exchange.`
+                ]
+            },
+            {
+                "title": "Monitoring and Optimization",
+                "steps": [
+                    `Provide real-time tracking dashboards built with Power BI to measure automation ROI.`,
+                    `Use machine learning to refine workflows based on performance data.`
+                ]
+            }
+        ]
+    },
+    "results": {
+        "title": "Impact: How We Deliver Results",
+        "items": [
+            {
+                "title": "Time Savings",
+                "description": `How We Achieve It: Automate repetitive tasks to free up 20–30% of employee time for strategic work.`
+            },
+            {
+                "title": "Error Reduction",
+                "description": `How We Achieve It: Automating workflows ensures consistency, reducing errors by 90%.`
+            },
+            {
+                "title": "Cost Efficiency",
+                "description": `How We Achieve It: Streamlined processes cut operational costs by up to 25%.`
+            }
+        ]
+    },
+    "caseStudy": {
+        "title": "Case Study: Streamlining HR Workflows for a Tech Firm",
+        "problem": "A tech company with 1,000+ employees struggled with manual HR processes like onboarding and payroll, leading to delays and errors.",
+        "solution": [
+            `Automated onboarding workflows using Microsoft Power Automate.`,
+            `Developed a self-service portal where employees could request leave, update profiles, and view payroll details.`,
+            `Integrated tools like Slack and BambooHR for seamless communication.`
+        ],
+        "results": [
+            `HR team saved 20 hours weekly by automating repetitive tasks.`,
+            `Payroll errors decreased by 90%, improving employee satisfaction.`,
+            `Reduced HR operational costs by $100,000 annually.`
+        ]
+    },
+    "relatedServices": [
+        {
+            "icon": <BrainCircuit/>,
+            "title": "AI Integration",
+            "description": "Enhance workflows with intelligent tools for predictive resource allocation.",
+            "slug": "ai-integration"
+        },
+        {
+            "icon": <Code2/>,
+            "title": "Custom Tech Solutions",
+            "description": "Build bespoke platforms tailored to your unique workflow needs.",
+            "slug": "custom-tech-solutions"
+        }
+    ]
     },
     "predictive-analytics": {
     "hero": {
@@ -965,31 +1018,37 @@ guide users down the sales funnel.`
         "description": "We take workflow automation a step further by embedding predictive analytics into your systems, enabling smarter, data-driven operations.",
         "aiTools": [
             {
+                "icon": <BarChart4/>,
                 "title": "Predictive Analytics Platforms",
                 "description": "AWS SageMaker and Azure AI for forecasting workload trends."
             },
             {
+                "icon": <LineChart/>,
                 "title": "Real-Time Monitoring",
                 "description": "Dashboards from Power BI and Tableau visualize bottlenecks and inefficiencies."
             },
             {
+                "icon": <Workflow/>,
                 "title": "Automation Integration",
                 "description": "Use UiPath and Zapier to automate predictive insights into workflows."
             }
         ],
         "approach": [
-                {
-                    "title": "Forecasting Models",
-                    "description": "Build machine learning models to predict workload spikes, resource shortages, and potential delays."
-                },
-                {
-                    "title": "Actionable Insights",
-                    "description": "Use predictive insights to adjust task priorities and resource allocation dynamically."
-                },
-                {
-                    "title": "Integrated Dashboards",
-                    "description": "Provide real-time visibility into workflows, enabling proactive issue resolution."
-                }
+            {
+                "icon": <Telescope/>,
+                "title": "Forecasting Models",
+                "description": "Build machine learning models to predict workload spikes, resource shortages, and potential delays."
+            },
+            {
+                "icon": <Lightbulb/>,
+                "title": "Actionable Insights",
+                "description": "Use predictive insights to adjust task priorities and resource allocation dynamically."
+            },
+            {
+                "icon": <LayoutDashboard/>,
+                "title": "Integrated Dashboards",
+                "description": "Provide real-time visibility into workflows, enabling proactive issue resolution."
+            }
             ]
     },
     "process": {
@@ -1050,11 +1109,13 @@ guide users down the sales funnel.`
     },
     "relatedServices": [
         {
+            "icon": <Workflow/>,
             "title": "Workflow Automation",
             "description": "Enhance predictive insights with automated task execution.",
             "slug": "workflow-automation"
         },
         {
+            "icon": <TrendingUp/>,
             "title": "Market Research",
             "description": "Combine predictive analytics with market trends for strategic growth.",
             "slug": "market-research"
@@ -1080,35 +1141,42 @@ guide users down the sales funnel.`
         "description": "At Growth Grid, we offer end-to-end cloud and data solutions that integrate AI for advanced analytics, scalability, and security. Whether migrating legacy systems to the cloud or building data lakes, we create infrastructure that empowers businesses to leverage their data effectively.",
         "aiTools": [
             {
+                "icon": <Cloud/>,
                 "title": "Cloud Platforms",
                 "description": "Use leading providers like AWS, Microsoft Azure, and Google Cloud Platform for scalable cloud infrastructure."
             },
             {
+                "icon": <Database/>,
                 "title": "Data Warehousing",
                 "description": "Tools like Snowflake and BigQuery enable centralized and efficient data storage."
             },
             {
+                "icon": <BarChart/>,
                 "title": "AI Analytics",
                 "description": "Implement Tableau and Power BI for real-time data visualization."
             },
             {
+                "icon": <ShieldCheck/>,
                 "title": "Security and Compliance",
                 "description": "Use Palo Alto Prisma Cloud for proactive threat detection and compliance monitoring."
             }
         ],
         "approach": [
-                {
-                    "title": "Cloud Migration Expertise",
-                    "description": "Seamlessly migrate legacy systems to secure, cost-effective cloud environments."
-                },
-                {
-                    "title": "Data Integration and Management",
-                    "description": "Build data lakes that unify siloed data for advanced analytics."
-                },
-                {
-                    "title": "AI-Enhanced Analytics",
-                    "description": "Enable predictive insights and automated reporting for better decision-making."
-                }
+            {
+                "icon": <ArrowUpRight/>,
+                "title": "Cloud Migration Expertise",
+                "description": "Seamlessly migrate legacy systems to secure, cost-effective cloud environments."
+            },
+            {
+                "icon": <Combine/>,
+                "title": "Data Integration and Management",
+                "description": "Build data lakes that unify siloed data for advanced analytics."
+            },
+            {
+                "icon": <BrainCircuit/>,
+                "title": "AI-Enhanced Analytics",
+                "description": "Enable predictive insights and automated reporting for better decision-making."
+            }
             ]
     },
     "process": {
@@ -1173,11 +1241,13 @@ guide users down the sales funnel.`
     },
     "relatedServices": [
         {
+            "icon": <BarChart4/>,
             "title": "Predictive Analytics",
             "description": "Use centralized data for forward-looking insights.",
             "slug": "predictive-analytics"
         },
         {
+            "icon": <Code2/>,
             "title": "Custom Tech Solutions",
             "description": "Build bespoke software that integrates seamlessly with cloud platforms.",
             "slug": "custom-tech-solutions"
@@ -1203,31 +1273,37 @@ guide users down the sales funnel.`
         "description": "We specialize in developing AI-driven chatbots tailored to your business needs, combining natural language processing (NLP) and machine learning for conversational, human-like interactions.",
         "aiTools": [
             {
+                "icon": <MessageSquare/>,
                 "title": "Chatbot Frameworks",
                 "description": "Platforms like Dialogflow and Microsoft Bot Framework for custom bot development."
             },
             {
+                "icon": <Brain/>,
                 "title": "NLP Engines",
                 "description": "OpenAI GPT models and Google Cloud Natural Language to process and understand customer queries."
             },
             {
+                "icon": <Users/>,
                 "title": "Customer Data Insights",
                 "description": "Tools like HubSpot AI to personalize responses based on user history."
             }
         ],
         "approach": [
-                {
-                    "title": "Conversational Design",
-                    "description": "Create flows that guide customers intuitively through FAQs, troubleshooting, and purchase decisions."
-                },
-                {
-                    "title": "Multi-Channel Integration",
-                    "description": "Deploy chatbots across websites, mobile apps, and messaging platforms like WhatsApp and Facebook Messenger."
-                },
-                {
-                    "title": "Continuous Improvement",
-                    "description": "Use machine learning to analyze interactions and improve bot performance over time."
-                }
+            {
+                "icon": <MessageCircleQuestion/>,
+                "title": "Conversational Design",
+                "description": "Create flows that guide customers intuitively through FAQs, troubleshooting, and purchase decisions."
+            },
+            {
+                "icon": <Share2/>,
+                "title": "Multi-Channel Integration",
+                "description": "Deploy chatbots across websites, mobile apps, and messaging platforms like WhatsApp and Facebook Messenger."
+            },
+            {
+                "icon": <RefreshCcw/>,
+                "title": "Continuous Improvement",
+                "description": "Use machine learning to analyze interactions and improve bot performance over time."
+            }
         ]
     },
     "process": {
@@ -1288,16 +1364,142 @@ guide users down the sales funnel.`
     },
     "relatedServices": [
         {
+            icon: <Hourglass/>,
             "title": "AI Integration",
             "description": "Enhance chatbots with predictive analytics and personalized recommendations.",
             "slug": "ai-integration"
         },
         {
+            icon: <Workflow/>,
             "title": "Workflow Automation",
             "description": "Automate ticket assignment and escalation processes.",
             "slug": "workflow-automation"
         }
     ]
-    }
+    },
+    "cybersecurity-services": {
+    "hero": {
+        "title": "Cybersecurity: Protecting Your Business in the Digital Age",
+        "backgroundImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "research": {
+        "title": "Research and Market Insights",
+        "content": "As cyber threats evolve in sophistication, businesses face unprecedented security challenges. In 2024, data breaches cost companies an average of $4.8 million per incident (IBM Security Report). Meanwhile, 76% of organizations experienced at least one successful attack within the past 12 months, and ransomware attacks increased by 38% year-over-year (CyberSecurity Ventures). Proactive cybersecurity measures have become essential, with organizations that implement comprehensive security frameworks reducing breach costs by 60%.",
+        "keyChanges": [
+            "Traditional security perimeters are dissolving with remote work and cloud adoption.",
+            "Ransomware and phishing attacks have become more sophisticated and targeted.",
+            "Regulatory compliance requirements are intensifying, with severe penalties for non-compliance."
+        ]
+    },
+    "advantage": {
+        "title": "Growth Grid's Cybersecurity Advantage",
+        "description": "We deliver comprehensive cybersecurity solutions that combine advanced threat detection, prevention technologies, and strategic consulting to protect your business from evolving digital threats.",
+        "aiTools": [
+            {
+                "icon": <Shield/>,
+                "title": "Threat Intelligence Platforms",
+                "description": "CrowdStrike Falcon and Darktrace for AI-powered threat detection and response."
+            },
+            {
+                "icon": <Lock/>,
+                "title": "Zero Trust Solutions",
+                "description": "Implement zero trust architecture using Okta and Palo Alto Networks for secure access management."
+            },
+            {
+                "icon": <Search/>,
+                "title": "Vulnerability Management",
+                "description": "Tenable and Qualys for continuous vulnerability scanning and risk assessment."
+            }
+        ],
+        "approach": [
+            {
+                "icon": <ShieldAlert/>,
+                "title": "Security Assessment",
+                "description": "Comprehensive evaluation of security posture, including penetration testing and vulnerability scanning."
+            },
+            {
+                "icon": <Eye/>,
+                "title": "Continuous Monitoring",
+                "description": "24/7 security operations center (SOC) with real-time threat monitoring and incident response."
+            },
+            {
+                "icon": <UserCog/>,
+                "title": "Security Training",
+                "description": "Customized training programs to build a security-aware culture within your organization."
+            }
+        ]
+    },
+    "process": {
+        "title": "What to Expect",
+        "phases": [
+            {
+                "title": "Security Assessment Phase",
+                "steps": [
+                    "Conduct thorough infrastructure and application security assessments.",
+                    "Identify vulnerabilities, compliance gaps, and areas for improvement."
+                ]
+            },
+            {
+                "title": "Implementation Phase",
+                "steps": [
+                    "Deploy customized security solutions based on assessment findings.",
+                    "Integrate security tools with existing infrastructure for seamless protection."
+                ]
+            },
+            {
+                "title": "Ongoing Management",
+                "steps": [
+                    "Provide continuous monitoring and threat hunting through our SOC.",
+                    "Deliver regular security posture reports and improvement recommendations."
+                ]
+            }
+        ]
+    },
+    "results": {
+        "title": "Impact: How We Deliver Results",
+        "items": [
+            {
+                "title": "Reduced Risk Exposure",
+                "description": "How We Achieve It: Implement multi-layered security controls that detect and neutralize 99.7% of threats before they impact operations."
+            },
+            {
+                "title": "Compliance Assurance",
+                "description": "How We Achieve It: Align security measures with regulatory requirements (GDPR, HIPAA, PCI DSS) to avoid penalties and build trust."
+            },
+            {
+                "title": "Business Continuity",
+                "description": "How We Achieve It: Develop and test incident response plans that minimize downtime and data loss during security events."
+            }
+        ]
+    },
+    "caseStudy": {
+        "title": "Case Study: Securing a Financial Services Firm Against Advanced Threats",
+        "problem": "A mid-sized financial services company experienced multiple ransomware attempts and was concerned about regulatory compliance and client data protection.",
+        "solution": [
+            "Implemented a zero-trust security architecture with multi-factor authentication across all systems.",
+            "Deployed an advanced endpoint detection and response (EDR) solution with AI-based threat hunting.",
+            "Established 24/7 security monitoring and incident response protocols."
+        ],
+        "results": [
+            "Blocked 127 sophisticated attack attempts in the first quarter after implementation.",
+            "Achieved 100% compliance with financial industry regulations.",
+            "Reduced security incident response time from 6 hours to under 15 minutes."
+        ]
+    },
+    "relatedServices": [
+        {
+            "icon": <Cloud/>,
+            "title": "Cloud Security",
+            "description": "Secure cloud environments and applications with specialized protection strategies.",
+            "slug": "cloud-security"
+        },
+        {
+            "icon": <FileWarning/>,
+            "title": "Data Protection",
+            "description": "Implement encryption, DLP, and data governance frameworks to safeguard sensitive information.",
+            "slug": "data-protection"
+        }
+    ]
+}
     // Add similar content structures for other services
 };

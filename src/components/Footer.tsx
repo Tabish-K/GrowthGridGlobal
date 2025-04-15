@@ -106,7 +106,9 @@ function Footer() {
                                 "Market Research",
                                 "Engagement With AI",
                                 "Workflow Automation",
-                                "Predictive Analytics"
+                                "Predictive Analytics",
+                                "Custom Tech Solutions",
+                                "Cybersecurity Services"
                             ].map((service, index) => (
                                 <li key={index} className="hover:text-[#D77914] transition-colors cursor-pointer relative group">
                                     <a href={`/services/${service.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center">
@@ -150,7 +152,6 @@ function Footer() {
                             {[
                                 "About Us",
                                 "Why Us",
-                                "Case Studies",
                                 "Careers",
                             ].map((company, index) => (
                                 <li key={index} className="hover:text-[#D77914] transition-colors cursor-pointer relative group">

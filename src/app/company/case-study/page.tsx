@@ -16,8 +16,11 @@ export default function CaseStudiesPage() {
             <div className="absolute inset-0 bg-black/40" />
             <div className="max-w-7xl relative mt-12 right-0 left-0 mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold bg-gradient-to-r from-white drop-shadow-2xl to-transparent text-transparent bg-clip-text font-poppins">
-                Case Studies
+            Real Problems. Smart Solutions.
             </h1>
+            <p className="font-afacad text-white text-md md:text-lg mt-2 mx-4 md:mx-6 ">
+                {`Dive into our case studies to see how we turned challenges into success stories. Each project showcases our problem-solving approach, the strategies we implemented, and the impact we created.`}
+            </p>
             </div>
         </div>
         {/* Header */}
