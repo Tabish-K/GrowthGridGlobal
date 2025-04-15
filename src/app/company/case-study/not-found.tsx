@@ -9,7 +9,7 @@ export default function NotFound() {
             {`The case study you're looking for doesn't exist or has been moved.`}
         </p>
         <Link
-            href="/case-study"
+            href="/company/case-study"
             className="mt-8 px-6 py-3 bg-[#D77914] text-white rounded-md font-medium hover:bg-[#D77914]/70 transition-all"
         >
             Back to Case Studies

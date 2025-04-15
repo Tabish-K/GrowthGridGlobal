@@ -71,7 +71,7 @@ export default function CaseStudiesPage() {
                     </p>
                     </div>
                     <Link
-                    href={`/#/company/case-study/${study.id}`}
+                    href={`/company/case-study`}
                     className="inline-block bg-[#4F1C51] w-max relative right-0 left-0 mx-auto font-afacad text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#4F1C51]/90 transition-all"
                     >
                     View Project
