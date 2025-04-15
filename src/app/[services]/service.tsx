@@ -164,18 +164,18 @@ return (
             </div>
 
             {/* Research Section */}
-            <div className="bg-gray-50">
+            <div className="bg-[#D77914]/30">
             <div className="container mx-auto flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 px-4 md:px-8 lg:px-20 py-12 lg:py-20">
                 <div className="w-full lg:w-[80rem] flex flex-col gap-6 lg:gap-12">
-                <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+                <h2 className="text-3xl md:text-4xl font-semibold text-[#4F1C51]">
                     {content.research.title}
                 </h2>
-                <p className="text-gray-700 leading-relaxed text-md md:text-lg">
+                <p className="text-black leading-relaxed text-md md:text-lg">
                     {content.research.content}
                 </p>
                 </div>
-                <div className="bg-white p-6 w-full lg:w-auto border-l-4 border-[#CC0000]">
-                <h3 className="text-[#CC0000] font-semibold text-xl mb-4">
+                <div className="bg-white p-6 w-full lg:w-auto border-l-4 border-[#4F1C51]">
+                <h3 className="text-[#4F1C51] font-semibold text-xl mb-4">
                     Key Changes
                 </h3>
                 <div className="flex flex-col gap-3 text-sm md:text-md">

@@ -105,7 +105,7 @@ const Page = () => {
         {/* Hero Section */}
         <section id="about-us" className="bg-white max-w-7xl right-0 left-0 lg:mx-auto relative mx-4 md:mx-6">
             {/* Header Section */}
-            <div className="text-left py-12 md:py-20">
+            <div className="text-center py-12 md:py-20">
             <h1 className="text-4xl md:text-5xl relative font-medium text-black leading-tight">
                 We Envision Your Business Like A
             </h1>
@@ -119,7 +119,7 @@ const Page = () => {
             </div>
 
             {/* Missiom Section */}
-            <div className="grid md:grid-cols-2 gap-20">
+            <div className="grid md:grid-cols-2 gap-20 mx-auto max-w-5xl">
             {[
                 {
                 title: "Our Mission",
@@ -148,7 +148,7 @@ const Page = () => {
             </div>
 
             {/* Stats Section */}
-            <div className="grid sm:grid-cols-2 gap-x-20 gap-y-12 my-16 font-afacad">
+            <div className="grid sm:grid-cols-2 mx-auto max-w-5xl gap-x-20 gap-y-12 my-16 font-afacad">
             {stats.map((stat, index) => (
                 <div
                 key={index}

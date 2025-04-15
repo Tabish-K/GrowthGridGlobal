@@ -56,7 +56,7 @@ const Navbar = () => {
     {
       label: "Our Services",
       hasDropdown: true,
-      parentRoute: "explore",
+      parentRoute: "explore-services",
       links: {
         "": [
           "Technology & Development",
@@ -98,7 +98,7 @@ const Navbar = () => {
         {
           text: (
             <Link
-              href="/explore"
+              href="/explore-services"
               className="text-black hover:text-[#4F1C51] transition duration-300 inline-flex items-center text-md md:text-lg font-medium font-afacad"
             >
               Explore All Services
@@ -115,7 +115,7 @@ const Navbar = () => {
     {
       label: "Portofolio",
       hasDropdown: true,
-      parentRoute: "portfolio",
+      parentRoute: "company/case-study",
       links: {
         "": [  // Empty category for clean list
           "UI Path - Process Automation",
@@ -154,7 +154,7 @@ const Navbar = () => {
         {
           text: (
             <Link
-              href="/#"
+              href="/company/case-study"
               className="text-black hover:text-[#4F1C51] transition duration-300 inline-flex items-center text-md md:text-lg font-medium font-afacad"
             >
               Explore All Case Studies
@@ -171,7 +171,7 @@ const Navbar = () => {
     {
       label: "Blogs",
       hasDropdown: true,
-      parentRoute: "blogs",
+      parentRoute: "/#/blogs",
       links: {
         "": [  // Empty category for clean list
           "AI for SME Digital Transformation",

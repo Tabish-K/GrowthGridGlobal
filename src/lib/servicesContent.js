@@ -1,48 +1,78 @@
+import { Boxes, ChartBar, ChartCandlestick, Cloud, Code, CodeXml, DiamondPercent, Factory, FilePenLine, FileSearch, Megaphone, NotebookPen, ScanFace, ShieldCheck, ShoppingCart, Smartphone, Sparkles, Terminal, TrendingUp, WandSparkles, Waypoints } from "lucide-react";
+
 export const services = [
     {
         title: `Social Media Management`,
-        slug: `social-media-management`
+        description: `Boost your brand presence with AI-driven strategies that maximize engagement and ROI across platforms.`,
+        slug: `social-media-management`,
+        icon: <Smartphone/>
     },
     {
         title: `Paid Advertising`,
-        slug: `paid-advertising`
+        slug: `paid-advertising`,
+        description: `Reach the right audience with hyper-targeted campaigns powered by AI optimization tools`,
+        icon: <Megaphone/>
     },
     {
         title: `Content Creation`,
-        slug: `content-creation`
+        slug: `content-creation`,
+        description: `Craft compelling stories and visuals that inspire action, powered by AI insights.`,
+        icon: <NotebookPen/>
     },
     {
         title: `Market Research`,
-        slug: `market-research`
+        slug: `market-research`,
+        description: `Gain actionable insights with AI-powered market research that uncovers trends, customer behavior.`,
+        icon: <FileSearch/>
     },
     {
         title: `Engagement with AI`,
-        slug: `engagement-with-ai`
+        slug: `engagement-with-ai`,
+        description: `Enhance customer interaction and satisfaction with AI-driven engagement strategies.`,
+        icon: <Sparkles/>
     },
     {
         title: `Website and App Development`,
-        slug: `website-and-app-development`
+        slug: `website-and-app-development`,
+        description: `Build responsive, high-performing digital platforms with AI-enhanced features`,
+        icon: <CodeXml/>
     },
     {
         title: `E-Commerce Optimization`,
-        slug: `e-commerce-optimization`
+        slug: `e-commerce-optimization`,
+        description: `Transform your e-commerce platform with seamless shopping experiences and AI-driven personalization`,
+        icon: <ShoppingCart/>
     },
     {
         title: `Workflow Automation`,
-        slug: `workflow-automation`
+        slug: `workflow-automation`,
+        description: `Streamline processes and boost productivity with AI-powered automation tools`,
+        icon: <Waypoints/>
     },
     {
         title: `Predictive Analytics`,
-        slug: `predictive-analytics`
+        slug: `predictive-analytics`,
+        description: `Harness the power of AI to predict trends, optimize resources, and stay ahead of the curve`,
+        icon: <ChartCandlestick/>
     },
     {
         title: `Data and Cloud Solutions`,
-        slug: `data-and-cloud-solutions`
+        slug: `data-and-cloud-solutions`,
+        description: `Simplify data management and scale your operations with secure cloud-based solutions.`,
+        icon: <Cloud/>
     },
-    // {
-    //     title: `Custom Tech Solutions`,
-    //     slug: `custom-tech-solutions`
-    // }
+    {
+        title: `Custom Tech Solutions`,
+        slug: `custom-tech-solutions`,
+        description: `Develop tailored software and systems to solve your unique business challenges`,
+        icon: <Terminal/>
+    },
+    {
+        title: `Cybersecurity Services`,
+        slug: `cybersecurity-services`,
+        description: `Protect your digital assets with proactive, AI-enhanced cybersecurity solutions that detect threats in real time.`,
+        icon: <ShieldCheck/>
+    }
 ];
 
 export const serviceContent = {
@@ -65,28 +95,34 @@ export const serviceContent = {
             description: "We go beyond just managing social media. Our AI-first approach ensures that every post is backed by data and tailored to your audience's preferences.",
             aiTools: [
                 {
+                    icon: <WandSparkles/>,
                     title: "Content Personalization",
                     description: "Tools like Canva AI and Persado create emotionally resonant, platform-specific posts."
                 },
                 {
+                    icon: <TrendingUp/>,
                     title: "Predictive Posting",
                     description: "Buffer Analyze predicts the best times to post based on audience activity trends."
                 },
                 {
+                    icon: <ChartBar/>,
                     title: "Engagement Analytics",
                     description: "Tools like Hootsuite Insights and Sprout Social track sentiment, engagement, and campaign ROI in real time."
                 }
             ],
             approach: [
                 {
+                    icon: <Factory/>,
                     title: "Industry Research",
                     description: "Identify audience trends using tools like Brandwatch and Google Trends."
                 },
                 {
+                    icon: <Boxes/>,
                     title: "Content Strategy Development",
                     description: "Build interactive content calendars featuring reels, polls, Q&As, and influencer collaborations."
                 },
                 {
+                    icon: <ScanFace/>,
                     title: "Real-Time Community Engagement",
                     description: "Assign dedicated AI chatbots for responding to comments and inquiries 24/7."
                 }
@@ -152,11 +188,13 @@ export const serviceContent = {
         },
         relatedServices: [
             {
+                icon: <DiamondPercent/>,
                 title: "Paid Advertising",
                 description: "Amplify reach with hyper-targeted ad campaigns.",
                 slug: "paid-advertising"
             },
             {
+                icon: <FilePenLine/>,
                 title: "Content Creation",
                 description: "Develop high-quality, platform-optimized visuals and text.",
                 slug: "content-creation"

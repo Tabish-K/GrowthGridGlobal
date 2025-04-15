@@ -4,8 +4,17 @@ import { ReactNode } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["400", "700"] });
-const afacad = Afacad({ subsets: ["latin"], weight: ["400", "700"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
+
+const afacad = Afacad({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-afacad",
+});
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -42,13 +51,13 @@ export const metadata = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${poppins.variable} ${afacad.variable}`}>
       <head>
         <link rel="icon" href="/webtoplogo.png" type="image/png" sizes="32x32" />
         <link rel="icon" href="/webtoplogo.png" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/webtoplogo.png" />
       </head>
-      <body className={`${afacad} ${poppins} antialiased`}>
+      <body className={`antialiased`}>
         <Navbar />
         {children}
         <Footer />

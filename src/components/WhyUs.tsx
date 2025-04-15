@@ -263,19 +263,19 @@ const WhyUs: React.FC = () => {
                 </div>
                 <div className="flex flex-col gap-6 text-justify">
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
-                        <CheckCircle className="h-8 w-8 md:h-12 md:w-12"/>
+                        <CheckCircle className="h-8 w-8"/>
                         <p>{`Increased leads by 63% and cut support time by 72%, with 4.6x in driving conversions.`}</p>
                     </div>
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
-                        <CheckCircle className="h-8 w-8 md:h-12 md:w-12"/>
+                        <CheckCircle className="h-8 w-8"/>
                         <p>{`Boosted form submissions by 41%, improved load time by 1.8s, and reduced bounce rate by 33%`}</p>
                     </div>
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
-                        <CheckCircle className="h-8 w-8 md:h-12 md:w-12"/>
+                        <CheckCircle className="h-8 w-8"/>
                         <p>{`Delivered investor-ready positioning, global GTM plans, competitor play books.`}</p>
                     </div>
                     <div className="flex items-center gap-4 font-afacad tracking-wide text-lg md:text-2xl">
-                        <CheckCircle className="h-8 w-8 md:h-12 md:w-12"/>
+                        <CheckCircle className="h-8 w-8"/>
                         <p>{`Built viral content(1.2M views), improved UX, and rebranded startups from scratch.`}</p>
                     </div>
 

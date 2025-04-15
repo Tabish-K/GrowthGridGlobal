@@ -46,13 +46,13 @@ function Footer() {
             >
                 <div className="text-center max-w-2xl mx-auto">
                     <motion.h1 
-                        className="text-xl lg:text-4xl font-bold text-[#4F1C51] font-poppins"
+                        className="text-xl lg:text-4xl drop-shadow-2xl font-bold text-[#4F1C51] font-poppins"
                         {...fadeInUp}
                     >
                         {`Let's Shape the Future Together`}
                     </motion.h1>
                     <motion.p 
-                        className="text-lg leading-tight md:text-xl tracking-wide text-black font-afacad mt-3 md:mt-6"
+                        className="text-lg leading-tight drop-shadow-2xl md:text-xl tracking-wide text-black font-afacad mt-3 md:mt-6"
                         {...fadeInUp}
                     >
                         {`Get in touch today to start your journey toward innovation, efficiency and growth`}
