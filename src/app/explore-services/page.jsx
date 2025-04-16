@@ -277,16 +277,16 @@ function Explore() {
                 </h1>
 
                 {/* Icons */}
-                <div className="grid grid-cols-3 gap-16 md:gap-x-36 md:gap-y-20">
+                <div className="p-6 grid grid-cols-3 gap-20 md:gap-x-36 md:gap-y-20">
                             {techStack.map((tech) => (
-                                <div key={tech.name} className="flex gap-8 justify-center items-center">
-                                    <div className="w-7 h-7 md:h-12 md:w-12 flex items-center justify-center">
+                                <div key={tech.name} className="flex justify-center items-center">
+                                    <div className="h-6 w-6 md:h-10 md:w-10 flex items-center justify-center">
                                     <Image
                                         src={tech.icon}
                                         alt={tech.alt}
-                                        width={48}
-                                        height={48}
-                                        className="max-w-full max-h-full"
+                                        width={100}
+                                        height={100}
+                                        className="max-w-48 max-h-48"
                                     />
                                     </div>
                                 </div>

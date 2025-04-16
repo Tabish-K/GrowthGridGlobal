@@ -188,16 +188,16 @@ export const serviceContent = {
         },
         relatedServices: [
             {
-                icon: <DiamondPercent/>,
-                title: "Paid Advertising",
-                description: "Amplify reach with hyper-targeted ad campaigns.",
-                slug: "paid-advertising"
+                title: `Paid Advertising`,
+                slug: `paid-advertising`,
+                description: `Reach the right audience with hyper-targeted campaigns powered by AI optimization tools`,
+                icon: <Megaphone/>
             },
             {
-                icon: <FilePenLine/>,
-                title: "Content Creation",
-                description: "Develop high-quality, platform-optimized visuals and text.",
-                slug: "content-creation"
+                title: `Content Creation`,
+                slug: `content-creation`,
+                description: `Craft compelling stories and visuals that inspire action, powered by AI insights.`,
+                icon: <NotebookPen/>
             }
         ]
     },
@@ -473,16 +473,16 @@ guide users down the sales funnel.`
         },
         relatedServices: [
             {
-                icon: <Share2/>,
-                title: "Social Media Management",
-                description: "Amplify your content reach through strategic platform management",
-                slug: "social-media-management"
+                title: `Social Media Management`,
+                description: `Boost your brand presence with AI-driven strategies that maximize engagement and ROI across platforms.`,
+                slug: `social-media-management`,
+                icon: <Smartphone/>
             },
             {
-                icon: <Target/>,
-                title: "Paid Advertising",
-                description: "Boost content visibility with targeted promotion campaigns",
-                slug: "paid-advertising"
+                title: `Paid Advertising`,
+                slug: `paid-advertising`,
+                description: `Reach the right audience with hyper-targeted campaigns powered by AI optimization tools`,
+                icon: <Megaphone/>
             }
         ]
     },
@@ -986,16 +986,16 @@ guide users down the sales funnel.`
     },
     "relatedServices": [
         {
-            "icon": <BrainCircuit/>,
-            "title": "AI Integration",
-            "description": "Enhance workflows with intelligent tools for predictive resource allocation.",
-            "slug": "ai-integration"
+            title: `Engagement with AI`,
+            slug: `engagement-with-ai`,
+            description: `Enhance customer interaction and satisfaction with AI-driven engagement strategies.`,
+            icon: <Sparkles/>
         },
         {
-            "icon": <Code2/>,
-            "title": "Custom Tech Solutions",
-            "description": "Build bespoke platforms tailored to your unique workflow needs.",
-            "slug": "custom-tech-solutions"
+            title: `Custom Tech Solutions`,
+            slug: `custom-tech-solutions`,
+            description: `Develop tailored software and systems to solve your unique business challenges`,
+            icon: <Terminal/>
         }
     ]
     },
@@ -1364,16 +1364,16 @@ guide users down the sales funnel.`
     },
     "relatedServices": [
         {
-            icon: <Hourglass/>,
-            "title": "AI Integration",
-            "description": "Enhance chatbots with predictive analytics and personalized recommendations.",
-            "slug": "ai-integration"
+            title: `Engagement with AI`,
+            slug: `engagement-with-ai`,
+            description: `Enhance customer interaction and satisfaction with AI-driven engagement strategies.`,
+            icon: <Sparkles/>
         },
         {
-            icon: <Workflow/>,
-            "title": "Workflow Automation",
-            "description": "Automate ticket assignment and escalation processes.",
-            "slug": "workflow-automation"
+            title: `Workflow Automation`,
+            slug: `workflow-automation`,
+            description: `Streamline processes and boost productivity with AI-powered automation tools`,
+            icon: <Waypoints/>
         }
     ]
     },

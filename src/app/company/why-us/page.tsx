@@ -18,15 +18,15 @@ interface PartnershipSection {
 }
 
 interface ProcessStep {
-  id: number;
-  title: string;
-  content: string;
+    id: number;
+    title: string;
+    content: string;
 }
 
 interface Benefit {
-  prefix: string;
-  highlight: string;
-  suffix: string;
+    prefix: string;
+    highlight: string;
+    suffix: string;
 }
 
 // Why Us
@@ -163,8 +163,8 @@ const benefits: Benefit[] = [
 ];
 
 interface NavLink {
-  id: string;
-  label: string;
+    id: string;
+    label: string;
 }
 
 const Page: React.FC = () => {
@@ -193,20 +193,20 @@ const Page: React.FC = () => {
             >
                 <div className="absolute inset-0 bg-black/20" />
                 <div className="max-w-7xl relative mt-12 right-0 left-0 mx-auto">
-                    <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold bg-gradient-to-r from-white drop-shadow-2xl to-transparent text-transparent bg-clip-text font-poppins">Why Us</h1>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold text-white drop-shadow-2xl font-poppins">Smarter Growth Starts Here</h1>
                 </div>
             </div>
 
             {/* why-us */}
             <section id='why-us' className='py-6 md:py-20 max-w-7xl relative right-0 left-0 lg:mx-auto md:mx-6 mx-4'>
                 <div className="mb-8 text-left space-y-4">
-                    <h2 className="text-3xl text-center md:text-start md:text-4xl font-bold text-black font-poppins leading-tight">
+                    <h2 className="text-3xl text-center md:text-start md:text-5xl font-bold text-black font-poppins leading-tight">
                     Why{" "}
                     <span className="text-[#D77914]">
                         Growth Grid?
                     </span>
                     </h2>
-                    <p className="text-[18px] md:text-[22px] text-center md:text-xl font-medium font-afacad tracking-wide text-gray-900 mt-2">
+                    <p className="text-[18px] md:text-[22px] text-center md:text-2xl font-medium font-afacad tracking-wide text-gray-900 mt-2">
                         {`Because we turn complexity into opportunity using AI automation solutions, workflow automation software, and predictive analytics to help businesses scale faster.`}
                     </p>
                 </div>
@@ -214,7 +214,7 @@ const Page: React.FC = () => {
                 {/* Content Section */}
                 <div className="flex h-full lg:h-[22rem] flex-col-reverse justify-between md:flex-row my-10 gap-10 md:gap-0 px-2">
                     {/* Left Side: Collapsible Sections (Standalone) */}
-                    <div className="md:w-1/2 flex flex-col justify-between gap-8 md:gap-0">
+                    <div className="md:w-1/2 flex flex-col justify-center gap-8 md:gap-12">
                     {sections.map((section, index) => (
                         <div
                         key={index}

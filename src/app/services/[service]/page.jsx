@@ -251,7 +251,7 @@ return (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {content.relatedServices.map((service, index) => (
                     <Link href={`/services/${service.slug}`} key={index}>
-                    <div className="border font-afacad p-6 relative hover:border-b-[6px] border-[#4F1C51] transition-all rounded-lg">
+                    <div className="border font-afacad p-6 relative hover:border-b-[6px] border-[#4F1C51] transition-all rounded-lg h-full w-full">
                         <div className="bg-[#4F1C51] w-max text-white p-4 rounded-lg mb-4">
                             {service.icon}
                         </div>

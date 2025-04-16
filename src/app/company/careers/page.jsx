@@ -245,7 +245,7 @@ const CareersPage = () => {
           <h1 className="text-lg md:text-xl font-bold font-poppins tracking-wide">
             Team Testimonials
           </h1>
-          <div className="relative h-40">
+          <div className="relative h-[18rem] md:h-[12rem]">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
@@ -288,9 +288,9 @@ const CareersPage = () => {
             {openPositions.map((position, index) => (
               <div
                 key={index}
-                className="p-4 md:p-6 rounded-lg border-2 border-gray-300 hover:border-b-[6px] transition-all hover:border-[#4F1C51] flex flex-col md:flex-row justify-between md:items-center gap-4 md:gap-6"
+                className="p-3 md:p-6 h-full w-full rounded-lg border-2 border-gray-300 hover:border-b-[6px] transition-all hover:border-[#4F1C51] flex flex-col md:flex-row justify-between md:items-center gap-4 md:gap-6"
               >
-                <div className="space-y-2">
+                <div className="space-y-2 flex flex-col items-start">
                   <h3 className="text-sm md:text-xl font-semibold font-poppins">
                     {position.title}
                   </h3>
@@ -301,7 +301,7 @@ const CareersPage = () => {
                     <span className="hidden md:inline">•</span>
                     <span>{position.type}</span>
                   </div>
-                  <button className="flex items-center justify-center gap-2 text-[#4F1C51] w-full md:w-auto font-poppins text-xs md:text-sm font-bold">
+                  <button className="flex items-center justify-center gap-2 text-[#4F1C51] font-poppins text-xs md:text-sm font-bold">
                     Learn More
                     <ArrowUpRight className="md:w-4 md:h-4 h-3 w-3" />
                   </button>

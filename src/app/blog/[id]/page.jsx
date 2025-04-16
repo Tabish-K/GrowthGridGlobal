@@ -47,7 +47,7 @@ const BlogPost = ({ params }) => {
             <div className="bg-white border-b">
                 <div className="container mx-auto px-8 py-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600">
-                        <Link href="/blog" className="hover:text-red-600">Blog</Link>
+                        <Link href="/blog" className="hover:text-[#4F1C51]">Blog</Link>
                         <ChevronRight size={16} />
                         <span className="text-gray-400">{post.metadata.category}</span>
                     </div>
@@ -62,18 +62,18 @@ const BlogPost = ({ params }) => {
             >
                 <div className="container mx-auto px-6 md:px-8 py-12">
                     <div className="max-w-3xl mx-auto">
-                        <span className="text-red-600 font-semibold">{post.metadata.category}</span>
-                        <h1 className="text-3xl md:text-4xl font-bold mt-4 mb-6">{post.title}</h1>
-                        <div className="items-center gap-6 text-gray-500 grid grid-cols-2 md:grid-cols-3">
-                            <div className="flex items-center gap-2 text-sm">
+                        <span className="text-[#4F1C51] font-semibold">{post.metadata.category}</span>
+                        <h1 className="text-3xl md:text-4xl font-bold mt-4 mb-6 font-poppins">{post.title}</h1>
+                        <div className="items-center gap-6 text-gray-500 font-afacad text-sm sm:text-lg grid grid-cols-2 md:grid-cols-3">
+                            <div className="flex items-center gap-2">
                                 <User size={20} />
                                 <span>{post.metadata.author}</span>
                             </div>
-                            <div className="flex items-center gap-2 text-sm">
+                            <div className="flex items-center gap-2">
                                 <Calendar size={20} />
                                 <span>{new Date(post.metadata.datePublished).toLocaleDateString()}</span>
                             </div>
-                            <div className="flex items-center gap-2 text-sm">
+                            <div className="flex items-center gap-2">
                                 <Clock size={20} />
                                 <span>{post.readTime || '5 min read'}</span>
                             </div>
@@ -92,7 +92,7 @@ const BlogPost = ({ params }) => {
                 <div className="max-w-3xl mx-auto">
                     <div className="prose prose-lg">
                         {contentParagraphs.map((paragraph, index) => (
-                            <p key={index} className="text-gray-600 leading-relaxed mb-6">
+                            <p key={index} className="text-black font-afacad text-md sm:text-lg leading-relaxed mb-6">
                                 {paragraph}
                             </p>
                         ))}
@@ -100,8 +100,8 @@ const BlogPost = ({ params }) => {
                         {/* Structured Sections */}
                         {post.structuredContent.sections.map((section, index) => (
                             <div key={index} className="mt-8">
-                                <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
-                                <p className="text-gray-600 leading-relaxed mb-6">
+                                <h2 className="text-2xl font-bold mb-4 font-poppins">{section.title}</h2>
+                                <p className="text-black font-afacad text-md sm:text-lg leading-relaxed mb-6">
                                     {section.content}
                                 </p>
                             </div>
@@ -111,10 +111,10 @@ const BlogPost = ({ params }) => {
                     {/* Sources */}
                     {post.metadata.sources && post.metadata.sources.length > 0 && (
                         <div className="mt-12 pt-8 border-t">
-                            <h3 className="text-xl font-bold mb-4">Sources</h3>
+                            <h3 className="text-xl font-bold mb-4 font-poppins">Sources</h3>
                             <ul className="space-y-2">
                                 {post.metadata.sources.map((source, index) => (
-                                    <li key={index} className="text-gray-600">
+                                    <li key={index} className="text-black font-afacad text-md sm:text-lg">
                                         {source.name} ({source.year}): {source.citation}
                                     </li>
                                 ))}
@@ -123,12 +123,12 @@ const BlogPost = ({ params }) => {
                     )}
 
                     {/* Tags */}
-                    <div className="mt-12 pt-8 border-t">
-                        <div className="flex flex-wrap gap-2">
+                    <div className="mt-12 pt-8 border-t-2 border-[#4F1C51]">
+                        <div className="flex flex-wrap gap-2 font-afacad">
                             {post.metadata.tags.map(tag => (
                                 <span 
                                     key={tag}
-                                    className="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm"
+                                    className="px-4 py-2 bg-gray-100 text-gray-600 rounded-full text-sm sm:text-lg md:text-xl"
                                 >
                                     {tag}
                                 </span>

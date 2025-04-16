@@ -7,22 +7,22 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const stats = [
     {
-        icon: <Factory size={48} className="text-white" />,
+        icon: <Factory className="text-white h-6 w-6 md:h-20 md:w-20" />,
         value: "10+",
         label: "Years Of Experience In The Industry",
     },
     {
-        icon: <Earth size={48} className="text-white" />,
+        icon: <Earth className="text-white h-6 w-6 md:h-20 md:w-20" />,
         value: "100+",
         label: "Businesses Empowered Globally",
     },
     {
-        icon: <ChartNoAxesCombined size={48} className="text-white" />,
+        icon: <ChartNoAxesCombined className="text-white h-6 w-6 md:h-20 md:w-20" />,
         value: "40%",
         label: "Average Operational Efficiency",
     },
     {
-        icon: <CircleDollarSign size={48} className="text-white" />,
+        icon: <CircleDollarSign className="text-white h-6 w-6 md:h-20 md:w-20" />,
         value: "$2M+",
         label: "Saved Annually Across Workflows",
     },
@@ -96,7 +96,7 @@ const Page = () => {
         >
             <div className="absolute inset-0 bg-black/80" />
             <div className="max-w-7xl relative mt-12 right-0 left-0 mx-auto">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold bg-gradient-to-r from-white drop-shadow-2xl to-transparent text-transparent bg-clip-text">We're Not Just Another Agency—We're Your Strategic Growth Catalyst</h1>
+                <h1 className="text-2xl md:text-4xl lg:text-5xl mx-4 md:mx-6 font-bold text-white drop-shadow-2xl font-poppins">We're Not Just Another Agency—We're Your Strategic Growth Catalyst</h1>
             </div>
         </div>
 
@@ -106,72 +106,65 @@ const Page = () => {
         <section id="about-us" className="bg-white max-w-7xl right-0 left-0 lg:mx-auto relative mx-4 md:mx-6">
             {/* Header Section */}
             <div className="text-center py-12 md:py-20">
-            <h1 className="text-4xl md:text-5xl relative font-medium text-black leading-tight">
-                We Envision Your Business Like A
-            </h1>
-            <h1 className="text-4xl md:text-5xl font-bold text-[#D77914]">
-                Growth {" "}
-                <span className="bg-gradient-to-r from-[#D77914] to-[#D77914]/40 text-transparent bg-clip-text">
-                Partner
-                </span>
-            
+            <h1 className="text-3xl md:text-5xl relative font-bold text-black leading-tight">
+                We Envision Your Business Like A {" "}
+            <span className="text-3xl md:text-5xl font-bold text-[#D77914]">
+                Growth Partner
+            </span>
             </h1>
             </div>
 
             {/* Missiom Section */}
-            <div className="grid md:grid-cols-2 gap-20 mx-auto max-w-5xl">
+            <div className="grid grid-cols-2 md:gap-20 gap-2 mx-auto max-w-5xl">
             {[
                 {
                 title: "Our Mission",
                 description:
                     "To revolutionize businesses by delivering data-driven solutions powered by AI and automation.",
-                icon: <Target size={48} className="text-[#4F1C51]" />,
+                icon: <Target className="text-[#4F1C51] h-8s w-8 md:h-16 md:w-16" />,
                 },
                 {
                 title: "Our Vision",
                 description:
                     "A future where businesses harness the power of technology to innovate and thrive in a competitive landscape.",
-                icon: <Eye size={48} className="text-[#4F1C51]" />,
+                icon: <Eye className="text-[#4F1C51] h-8 w-8 md:h-16 md:w-16" />,
                 },
             ].map((item, index) => (
                 <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg border-2 text-center flex flex-col items-start"
+                className="bg-white p-4 md:p-8 rounded-2xl shadow-lg border-2 text-center flex flex-col items-start"
                 >
-                <div className="flex items-center justify-center w-28 h-28 rounded-full bg-[#4F1C51]/20">
+                <div className="flex items-center justify-center md:w-28 md:h-28 h-16 w-16 rounded-full bg-[#4F1C51]/20">
                     {item.icon}
                 </div>
-                <h2 className="text-3xl font-bold mt-6 text-black font-poppins">{item.title}</h2>
-                <p className="text-black text-justify mt-3 text-xl md:text-2xl font-afacad">{item.description}</p>
+                <h2 className="text-lg text-start sm:text-xl md:text-3xl font-bold mt-6 text-black font-poppins">{item.title}</h2>
+                <p className="text-black text-start mt-3 text-sm sm:text-lg md:text-2xl font-afacad">{item.description}</p>
                 </div>
             ))}
             </div>
 
             {/* Stats Section */}
-            <div className="grid sm:grid-cols-2 mx-auto max-w-5xl gap-x-20 gap-y-12 my-16 font-afacad">
+            <div className="grid grid-cols-2 mx-auto max-w-5xl gap-x-4 gap-y-4 md:gap-x-20 md:gap-y-12 my-16 font-afacad">
             {stats.map((stat, index) => (
                 <div
                 key={index}
-                className="bg-[#4F1C51] p-6 rounded-xl text-white flex flex-col justify-between shadow-md"
+                className="bg-[#4F1C51] p-3 md:p-6 rounded-xl text-white flex flex-col justify-between shadow-md"
                 >
                 <div className="flex items-center justify-between">
-                    <div className="bg-white bg-opacity-20 p-3 rounded-md w-20 h-20 flex items-center justify-center">
+                    <div className="bg-white bg-opacity-20 p-3 rounded-md md:w-20 md:h-20 w-12 h-12 flex items-center justify-center">
                     {stat.icon}
                     </div>
-                    <h3 className="text-5xl font-bold">{stat.value}</h3>
+                    <h3 className="text-3xl md:text-5xl font-bold">{stat.value}</h3>
                 </div>
-                <p className="text-lg mt-3">{stat.label}</p>
+                <p className="text-sm sm:text-md md:text-lg mt-3">{stat.label}</p>
                 </div>
             ))}
             </div>
 
             {/* Story Section */}
             <div className="my-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-black font-poppins">
-                The{" "}
-                <span className="bg-gradient-to-r from-[#D77914] to-[#D77914]/40 text-transparent bg-clip-text">
-                Story
-                </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#D77914] font-poppins">
+                The Story
             </h2>
 
             <p className="text-2xl font-afacad mb-12 md:text-3xl font-semibold relative text-gray-900 mt-3">
@@ -224,8 +217,8 @@ const Page = () => {
         {/* Team */}
         <section id="team" className="bg-[#D77914]">
             <div className="max-w-7xl h-full flex flex-col md:flex-row justify-between leading-normal py-12 md:py-20 relative right-0 left-0 md:mx-auto mx-4">
-                <div className="max-w-[32rem] flex flex-col justify-between items-center gap-6 md:gap-0 mb-10 md:mb-0">
-                    <h1 className="text-4xl md:text-5xl text-justify text-white font-medium font-poppins">Our Expert <span className="font-bold bg-gradient-to-r from-white to-yellow-500 bg-clip-text text-transparent">Team</span></h1>
+                <div className="md:max-w-[32rem] flex flex-col justify-between items-center gap-6 md:gap-0 mb-10 md:mb-0">
+                    <h1 className="text-3xl md:text-5xl text-justify text-white font-semibold font-poppins">Our Expert Team</h1>
                     <p className="text-lg md:text-xl w-full text-white capitalize leading-2 text-justify font-afacad mx-auto">
                     {`Our team specializes in IT consulting services, AI automation solutions, and business process automation, blending technical expertise with creative vision to drive business transformation. Our developers, designers, marketers, and strategists work collaboratively to align business goals with cutting-edge solutions. From crafting intuitive websites to optimizing processes through automation and analytics, we ensure every project drives meaningful digital transformation and growth.`}
                     </p>
@@ -247,19 +240,19 @@ const Page = () => {
         <section id="value" className="bg-white">
             <div className="max-w-7xl py-20 right-0 left-0 md:mx-auto relative mx-4">
                 <div className="flex flex-col justify-center items-center gap-3 py-3 w-full">
-                    <h1 className="text-4xl md:text-5xl font-poppins">Our <span className="font-bold bg-gradient-to-r from-[#D77914] to-[#D77914]/50 bg-clip-text text-transparent">Core Values</span></h1>
+                    <h1 className="text-4xl md:text-5xl text-[#D77914] font-bold font-poppins">Our Core Values</h1>
                     <p className="capitalize text-black text-xl font-afacad md:text-2xl text-center max-w-[42rem]">{`Our values shape everything we do, driving innovation, excellence. and lasting impact.`}</p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-16 gap-y-8 mt-10">
+                <div className="grid grid-cols-2 md:grid-cols-3 md:gap-x-16 md:gap-y-8 gap-x-4 gap-y-4 mt-10">
                     {coreValues.map((value, index) => (  
                     <div
                         key={index}
-                        className="bg-[#4F1C51] font-afacad text-white p-6 rounded-xl flex flex-col items-start shadow-lg"
+                        className="bg-[#4F1C51] font-afacad text-white p-3 md:p-6 rounded-xl flex flex-col items-start shadow-lg"
                     >
                         <div className="mb-4">{value.icon}</div>
-                        <h3 className="text-4xl">{value.title}</h3>
-                        <p className="mt-2 text-lg mb-4">{value.subtitle}</p>
+                        <h3 className="text-2xl md:text-4xl">{value.title}</h3>
+                        <p className="mt-2 text-sm md:text-lg mb-4">{value.subtitle}</p>
                     </div>
                     ))}
                 </div>
@@ -271,7 +264,7 @@ const Page = () => {
         <section id="life-style">
             <div className="max-w-7xl relative right-0 left-0 md:mx-auto mx-4 md:py-20">
             <div className="mb-10 md:mb-20">
-                <h1 className="text-3xl md:text-5xl font-semibold text-[#D77914] font-poppins">{`Work, Grow, Enjoy!`}</h1>
+                <h1 className="text-3xl md:text-5xl font-bold text-[#D77914] font-poppins">{`Work, Grow, Enjoy!`}</h1>
                 <p className="text-xl md:text-2xl text-black text-justify mt-6 leading-relaxed font-afacad">
                     {`We Prioritize Our People. Our Team Is Our Greatest Strength, And We Are Committed To
                     Creating An Environment Where Everyone  Valued And Empowered. Through
