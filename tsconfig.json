@@ -119,7 +119,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/company/about-us/page.jsx", "src/lib/servicesContent.js", "src/app/services/[service]/page.jsx"  ],
+, "src/app/company/about-us/page.jsx", "src/lib/servicesContent.js", "src/app/services/[service]/page.jsx", "src/app/blog/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

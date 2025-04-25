@@ -136,7 +136,7 @@ function Footer() {
                                 "All Industries"
                             ].map((industry, index) => (
                                 <li key={index} className="hover:text-[#D77914] transition-colors cursor-pointer relative group">
-                                    <a href={`/industries/${industry.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center">
+                                    <a href={`/#/industries/${industry.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center">
                                         {industry}
                                         <span className="absolute left-0 bottom-0 w-0 h-px bg-[#D77914] group-hover:w-full transition-all duration-300"></span>
                                     </a>
@@ -171,12 +171,12 @@ function Footer() {
                         </h3>
                         <ul className="space-y-2 text-gray-300 font-afacad text-sm md:text-sm tracking-wide w-max">
                             {[
-                                "AI For SME Digital Transformation",
+                                "Harness AI",
                                 "AI In Product Development",
-                                "AI In E-Com Customer Experience",
-                                "AI-Driven Supply Chain Optimization",
+                                "AI Driven Supply Chain",
                                 "Automating Business Workflows",
-                                "AI In Content Marketing & Engagement"
+                                "Content Marketing",
+                                "Future of E Commerce"
                             ].map((article, index) => (
                                 <li key={index} className="hover:text-[#D77914] transition-colors cursor-pointer relative group">
                                     <a href={`/blog/${article.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center">

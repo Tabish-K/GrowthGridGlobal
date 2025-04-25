@@ -37,6 +37,7 @@ interface NavLink {
     text: ReactNode | string
     description?: string
     isLink?: boolean
+    path?: string // Added path property for specific routing
   }>
 }
 
@@ -72,28 +73,33 @@ const Navbar = () => {
           text: "Technology & Development",
           description:
             "We craft scalable websites, mobile apps, and custom digital solutions that accelerate business growth.",
+          path: "/services/website-and-app-development"
         },
         {
           icon: <Cloud size={20} className="text-purple-700" />,
           text: "Data & Cloud Solutions",
           description:
             "Our secure cloud infrastructure and data management systems optimize performance and ensure reliability.",
+          path: "/services/data-and-cloud-solutions"
         },
         {
           icon: <Waypoints size={20} className="text-[#D77914]" />,
-          text: "Automation & Analytics",
+          text: "Workflow Automation",
           description: "Streamline your processes with intelligent automation and actionable insights powered by AI.",
+          path: "/services/workflow-automation"
         },
         {
           icon: <ShieldAlert size={20} className="text-gray-700" />,
           text: "Cybersecurity Services",
           description:
             "Protect your digital assets with advanced security protocols, risk assessments, and compliance strategies.",
+          path: "/services/cybersecurity-services"
         },
         {
           icon: <Sparkles size={20} className="text-[#D77914]" />,
           text: "Engagement with AI",
           description: "Enhance customer interactions and business processes using smart AI-driven solutions.",
+          path: "/services/engagement-with-ai"
         },
         {
           text: (
@@ -109,6 +115,7 @@ const Navbar = () => {
             </Link>
           ),
           isLink: true,
+          path: "/explore-services"
         },
       ],
     },
@@ -128,28 +135,33 @@ const Navbar = () => {
       content: [
         {
           icon: <GalleryVertical size={20} className="text-[#D77914]" />,
-          text: "UI Path - Process Automation",
-          description: "Reduced operational costs by 40% through streamlined workflows and system integrations.",
+          text: "Global Tech Firm",
+          description: "How a global tech firm cut manual processes by 40% through workflow automation",
+          path: "/company/case-study/global-tech-firm"
         },
         {
           icon: <ShoppingBag size={20} className="text-[#4F1C51]" />,
-          text: "Dynamic Yield - E-Commerce Optimization",
-          description: "Increased revenue by 68% with personalized retargeting and loyalty program development.",
+          text: "StartUp Feature",
+          description: "How a SaaS startup feature tripled revenue by 285% in 6 months",
+          path: "/company/case-study/startup-feature"
         },
         {
           icon: <Image src={aws} height={100} width={100} alt="aws" className="h-full w-full"/>,
           text: "AWS - Cloud Migration Strategy",
-          description: "Achieved 40% cost savings with advanced cloud migration and security solutions.",
+          description: "How a French startup achieved 30% cost savings with cloud infrastructure",
+          path: "/company/case-study/french-startup"
         },
         {
           icon: <ChartNoAxesCombined size={20} className="text-[#4F1C51]" />,
           text: "Revolut - Digital Transformation",
           description: "Scaled a FinTech giant using AI and cloud technologies, driving 4x revenue growth.",
+          path: "/company/case-study/digital-transformation"
         },
         {
           icon: <ShieldHalf size={20} className="text-[#D77914]" />,
-          text: "Palo Alto Prisma - Security & Compliance",
-          description: "Enhanced security and compliance through advanced threat protection and monitoring.",
+          text: "DTC - Brands",
+          description: "Scaling a DTC brand's revenue 4X with AI-driven paid advertising",
+          path: "/company/case-study/dtc-brand"
         },
         {
           text: (
@@ -165,47 +177,54 @@ const Navbar = () => {
             </Link>
           ),
           isLink: true,
+          path: "/company/case-study"
         },
       ],
     },
     {
       label: "Blogs",
       hasDropdown: true,
-      parentRoute: "/#/blogs",
+      parentRoute: "blog",
       links: {
         "": [  // Empty category for clean list
-          "AI for SME Digital Transformation",
-          "AI in Product Development",
-          "AI in E-Commerce Customer Experience",
-          "Automating Business Workflows",
-          "AI in Content Marketing & Engagement"
+          "harness-ai",
+          "ai-in-product-development",
+          "ai-driven-supply-chain",
+          "automating-business-workflows",
+          "content-marketing",
+          "future-of-e-commerce"
         ]
       },
       content: [
         {
           icon: <WandSparkles size={20} className="text-[#D77914]" />,
-          text: "AI for SME Digital Transformation",
+          text: "Harnessing AI for Digital Transformation in SMEs",
           description: "Explore how AI empowers small and medium enterprises to scale and innovate.",
+          path: "/blog/harness-ai"
         },
         {
           icon: <Package size={20} className="text-[#4F1C51]" />,
           text: "AI in Product Development",
           description: "Discover how AI accelerates product design and enhances customer feedback loops.",
+          path: "/blog/ai-in-product-development"
         },
         {
           icon: <Headset size={20} className="text-[#D77914]" />,
           text: "AI in E-Commerce Customer Experience",
           description: "Learn how AI-driven recommendations and personalization improve user satisfaction.",
+          path: "/blog/ai-driven-supply-chain"
         },
         {
           icon: <File size={20} className="text-[#D77914]" />,
           text: "Automating Business Workflows",
           description: "See how automation streamlines operations and increases productivity.",
+          path: "/blog/automating-business-workflows"
         },
         {
           icon: <ServerCog size={20} className="text-[#4F1C51]" />,
           text: "AI in Content Marketing & Engagement",
           description: "Explore how AI optimizes content strategies and improves audience engagement.",
+          path: "/blog/content-marketing"
         },
         {
           text: (
@@ -221,6 +240,7 @@ const Navbar = () => {
             </Link>
           ),
           isLink: true,
+          path: "/blog"
         },
       ],
     },
@@ -387,34 +407,38 @@ const Navbar = () => {
                             onMouseEnter={handleDropdownHover}
                             onMouseLeave={handleDropdownLeave}
                           >
-                              <Link href={`/${item.parentRoute}`}>
                             <div className="space-y-4">
                               {item.content.map((subItem, subIndex) => (
                                 <div
                                   key={subIndex}
                                   className={`flex items-start space-x-3 ${subItem.isLink ? "pt-2" : ""}`}
                                 >
-                                  {!subItem.isLink && subItem.icon && (
-                                    <span className="text-lg mt-1 min-w-[20px]">{subItem.icon}</span>
-                                  )}
-                                  <div>
-                                    {subItem.isLink ? (
-                                      <div>{subItem.text}</div>
-                                    ) : (
-                                      <>
-                                        <span className="font-medium text-sm font-poppins">{subItem.text}</span>
-                                        {subItem.description && (
-                                          <p className="text-gray-500 text-sm mt-1 font-afacad">
-                                            {subItem.description}
-                                          </p>
+                                  {/* For regular navigation items with links */}
+                                  {!subItem.isLink && (
+                                    <Link href={subItem.path || `/${item.parentRoute}`} onClick={handleNavLinkClick}>
+                                      <div className="flex items-start space-x-3">
+                                        {subItem.icon && (
+                                          <span className="text-lg mt-1 min-w-[20px]">{subItem.icon}</span>
                                         )}
-                                      </>
-                                    )}
-                                  </div>
+                                        <div>
+                                          <span className="font-medium text-sm font-poppins">{subItem.text}</span>
+                                          {subItem.description && (
+                                            <p className="text-gray-500 text-sm mt-1 font-afacad">
+                                              {subItem.description}
+                                            </p>
+                                          )}
+                                        </div>
+                                      </div>
+                                    </Link>
+                                  )}
+                                  
+                                  {/* For "Explore All" type links */}
+                                  {subItem.isLink && (
+                                    <div>{subItem.text}</div>
+                                  )}
                                 </div>
                               ))}
                             </div>
-                        </Link>
                           </div>
                         )}
                       </div>
@@ -447,11 +471,7 @@ const Navbar = () => {
                   isSearchOpen ? "w-full md:w-[35rem]" : "justify-end"
                 }`}
               >
-                {/* {!isSearchOpen && (
-                  <button className="lg:hidden">
-                    <SearchBar />
-                  </button>
-                )} */}
+                {/* Search functionality removed as in original */}
               </div>
             </div>
           </div>
@@ -500,34 +520,34 @@ const Navbar = () => {
                           </button>
 
                           {item.hasDropdown && openDropdown === index && item.content && (
-                            
-                            <Link href={`/${item.parentRoute}`} onClick={() => setIsOpen(false)}>
-                              <div className="py-2 space-y-6">
-                                {item.content.filter(item => !item.isLink).map((subItem, subIndex) => (
-                                  <div
-                                    key={subIndex}
-                                    className="flex items-start space-x-3"
-                                  >
+                            <div className="py-2 space-y-6">
+                              {item.content.filter(item => !item.isLink).map((subItem, subIndex) => (
+                                <Link 
+                                  href={subItem.path || `/${item.parentRoute}`} 
+                                  key={subIndex}
+                                  onClick={handleNavLinkClick}
+                                >
+                                  <div className="flex items-start space-x-3">
                                     {subItem.icon && (
                                       <span className="mt-1 min-w-[20px]">{subItem.icon}</span>
                                     )}
                                     <div>
                                       <span className="text-xs md:text-sm font-[550] tracking-wide font-poppins">{subItem.text}</span>
                                       {subItem.description && (
-                                        <p className="text-gray-500 text-sm mt-1 font-afacad">
+                                        <p className="text-gray-500 text-sm mb-2 font-afacad">
                                           {subItem.description}
                                         </p>
                                       )}
                                     </div>
                                   </div>
-                                ))}
-                                {item.content.find(item => item.isLink) && (
-                                  <div className="pt-2 pb-4 border-t border-gray-200 mt-4 font-afacad">
-                                    {item.content.find(item => item.isLink)?.text}
-                                  </div>
-                                )}
-                              </div>
-                            </Link>
+                                </Link>
+                              ))}
+                              {item.content.find(item => item.isLink) && (
+                                <div className="pt-2 pb-4 border-t border-gray-200 mt-4 font-afacad">
+                                  {item.content.find(item => item.isLink)?.text}
+                                </div>
+                              )}
+                            </div>
                           )}
                         </>
                       ) : (

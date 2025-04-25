@@ -1,42 +1,33 @@
-export const blogPosts = [
-    // {
-    //     id: 'ai-in-business-automation',
-    //     title: "The Future of AI in Business Automation",
-    //     excerpt: "Discover how artificial intelligence is revolutionizing business processes and creating new opportunities for growth and efficiency.",
-    //     category: "Technology",
-    //     author: "John Smith",
-    //     date: "Feb 15, 2024",
-    //     readTime: "5 min read",
-    //     image: "https://images.unsplash.com/photo-1674027444484-cf52149ea050?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjJ8fGZ1dHVyZSUyMGFpfGVufDB8fDB8fHww",
-    //     tags: ["AI", "Automation", "Business"],
-    //     backgroundImage: 'https://images.unsplash.com/photo-1727960478626-f3ff77d2de2b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    // },
-    // {
-    //     id: 'data-driven-marketing',
-    //     title: "Maximizing ROI with Data-Driven Marketing",
-    //     excerpt: "Learn how to leverage data analytics to optimize your marketing strategies and achieve better returns on investment.",
-    //     category: "Marketing",
-    //     author: "Sarah Johnson",
-    //     date: "Feb 14, 2024",
-    //     readTime: "7 min read",
-    //     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1hcmtldGluZ3xlbnwwfHwwfHx8MA%3D%3D",
-    //     tags: ["Marketing", "Analytics", "ROI"],
-    //     backgroundImage: 'https://plus.unsplash.com/premium_photo-1672595604640-cc2ca7e9156b?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    // },
-    // {
-    //     id: 'digital-transformation-guide',
-    //     title: 'Digital Transformation: A Comprehensive Guide for Modern Businesses',
-    //     excerpt: 'Explore the essential steps and strategies for successful digital transformation...',
-    //     category: 'Technology',
-    //     author: 'Alex Thompson',
-    //     date: 'Feb 12, 2024',
-    //     readTime: '10 min read',
-    //     image: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    //     tags: ["Marketing", "Analytics", "ROI"],
-    //     backgroundImage: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-    // },
+export interface BlogPostMetadata {
+    author: string;
+    datePublished: string;
+    readTime: string;
+    category: string;
+    tags: string[];
+    sources: Array<{
+        name?: string;
+        year?: string;
+        citation?: string;
+        [key: string]: any;
+    }>;
+}
 
-    // Blog 1
+export interface BlogPost {
+    id: string;
+    title: string;
+    fullContent: string;
+    image: string;
+    backgroundImage: string;
+    structuredContent: {
+        sections: Array<{
+            title: string;
+            content: string;
+        }>;
+    };
+    metadata: BlogPostMetadata;
+}
+
+export const blogPosts = [
     {
         "id": "harness-ai",
         "title": "Harnessing AI for Digital Transformation in SMEs",
@@ -68,7 +59,7 @@ export const blogPosts = [
             },
             "metadata": {
             "author": "Growth Grid",
-            "datePublished": "2024-02-15",
+            "datePublished": "2025-02-15",
             "readTime": '2 min read',
             "category": "Product Development",
             "tags": ["AI", "Innovation", "Product Development", "Time-to-Market"],
@@ -84,7 +75,7 @@ export const blogPosts = [
 
     // Blog 2
     {
-        "id": "ai-product-development-2024",
+        "id": "ai-in-product-development",
         "title": "AI in Product Development: Accelerating Innovation and Reducing Time-to-Market",
         "fullContent": "AI in Product Development: Accelerating Innovation and Reducing Time-to-Market\nIntroduction\nIn an increasingly competitive business environment, speed and innovation are paramount. Artificial intelligence (AI) is revolutionizing product development by streamlining design processes, enhancing prototyping, and reducing time-to-market. Recent studies from Harvard Business Review (2023) reveal that companies integrating AI into their product development cycles can reduce development times by up to 40% while also improving product quality. This article explores how AI is transforming product development, offers actionable strategies for implementation, and provides real-world examples that illustrate its profound impact on innovation.\n\nAccelerating the Design Process\nAI is fundamentally altering the way products are designed. Traditionally, product development has been a time-consuming process, involving iterative prototyping, extensive testing, and manual adjustments. AI-powered design tools can analyze vast amounts of data, simulate performance under various conditions, and generate optimized design suggestions in a fraction of the time. For instance, companies in the automotive and aerospace sectors are using AI algorithms to optimize structural designs, leading to weight reductions of up to 20% without compromising safety or performance. These advancements enable faster iteration cycles and more innovative products.",
         "image": 'https://images.unsplash.com/photo-1500964757637-c85e8a162699?q=80&w=903&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -103,7 +94,7 @@ export const blogPosts = [
             },
             "metadata": {
             "author": "Growth Grid",
-            "datePublished": "2024-02-15",
+            "datePublished": "2025-02-15",
             "readTime": '5 min read',
             "category": "Product Development",
             "tags": ["AI", "Innovation", "Product Development", "Time-to-Market"],
@@ -119,7 +110,7 @@ export const blogPosts = [
 
     // Blog 3
     {
-        "id": "ai-supply-chain-2024",
+        "id": "ai-driven-supply-chain",
         "title": "AI-Driven Supply Chain Optimization: Strategies for Modern Businesses",
         "fullContent": "AI-Driven Supply Chain Optimization: Strategies for Modern Businesses\nIntroduction\nIn today's highly competitive market, the supply chain is a critical component of a company's success. However, inefficiencies, unpredictability, and high operational costs continue to challenge even the most established enterprises. According to Gartner (2023), companies employing AI-driven supply chain solutions have achieved up to a 30% improvement in delivery efficiency and a 20% reduction in inventory costs. This article examines how artificial intelligence is revolutionizing supply chain management and offers strategies for modern businesses to optimize operations and enhance profitability.\n\nThe Evolving Supply Chain Landscape\nGlobal supply chains have become increasingly complex, influenced by factors such as fluctuating consumer demand, geopolitical uncertainties, and rapid technological advancements. Traditional supply chain models, reliant on historical data and static forecasts, are no longer sufficient. In this dynamic environment, AI emerges as a powerful tool that can analyze real-time data, predict trends, and drive proactive decision-making.",
         "image": "https://images.unsplash.com/photo-1664447990726-355422d41054?q=80&w=924&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -138,7 +129,7 @@ export const blogPosts = [
             },
             "metadata": {
             "author": "Growth Grid",
-            "datePublished": "2024-02-15",
+            "datePublished": "2025-02-15",
             "readTime": '3 min read',
             "category": "Supply Chain",
             "tags": ["AI", "Supply Chain", "Optimization", "Business Strategy"],
@@ -154,7 +145,7 @@ export const blogPosts = [
 
     // Blog 4
     {
-        "id": "automating-business-workflows-2024",
+        "id": "automating-business-workflows",
         "title": "Automating Business Workflows – A Roadmap to Operational Efficiency",
         "fullContent": "Automating Business Workflows – A Roadmap to Operational Efficiency\nIntroduction\nIn today's rapidly evolving business environment, operational efficiency is a critical driver of competitive advantage. Research from Gartner (2023) shows that AI-driven workflow automation can reduce operational costs by up to 30% while significantly enhancing productivity. As companies strive to streamline processes and optimize resource allocation, integrating AI into core business operations has become a strategic necessity. This article outlines a comprehensive roadmap for automating business workflows, providing detailed examples, best practices, and actionable insights for leaders aiming to boost operational efficiency.\n\nTransforming Customer Support\nOne of the most visible applications of AI-driven automation is in customer support. Traditional call centers, often burdened by long wait times and high labor costs, are being revolutionized by AI-powered chatbots and virtual assistants. These systems can respond to customer inquiries in less than five seconds and resolve up to 60% of routine issues without human intervention (Forrester, 2023). By automating standard interactions, companies can free up customer service teams to handle more complex issues, thereby enhancing overall service quality. This not only leads to higher customer satisfaction but also directly contributes to increased lead conversions and repeat business.",
         "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -173,7 +164,7 @@ export const blogPosts = [
         },
         "metadata": {
             "author": "Growth Grid",
-            "datePublished": "2024-02-15",
+            "datePublished": "2025-02-15",
             "readTime": '2 min read',
             "category": "Business Operations",
             "tags": ["AI", "Workflow Automation", "Operational Efficiency", "Business Process"],
@@ -219,7 +210,7 @@ export const blogPosts = [
         },
         "metadata": {
             "author": "Growth Grid",
-            "datePublished": "2024-02-15",
+            "datePublished": "2025-02-15",
             "readTime": '3 min read',
             "category": "Business Operations",
             "tags": ["AI", "Workflow Automation", "Operational Efficiency", "Business Process"],
@@ -240,7 +231,7 @@ export const blogPosts = [
 
     // Blog 6
     {
-        "id": "future-of-3-commerce",
+        "id": "future-of-e-commerce",
         "title": "The Future of E-Commerce – How Artificial Intelligence is Redefining Customer Experience",
         "fullContent": `The Future of E-Commerce – How Artificial Intelligence is Redefining Customer Experience\nIntroduction\nE-commerce is undergoing a paradigm shift as artificial intelligence (AI) becomes an integral part of
                         the digital retail landscape. Recent research from McKinsey (2023) reveals that AI-powered
@@ -271,7 +262,7 @@ export const blogPosts = [
             },
             "metadata": {
             "author": "Growth Grid",
-            "datePublished": "2024-02-15",
+            "datePublished": "2025-02-15",
             "readTime": '2 min read',
             "category": "Product Development",
             "tags": ["AI", "Innovation", "Product Development", "Time-to-Market"],
