@@ -83,7 +83,7 @@ function Footer() {
                     {/* Brand Section with animated logo */}
                     <div className="lg:col-span-1 flex flex-col gap-4 mb-10">
                         <div className="relative overflow-hidden group">
-                            <Image src="/whiteLogo1.png" width={100} height={100} className="h-14 w-max relative z-10 group-hover:opacity-90 transition-all duration-300" alt="Growth Grid Logo" />
+                            <Image src="/whiteLogo1.png" width={100} height={100} className="h-12 w-max relative z-10 group-hover:opacity-90 transition-all duration-300" alt="Growth Grid Logo" />
                             <div className="absolute inset-0 bg-gradient-to-r from-[#CC00] to-yellow-500 blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-300 -z-10"></div>
                         </div>
                     </div>

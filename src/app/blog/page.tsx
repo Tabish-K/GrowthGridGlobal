@@ -54,8 +54,8 @@ const BlogListing = () => {
         visible: { opacity: 1, y: 0 },
     };
 
-    return (
-        <div className="min-h-screen bg-gray-50">
+  return (
+    <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <div
             id="hero"
@@ -217,7 +217,9 @@ const BlogListing = () => {
                 animate={{ opacity: 1 }}
                 className="text-center py-16"
             >
-                <h3 className="text-2xl font-semibold mb-4 font-poppins">No articles found</h3>
+                <h3 className="text-2xl font-semibold mb-4 font-poppins">
+                No articles found
+                </h3>
                 <p className="text-gray-600 font-afacad">
                 Try adjusting your search or filter criteria
                 </p>
@@ -307,6 +309,72 @@ const BlogListing = () => {
                 >
                     {page}
                 </button>
+                ))}
+            </div>
+            </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="bg-gray-50 py-16">
+            <div className="container mx-auto px-6 sm:px-8">
+            <div className="text-center mb-12">
+                <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-3xl font-bold mb-4 font-poppins"
+                >
+                Frequently Asked <span className="text-[#D77914]">Questions</span>
+                </motion.h2>
+                <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-gray-600 max-w-2xl mx-auto font-afacad"
+                >
+                Find answers to common questions about our blog and services
+                </motion.p>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+                {[
+                {
+                    question: "How can I contribute an article to your blog?",
+                    answer:
+                    "We welcome guest contributions! Please send us a message through the contact form with your article idea and a brief outline. Our editorial team will review it and get back to you within 48 hours.",
+                },
+                {
+                    question: "Do you offer advertising opportunities?",
+                    answer:
+                    "Yes, we offer various advertising options including sponsored posts, banner ads, and newsletter features. Contact us for a media kit and pricing information.",
+                },
+                {
+                    question: "How often do you publish new content?",
+                    answer:
+                    "We publish new articles 3-4 times per week, typically on Monday, Wednesday, and Friday. Subscribe to our newsletter to get notified when new content is available.",
+                },
+                {
+                    question: "Can I republish your articles on my website?",
+                    answer:
+                    "Our content is protected by copyright. However, we do offer licensing options for select articles. Please contact us with specific requests.",
+                },
+                ].map((faq, index) => (
+                <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="mb-6"
+                >
+                    <div className="bg-white p-6 rounded-2xl shadow-sm">
+                    <h3 className="text-xl font-bold mb-3 font-poppins">
+                        {faq.question}
+                    </h3>
+                    <p className="text-gray-600 font-afacad">{faq.answer}</p>
+                    </div>
+                </motion.div>
                 ))}
             </div>
             </div>

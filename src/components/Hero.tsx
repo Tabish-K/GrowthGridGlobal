@@ -120,7 +120,7 @@ import { MoveRight } from "lucide-react";
             </motion.a>
 
             <motion.a
-                href="/explore"
+                href="/explore-services"
                 className="flex items-center text-xl gap-2 px-4 py-2 lg:px-6 lg:py-4"
             >
                 <span>Explore Our Solutions</span>
@@ -155,13 +155,13 @@ import { MoveRight } from "lucide-react";
                     {label}
                 </motion.button>
                 ))}
-                <motion.div className="flex-none">
-                <Link href="/explore">
+                {/* <motion.div className="flex-none"> */}
+                {/* <Link href="/explore">
                     <motion.button className="px-3 py-2 lg:px-6 lg:py-4 text-2xl hover:bg-white hover:text-black transition-colors">
                     <MoveRight />
                     </motion.button>
-                </Link>
-                </motion.div>
+                </Link> */}
+                {/* </motion.div> */}
             </motion.div>
             </div>
         </motion.div>

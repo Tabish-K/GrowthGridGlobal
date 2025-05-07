@@ -8,42 +8,38 @@ import { useEffect, useRef, useState } from "react";
 
     interface CaseStudy {
     id: string;
-    category: string;
-    region: string;
     title: string;
+    subtitle: string;
     description: string;
     imageUrl: string;
     }
 
     const caseStudies: CaseStudy[] = [
-    {
-        id: "1",
-        category: "Wellness",
-        region: "KDC (North America)",
-        title:
-        "Conversions increased from 1.1% to 3.6% after implementing the new and improved website",
-        description: "",
-        imageUrl: "/wellness-case-study.jpg",
-    },
-    {
-        id: "2",
-        category: "Telecom",
-        region: "B2B SaaS Platform (Europe)",
-        title:
-        "Limited resources led to 19% increase in product development velocity through a strategic dashboard and intuitive UX redesign",
-        description: "",
-        imageUrl: "/telecom-case-study.jpg",
-    },
-    {
-        id: "3",
-        category: "Retail",
-        region: "Growth OnRemote Work SaaS",
-        title:
-        "Senior SAAS team found after Growth Grid rebuilt GTM results and investor decks...",
-        description: "",
-        imageUrl: "/retail-case-study.jpg",
-    },
-    ];
+        {
+            id: "dtc-brand",
+            title:
+            "Scaling a DTC brand's revenue 4X with AI-driven paid advertising",
+            subtitle: "Accelerating Growth Through AI-Powered Marketing",
+            description: "",
+            imageUrl: "/wellness-case-study.jpg",
+        },
+        {
+            id: "startup-feature",
+            title:
+            "How a SaaS startup feature tripled revenue by 285% in 6 months",
+            subtitle: "Optimizing Cloud Infrastructure for Scalable Growth",
+            description: "",
+            imageUrl: "/telecom-case-study.jpg",
+        },
+        {
+            id: "fitness-platforms",
+            title:
+            "Transforming fitness platforms with data-powered nutrition",
+            subtitle: "Revolutionizing Digital Fitness Through Personalized Nutrition",
+            description: "",
+            imageUrl: "/retail-case-study.jpg",
+        },
+        ];
 
     const CaseStudies: React.FC = () => {
     const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -178,10 +174,6 @@ import { useEffect, useRef, useState } from "react";
                     />
                     </div>
                     <div className="p-4 bg-black/80 text-white h-[12rem] border-t-2 font-afacad flex flex-col justify-between rounded-b-lg">
-                    <div className="mb-2 text-sm font-medium">
-                        {study.category} {study.region}
-                        <div className="bg-gray-300 h-[1px] w-full" />
-                    </div>
                     <p className="mb-4 text-justify text-sm">{study.title}</p>
                     <Link href={`/#/case-studies/${study.id}`}>
                         <p className="inline-flex items-center gap-2 text-sm font-medium">
@@ -214,11 +206,11 @@ import { useEffect, useRef, useState } from "react";
                 </div>
                 <div className="p-4 absolute bottom-0 bg-black/70 text-white h-[40%] border-t-2 font-afacad flex flex-col justify-between">
                 <div className="mb-2 text-sm md:text-xl font-medium">
-                    {study.category} {study.region}
+                    {study.subtitle}
                     <div className="bg-gray-300 h-[1px] w-full" />
                 </div>
                 <p className="mb-4 text-justify">{study.title}</p>
-                <Link href={`/#/case-studies/${study.id}`}>
+                <Link href={`/company/case-study/${study.id}`}>
                     <p className="inline-flex items-center gap-2 text-sm md:text-lg font-medium">
                     Read Case Study
                     <ArrowRight size={16} />
@@ -231,7 +223,7 @@ import { useEffect, useRef, useState } from "react";
         )}
 
         <div className="text-center">
-            <Link href="/case-studies">
+            <Link href="/company/case-study">
             <p className="inline-block bg-[#D77914] hover:bg-[#D77914]/80 text-white font-medium font-afacad text-xl md:text-2xl py-2 px-12 rounded-full transition-colors">
                 Read all case studies
             </p>

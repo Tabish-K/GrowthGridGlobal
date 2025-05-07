@@ -322,7 +322,7 @@ const Solutions: React.FC = () => {
                   Next Question <MoveRight size={16}/>
                 </span>
               ) : (
-                <Link href="explore" className="flex items-center gap-2 font-afacad text-sm md:text-md">
+                <Link href="explore-services" className="flex items-center gap-2 font-afacad text-sm md:text-md">
                   Submit <MoveRight size={20} />
                 </Link>
               )}

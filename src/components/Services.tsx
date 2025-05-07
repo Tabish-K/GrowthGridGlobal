@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
     {
@@ -83,9 +84,11 @@ export default function ServicesGrid() {
             </div>
             </div>
             
-            <button className="mt-10 w-[300px] px-6 py-2 bg-[#D77914] text-white text-lg md:text-2xl rounded-full shadow-xl hover:bg-[#B47216] transition-all tracking-wide font-afacad">
-            Explore all services
-            </button>
+            <Link href="/explore-services">
+                <button className="mt-10 w-[300px] px-6 py-2 bg-[#D77914] text-white text-lg md:text-2xl rounded-full shadow-xl hover:bg-[#B47216] transition-all tracking-wide font-afacad">
+                Explore all services
+                </button>
+            </Link>
         </div>
         <div className="bg-black h-[2px] w-[80dvw] mx-auto mt-10 md:mt-20"/>
         </section>
