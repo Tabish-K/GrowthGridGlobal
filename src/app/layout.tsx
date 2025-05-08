@@ -3,6 +3,8 @@ import "./globals.css";
 import { ReactNode } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import CookieConsent from "../components/cookie-consent";
+import { Toaster } from "../components/ui/toaster";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -59,7 +61,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </head>
       <body className={`antialiased`}>
         <Navbar />
+        <Toaster/>
         {children}
+        <CookieConsent/>
         <Footer />
       </body>
     </html>

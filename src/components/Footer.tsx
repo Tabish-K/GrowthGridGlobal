@@ -266,15 +266,15 @@ function Footer() {
                 </div>
                 
                 {/* Copyright section with animated line */}
-                {/* <div className="mt-12 text-center text-gray-500 text-sm">
-                    <div className="w-full max-w-md mx-auto h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent mb-6"></div>
+                <div className="mt-12 text-center text-gray-500 text-sm font-afacad">
                     <p>© {new Date().getFullYear()} Growth Grid. All rights reserved.</p>
                     <div className="flex justify-center gap-6 mt-4">
-                        <a href="/#/privacy-policy" className="hover:text-[#D77914] transition-colors">Privacy Policy</a>
-                        <a href="/#/terms" className="hover:text-[#D77914] transition-colors">Terms of Service</a>
-                        <a href="/#/sitemap" className="hover:text-[#D77914] transition-colors">Sitemap</a>
+                        <Link href="/legal/privacy-policy" className="hover:text-[#D77914] transition-colors">Privacy Policy</Link>
+                        <Link href="/legal/terms" className="hover:text-[#D77914] transition-colors">Terms of Service</Link>
+                        <Link href="/legal/disclaimer" className="hover:text-[#D77914] transition-colors">Disclaimer</Link>
+                        <Link href="/legal/cookie-policy" className="hover:text-[#D77914] transition-colors">Cookies</Link>
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );
