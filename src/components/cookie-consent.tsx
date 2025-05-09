@@ -48,31 +48,31 @@ const CookieConsent = () => {
     return (
         <div className="fixed inset-x-0 bottom-0 z-50 px-4 pb-4 sm:px-6 md:pb-6">
         <div className="transform transition-all duration-500 ease-in-out translate-y-0 opacity-100 animate-in fade-in slide-in-from-bottom-10">
-            <div className="max-w-xl mx-auto bg-white/95 backdrop-blur-sm dark:bg-slate-900/90 rounded-xl shadow-lg border border-gray-200 dark:border-gray-800 overflow-hidden">
+            <div className="max-w-xl mx-auto bg-white/70 backdrop-blur backdrop-saturate-150 rounded-xl shadow-lg border border-gray-200 overflow-hidden">
             <div className="p-4 sm:p-6">
                 <div className="flex items-start">
-                <div className="flex-shrink-0 pt-0.5">
+                <div className="flex-shrink-0 pt-0.5 hidden sm:block">
                     <CookieIcon className="h-10 w-10 text-[#4F1C51]" />
                 </div>
                 <div className="ml-3 flex-1">
-                    <h3 className="text-lg font-medium text-gray-900 dark:text-gray-100 font-poppins">
+                    <h3 className="text-lg font-medium text-gray-900 font-poppins">
                     Cookie Consent
                     </h3>
-                    <p className="mt-1 text-sm sm:text-md text-gray-500 dark:text-gray-400 font-afacad">
+                    <p className="mt-1 text-sm sm:text-md text-gray-700 font-afacad">
                     {`We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. 
                     By clicking "Accept All", you consent to our use of cookies.`}
                     </p>
                     <div className="mt-4 font-afacad flex flex-col sm:flex-row sm:space-x-4 space-y-2 sm:space-y-0">
                     <button
                         onClick={handleAccept}
-                        className="inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#4F1C51] hover:bg-[#4F1C51]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors duration-200"
+                        className="inline-flex justify-center items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#4F1C51] hover:bg-[#4F1C51]/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#] transition-colors duration-200"
                     >
                         <Check className="mr-2 h-4 w-4" />
                         Accept All
                     </button>
                     <button
                         onClick={handleReject}
-                        className="inline-flex justify-center items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md shadow-sm text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-colors duration-200"
+                        className="inline-flex justify-center items-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4F1C51] transition-colors duration-200"
                     >
                         <X className="mr-2 h-4 w-4" />
                         Reject Non-Essential
